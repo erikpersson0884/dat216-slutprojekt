@@ -6,7 +6,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: ffffff;" styleClass="dag" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" layoutX="69.0" layoutY="202.0" prefHeight="70.0" prefWidth="277.0" text="Varukorg" textAlignment="CENTER" />
@@ -21,7 +20,7 @@
          </children>
       </AnchorPane>
       <Button layoutX="1158.0" layoutY="809.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="184.0" styleClass="next-button" text="Nästa" />
-      <Button layoutX="102.0" layoutY="820.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="184.0" styleClass="previous-button" text="Bakåt" />
+      <Button layoutX="100.0" layoutY="820.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="184.0" styleClass="previous-button" text="Bakåt" />
    </children>
    <stylesheets>
       <URL value="@css/leveransadress.css" />
