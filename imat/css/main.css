@@ -7,7 +7,7 @@
 }
 */
 
-*/ ##################### GENERAL STUFF AND COMPONENTS ########################## */
+/* ##################### GENERAL STUFF AND COMPONENTS ########################## */
 
 .small-text {
     -fx-font-size: 26px;
@@ -61,9 +61,7 @@
 }
 
 
-<<<<<<< HEAD
-
-=======
+/*<<<<<<< HEAD  =======*/
 .textfield {
     -fx-pref-height: 66px;
 
@@ -95,7 +93,7 @@
     -fx-flex: none;
     -fx-order: 0;
     -fx-flex-grow: 0;
-    
+
     -fx-font-family: "Poppins";
     -fx-font-style: normal;
     -fx-font-weight: 500;
