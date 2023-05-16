@@ -1,17 +1,18 @@
-
-
 .change-area {
 -fx-border-radius: 100px;
--fx-border-color: purple;
--fx-border-width: 2px;
+-fx-border-color: gray;
+-fx-border-width: 1px;
 -fx-border-style: solid;
 }
 
-.change-area button{
-    -fx-background-color:
+Label {
+    -fx-font-size: 18;
 }
 
-.minus-button {
+.header {
+    -fx-font-size: 26;
+}
 
-
+.heart-icon {
+    -fx-background-color: rgba(255, 255, 255, 0.8)
 }
