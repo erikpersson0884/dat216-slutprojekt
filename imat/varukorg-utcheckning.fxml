@@ -9,9 +9,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: ffffff;" styleClass="dag" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <SplitPane dividerPositions="0.1487279843444227" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0">
+      <SplitPane dividerPositions="0.14090019569471623" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="144.0" prefWidth="1440.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="1438.0" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
                   <Button layoutX="1142.0" layoutY="697.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="142.0" styleClass="next-button" text="Nästa" />
