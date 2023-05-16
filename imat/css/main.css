@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.small-text {
+    -fx-font-size: 26;
+}
+
+
+.next-button {
+    -fx-font-size: 32px;
+    -fx-font-family: "Poppins";
+    -fx-display: flex;
+    -fx-flex-direction: column;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-padding: 0px;
+    -fx-gap: 8px;
+
+    -fx-position: relative;
+    -fx-min-width: 142px;
+    -fx-min-height: 61px;
+
+    -fx-background-color: #67E083;
+    -fx-background-insets: 0;
+    -fx-background-radius: 100px;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
+}
+
+.previous-button {
+    -fx-box-sizing: border-box;
+    -fx-display: flex;
+    -fx-flex-direction: column;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-padding: 0px;
+    -fx-gap: 8px;
+    -fx-position: relative;
+    -fx-min-width: 142px;
+    -fx-min-height: 61px;
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 3px;
+    -fx-border-color: #67E083;
+    -fx-background-insets: 3px;
+    -fx-border-radius: 71px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
+}
+

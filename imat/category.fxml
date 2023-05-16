@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="30.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.Category">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="40.0">
+         <image>
+            <Image url="@resources/food-example.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="74.0" layoutY="6.0" text="Katergori" />
+   </children>
+</AnchorPane>

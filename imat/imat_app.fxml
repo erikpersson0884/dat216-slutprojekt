@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
+   <children>
+      <SplitPane dividerPositions="0.29759519038076154, 0.688376753507014" layoutX="24.0" layoutY="187.0" prefHeight="493.0" prefWidth="981.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
+               <children>
+                  <ScrollPane layoutX="47.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                     <content>
+                        <FlowPane prefHeight="838.0" prefWidth="426.0" styleClass="sidebar" />
+                     </content>
+                  </ScrollPane>
+                  <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField layoutX="67.0" layoutY="5.0" prefHeight="61.0" prefWidth="536.0" promptText="sök i iMat" styleClass="searchbar" AnchorPane.bottomAnchor="856.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
+                  <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="484.0" layoutY="21.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                     <image>
+                        <Image url="@resources/search-icon.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane layoutX="83.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                     <content>
+                        <FlowPane prefHeight="522.0" prefWidth="382.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="713.0" styleClass="sidebar">
+               <children>
+                  <Label alignment="CENTER" layoutX="90.0" layoutY="14.0" styleClass="secondary-header" text="Kundvagn" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@resources/shopping-cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <ScrollPane layoutX="54.0" layoutY="82.0" prefHeight="636.0" prefWidth="445.0" AnchorPane.bottomAnchor="211.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                     <content>
+                        <FlowPane prefHeight="614.0" prefWidth="444.0" styleClass="sidebar" />
+                     </content></ScrollPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                        <Label styleClass="small-text" text="Antal Varor:" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="25.0" />
+                        <Label styleClass="small-text" text="Totalt Pris:" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="25.0" />
+                        <Label styleClass="small-text" text="5 st" AnchorPane.bottomAnchor="130.0" AnchorPane.rightAnchor="25.0" />
+                        <Label styleClass="small-text" text="1 408,68 kr" AnchorPane.bottomAnchor="90.0" AnchorPane.rightAnchor="25.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+   <stylesheets>
+      <URL value="@css/imat_app.css" />
+      <URL value="@css/main.css" />
+   </stylesheets>
+</AnchorPane>

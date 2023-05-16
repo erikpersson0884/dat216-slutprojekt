@@ -1,0 +1,17 @@
+
+
+.change-area {
+-fx-border-radius: 100px;
+-fx-border-color: purple;
+-fx-border-width: 2px;
+-fx-border-style: solid;
+}
+
+.change-area button{
+    -fx-background-color:
+}
+
+.minus-button {
+
+
+}
