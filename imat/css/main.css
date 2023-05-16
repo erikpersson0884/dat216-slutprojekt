@@ -1,19 +1,25 @@
+/*
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/poppins.ttf');
     font-weight: normal;
     font-style: normal;
 }
+*/
 
-
+*/ ##################### GENERAL STUFF AND COMPONENTS ########################## */
 
 .small-text {
-    -fx-font-size: 26;
+    -fx-font-size: 26px;
+}
+
+.h1 {
+    -fx-font-size: 46px;
 }
 
 
 .next-button {
-    -fx-font-size: 32px;
+    -fx-font-size: 45px;
     -fx-font-family: "Poppins";
     -fx-display: flex;
     -fx-flex-direction: column;
@@ -34,6 +40,7 @@
 }
 
 .previous-button {
+    -fx-font-size: 70px;
     -fx-box-sizing: border-box;
     -fx-display: flex;
     -fx-flex-direction: column;
@@ -54,4 +61,77 @@
 }
 
 
+<<<<<<< HEAD
 
+=======
+.textfield {
+    -fx-pref-height: 66px;
+
+    -fx-background-color: #D9D9D9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 0px, 4px, 4px);
+    -fx-border-radius: 10px;
+
+}
+
+
+/* FRAME SPECIFIC CODE */
+
+.day-choosing-button {
+    -fx-display: flex;
+    -fx-flex-direction: row;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-padding: 16px;
+    -fx-gap: 8px;
+
+    -fx-pref-width: 200px;
+    -fx-pref-height: 104px;
+
+    -fx-background-color: #B6F3A5;
+    -fx-border-radius: 8px;
+
+    /* Inside auto layout */
+
+    -fx-flex: none;
+    -fx-order: 0;
+    -fx-flex-grow: 0;
+    
+    -fx-font-family: "Poppins";
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+    -fx-font-size: 40px;
+    -fx-line-height: 72px;
+
+}
+
+/* FRAME SPECIFIC CODE */
+    .time-choosing-button {
+    -fx-display: flex;
+    -fx-flex-direction: row;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-padding: 16px;
+    -fx-gap: 8px;
+
+    -fx-pref-width: 250px;
+    -fx-pref-height: 104px;
+
+    -fx-background-color: #B6F3A5;
+    -fx-border-radius: 8px;
+
+    /* Inside auto layout */
+
+    -fx-flex: none;
+    -fx-order: 0;
+    -fx-flex-grow: 0;
+
+
+
+    -fx-font-family: "Poppins";
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+    -fx-font-size: 40px;
+    -fx-line-height: 72px;
+
+}
+>>>>>>> d700dd608597b7e43b9daf5b88c52d6e37bd355a
