@@ -132,7 +132,6 @@
     -fx-line-height: 72px;
 
 }
->>>>>>> d700dd608597b7e43b9daf5b88c52d6e37bd355a
 
 
 
@@ -163,4 +162,16 @@
     -fx-border-color: #623CEA;
     -fx-border-width: 20px;
     -fx-border-style: solid;
+}
+
+/* BETALNING */
+
+.betalning-icon-bakgrund{
+    -fx-background-color: #a6bce0;
+}
+
+.betalning-text{
+    -fx-font-size: 50px;
+    -fx-font-style: normal;
+    -fx-text-fill: #ffffff;
 }
