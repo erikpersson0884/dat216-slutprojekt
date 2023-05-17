@@ -1,8 +1,8 @@
-.bakgrund{
+.header.bakgrund{
     -fx-background-color: #B6F3A5;
 }
 
-.text{
+.header-text{
 
     -fx-position: absolute;
     -fx-left: 2.85%;
@@ -15,10 +15,10 @@
     -fx-line-height: 232px;
     -fx-color: #000000;
 }
-.icon{
+.header{
     -fx-background-color: #623CEA;
 }
-.change-area {
+.header-icon {
     -fx-border-radius: 10px;
     -fx-border-color: #623CEA;
     -fx-border-width: 20px;
