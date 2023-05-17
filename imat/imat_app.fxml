@@ -35,7 +35,7 @@
                   </ImageView>
                   <ScrollPane layoutX="83.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
                      <content>
-                        <FlowPane prefHeight="522.0" prefWidth="382.0" />
+                        <FlowPane fx:id="productListFlowPane" prefHeight="522.0" prefWidth="523.0" />
                      </content>
                   </ScrollPane>
                </children>
