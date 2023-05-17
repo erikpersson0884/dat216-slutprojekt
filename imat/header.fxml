@@ -6,36 +6,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane fx:id="iMatLbl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="1440.0" styleClass="bakgrund" stylesheets="@src/imat/css/header.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="headerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="1440.0" styleClass="header-bakgrund" stylesheets="@css/header.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="1070.0" layoutY="22.0" prefHeight="102.0" prefWidth="100.0" styleClass="change-area">
+      <Pane layoutX="1070.0" layoutY="22.0" prefHeight="102.0" prefWidth="100.0" styleClass="header-icon" stylesheets="@css/header.css">
          <children>
-            <Pane layoutX="16.0" layoutY="14.0" prefHeight="79.0" prefWidth="75.0" styleClass="icon" />
+            <Pane layoutX="16.0" layoutY="14.0" prefHeight="79.0" prefWidth="75.0" styleClass="header" />
             <ImageView fitHeight="102.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../icons8-clock-64.png" />
+                  <Image url="@../../../../../Downloads/icons8-clock-50.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Label layoutX="37.0" layoutY="7.0" text="iMat" />
-      <Pane layoutX="1196.0" layoutY="21.0" prefHeight="102.0" prefWidth="100.0" styleClass="change-area">
+      <Label layoutX="37.0" layoutY="7.0" styleClass="header-text" text="iMat" />
+      <Pane layoutX="1196.0" layoutY="21.0" prefHeight="102.0" prefWidth="100.0" styleClass="header-icon">
          <children>
-            <Pane layoutX="15.0" layoutY="14.0" prefHeight="79.0" prefWidth="75.0" styleClass="icon" />
+            <Pane layoutX="15.0" layoutY="14.0" prefHeight="79.0" prefWidth="75.0" styleClass="header" />
             <ImageView fitHeight="102.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@src/imat/resources/favorite-icon.png" />
+                  <Image url="@resources/favorite-icon.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane layoutX="1317.0" layoutY="21.0" prefHeight="102.0" prefWidth="100.0" styleClass="change-area">
+      <Pane layoutX="1317.0" layoutY="21.0" prefHeight="102.0" prefWidth="100.0" styleClass="header-icon">
          <children>
-            <Pane layoutX="15.0" layoutY="12.0" prefHeight="79.0" prefWidth="75.0" styleClass="icon" />
+            <Pane layoutX="15.0" layoutY="12.0" prefHeight="79.0" prefWidth="75.0" styleClass="header" />
             <ImageView fitHeight="102.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@src/imat/resources/profile-icon.png" />
+                  <Image url="@resources/profile-icon.png" />
                </image>
             </ImageView>
          </children>
