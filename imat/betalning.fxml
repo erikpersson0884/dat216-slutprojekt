@@ -11,7 +11,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1440.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.14" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1444.0">
@@ -69,18 +68,21 @@
                   <Label layoutX="165.0" layoutY="475.0" styleClass="betalning-text" text="Kortnummer" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="440.0" />
                   <Label layoutX="707.0" layoutY="485.0" styleClass="betalning-text" text="CVV" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="535.0" />
                   <Label layoutX="212.0" layoutY="585.0" styleClass="betalning-text" text="Kom ihåg mig:" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="630.0" />
-                  <TextField layoutX="473.0" layoutY="352.0" prefHeight="70.0" prefWidth="831.0" AnchorPane.leftAnchor="476.0" AnchorPane.rightAnchor="149.0" />
-                  <TextField layoutX="476.0" layoutY="437.0" prefHeight="70.0" prefWidth="817.0" AnchorPane.leftAnchor="476.0" AnchorPane.rightAnchor="149.0" />
-                  <TextField layoutX="352.0" layoutY="540.0" prefHeight="70.0" prefWidth="285.0" AnchorPane.bottomAnchor="266.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="877.0" AnchorPane.topAnchor="540.0" />
+                  <TextField layoutX="473.0" layoutY="352.0" prefHeight="70.0" prefWidth="831.0" styleClass="betalning-textbox" text="Förnamn  Efternamn" AnchorPane.leftAnchor="476.0" AnchorPane.rightAnchor="149.0" />
+                  <TextField layoutX="476.0" layoutY="437.0" prefHeight="70.0" prefWidth="817.0" styleClass="betalning-textbox" text="1111 2222 3333 4444" AnchorPane.leftAnchor="476.0" AnchorPane.rightAnchor="149.0" />
+                  <TextField layoutX="352.0" layoutY="540.0" prefHeight="70.0" prefWidth="285.0" styleClass="betalning-textbox" text="123" AnchorPane.bottomAnchor="266.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="877.0" AnchorPane.topAnchor="540.0" />
                   <Button layoutX="606.0" layoutY="598.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="490.0" AnchorPane.rightAnchor="882.0" />
                   <Label layoutX="734.0" layoutY="563.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="820.0" AnchorPane.rightAnchor="433.0" AnchorPane.topAnchor="535.0" />
-                  <TextField layoutX="1046.0" layoutY="542.0" prefHeight="70.0" prefWidth="109.0" AnchorPane.leftAnchor="1030.0" AnchorPane.topAnchor="535.0" />
-                  <TextField layoutX="1148.0" layoutY="547.0" prefHeight="70.0" prefWidth="109.0" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="535.0" />
-                  <Label layoutX="971.0" layoutY="620.0" styleClass="betalning-text" text=" Total:  999 kr">
+                  <TextField layoutX="1046.0" layoutY="542.0" prefHeight="70.0" prefWidth="109.0" styleClass="betalning-textbox" text="MM" AnchorPane.leftAnchor="1030.0" AnchorPane.topAnchor="535.0" />
+                  <TextField layoutX="1148.0" layoutY="547.0" prefHeight="70.0" prefWidth="109.0" styleClass="betalning-textbox" text="ÅÅ" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="535.0" />
+                  <Label layoutX="1000.0" layoutY="630.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="630.0">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
+                  <Label layoutX="1153.0" layoutY="530.0" styleClass="betalning-text" text="/" />
+                  <Button layoutX="100.0" layoutY="755.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="120.0" styleClass="previous-button" text="Bakåt" />
+                  <Button layoutX="1040.0" layoutY="755.0" mnemonicParsing="false" prefWidth="270.0" styleClass="slutfor-button" text="Slutför köp" />
                </children>
             </AnchorPane>
         </items>
