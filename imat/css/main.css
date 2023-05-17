@@ -174,3 +174,11 @@
     -fx-font-size: 35px;
     -fx-font-style: normal;
 }
+
+/*   VARUKORG UTCHECKNING  */
+
+.text-medium{
+    -fx-font-style: normal;
+    -fx-font-size: 48px;
+    -fx-text-fill: #000000;
+}
