@@ -17,7 +17,7 @@
                   <Button layoutX="633.0" layoutY="198.0" mnemonicParsing="false" styleClass="day-choosing-button" text="Imorgon" AnchorPane.leftAnchor="615.0" AnchorPane.topAnchor="180.0" />
                   <Label alignment="CENTER" layoutX="612.0" layoutY="74.0" styleClass="h1" text="Dag" textAlignment="CENTER" AnchorPane.leftAnchor="612.0" AnchorPane.rightAnchor="588.0" AnchorPane.topAnchor="70.0" />
                   <Label alignment="CENTER" layoutX="709.0" layoutY="314.0" styleClass="h1" text="Tid" textAlignment="CENTER" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" />
-                  <Button layoutX="1143.0" layoutY="643.0" mnemonicParsing="false" styleClass="previous-button" text="Nästa" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0" />
+                  <Button layoutX="1143.0" layoutY="643.0" mnemonicParsing="false" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0" />
                   <Button layoutX="615.0" layoutY="388.0" mnemonicParsing="false" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="590.0" />
                   <Button layoutX="879.0" layoutY="386.0" mnemonicParsing="false" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="350.0" AnchorPane.rightAnchor="300.0" />
                   <Button layoutX="351.0" layoutY="388.0" mnemonicParsing="false" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="300.0" />
