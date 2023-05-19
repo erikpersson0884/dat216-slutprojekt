@@ -81,8 +81,8 @@
                      </font>
                   </Label>
                   <Label layoutX="1153.0" layoutY="530.0" styleClass="betalning-text" text="/" />
-                  <Button layoutX="100.0" layoutY="755.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="120.0" styleClass="previous-button" text="Bakåt" />
-                  <Button layoutX="1040.0" layoutY="755.0" mnemonicParsing="false" prefWidth="270.0" styleClass="slutfor-button" text="Slutför köp" />
+                  <Button layoutX="100.0" layoutY="755.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="120.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" />
+                  <Button layoutX="1040.0" layoutY="755.0" mnemonicParsing="false" prefWidth="270.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="50.0" />
                </children>
             </AnchorPane>
         </items>

@@ -308,3 +308,10 @@
     -fx-letter-spacing: 0.1px;
 
 }
+
+/* LEVERANSADRESS */
+.leveransadress-textbox{
+    -fx-text-fill: #4b4d57;
+    -fx-font-size: 35px;
+    -fx-font-style: normal;
+}
