@@ -12,6 +12,16 @@
 .small-text {
     -fx-font-size: 26px;
 }
+.text-medium{
+    -fx-font-style: normal;
+    -fx-font-size: 48px;
+    -fx-text-fill: #000000;
+}
+.large-text{
+    -fx-font-style: normal;
+    -fx-font-size: 70px;
+    -fx-text-fill: #000000;
+}
 
 .h1 {
     -fx-font-size: 46px;
@@ -135,16 +145,8 @@
 }
 
 .header-text{
-
-    -fx-position: absolute;
-    -fx-left: 2.85%;
-    -fx-right: 76.32%;
-    -fx-top: -3.22%;
-    -fx-bottom: 91.89%;
     -fx-font-style: normal;
-    -fx-font-weight: 400;
     -fx-font-size: 90px;
-    -fx-line-height: 232px;
     -fx-color: #000000;
 }
 .header{
@@ -175,13 +177,6 @@
     -fx-font-style: normal;
 }
 
-/*   VARUKORG UTCHECKNING  */
-
-.text-medium{
-    -fx-font-style: normal;
-    -fx-font-size: 48px;
-    -fx-text-fill: #000000;
-}
 
 /* IMAT APP */
 .searchbar {
