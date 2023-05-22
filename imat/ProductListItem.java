@@ -9,6 +9,8 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Random;
 
 
 public class ProductListItem extends AnchorPane {
@@ -19,8 +21,9 @@ public class ProductListItem extends AnchorPane {
     @FXML ImageView ProductImageView;
     @FXML Label PriceLabel;
     @FXML Label AmountLabel;
-    @FXML Label AmountUnitLabel;
+    @FXML Label AmountUnitLabel, AmountUnitLabel2;
     @FXML ImageView LikeImageView;
+    @FXML Label ComparisonPriceLabel;
     @FXML ImageView AddImageView;
     @FXML Label MinusImageView;
 
@@ -41,13 +44,36 @@ public class ProductListItem extends AnchorPane {
         this.parentController = MainViewController;
 
 
+
+        initializeCard();
+
     }
     public void initializeCard(){
         ProductNameLabel.setText(product.getName());
 //        ProductImageView.setImage();
         PriceLabel.setText(String.valueOf(product.getPrice()));
-        AmountLabel.setText(product.getUnit());
         AmountUnitLabel.setText(product.getUnit());
+        AmountUnitLabel2.setText(product.getUnit());
+        ComparisonPriceLabel.setText(calculateComparisonPrice());
+
+    }
+
+
+    private String calculateComparisonPrice(){
+//        This method does not have enough data to calculate the actual Comparision price, so for now it simply randomises a price
+        double min = 20.0;
+        double max = 120.0;
+
+        // Create an instance of the Random class
+        Random random = new Random();
+
+        // Generate a random double between min and max
+        double newRandomValue = min + (max - min) * random.nextDouble();
+
+        DecimalFormat decimalFormat = new DecimalFormat("#.00");
+        String newRandomValueString = decimalFormat.format(newRandomValue);
+
+        return(newRandomValueString);
 
     }
 }

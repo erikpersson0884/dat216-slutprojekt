@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="92.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group layoutX="94.0" layoutY="33.0" styleClass="progress_bar" stylesheets="@css/main.css">
+         <children>
+            <Group layoutX="26.0" layoutY="8.0">
+               <children>
+                  <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="120.0" />
+                  <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="120.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="120.0" />
+                  <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="240.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="120.0" />
+               </children>
+            </Group>
+            <Group styleClass="button">
+               <children>
+                  <Button fx:id="button2" layoutX="120.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" />
+                  <Button fx:id="button1" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_active" />
+                  <Button fx:id="button3" layoutX="240.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" stylesheets="@css/main.css" />
+                  <Button fx:id="button4" layoutX="360.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" />
+               </children>
+            </Group>
+         </children>
+      </Group>
+   </children>
+</fx:root>

@@ -14,11 +14,11 @@
          </image>
       </ImageView>
 
-      <Label layoutX="24.0" layoutY="163.0" styleClass="product-header" text="Varunamn" />
-      <Label layoutX="24.0" layoutY="226.0" styleClass="product-Label" text="XX" />
-      <Label layoutX="58.0" layoutY="226.0" styleClass="product-Label" text="kR/kG" />
-      <Label layoutX="24.0" layoutY="199.0" styleClass="product-Label" text="XX" />
-      <Label layoutX="58.0" layoutY="199.0" styleClass="product-Label" text="kR" />
+      <Label fx:id="ProductNameLabel" layoutX="24.0" layoutY="163.0" styleClass="product-header" text="Varunamn" />
+      <Label fx:id="ComparisonPriceLabel" layoutX="24.0" layoutY="226.0" styleClass="product-Label" text="XX" />
+      <Label layoutX="58.0" layoutY="226.0" styleClass="product-Label" text="Kr/Kg" />
+      <Label fx:id="PriceLabel" layoutX="24.0" layoutY="199.0" styleClass="product-Label" text="XX" />
+      <Label fx:id="AmountUnitLabel" layoutX="58.0" layoutY="199.0" styleClass="product-Label" text="kR" />
       <Pane layoutX="24.0" layoutY="253.0" minHeight="26.0" minWidth="205.0" prefHeight="41.0" prefWidth="209.0" styleClass="product-change-area" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
 
          <children>
@@ -32,8 +32,8 @@
                   <Image url="@resources/add-icon.png" />
                </image>
             </ImageView>
-            <Label layoutX="115.0" layoutY="8.0" styleClass="product-Label" text="sT" />
-            <Label layoutX="73.0" layoutY="8.0" styleClass="product-Label" text="XX" />
+            <Label fx:id="AmountUnitLabel2" layoutX="115.0" layoutY="8.0" styleClass="product-Label" text="sT" />
+            <Label fx:id="AmountLabel" layoutX="73.0" layoutY="8.0" styleClass="product-Label" text="XX" />
          </children>
       </Pane>
       <Pane prefHeight="48.0" prefWidth="48.0" styleClass="heart-icon" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
