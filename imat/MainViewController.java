@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -17,6 +18,8 @@ import se.chalmers.cse.dat216.project.Product;
 public class MainViewController implements Initializable {
 
     @FXML FlowPane productListFlowPane;
+    @FXML AnchorPane headerAnchorPane;
+    @FXML AnchorPane HEADER;
 
 
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
@@ -25,6 +28,8 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         String iMatDirectory = iMatDataHandler.imatDirectory();
         initializeHashMap();
+        HEADER.getChildren().add(headerAnchorPane);
+
     }
 
     private void initializeHashMap() {

@@ -11,7 +11,7 @@
       <Pane layoutX="1070.0" layoutY="22.0" prefHeight="102.0" prefWidth="100.0" styleClass="header-icon" stylesheets="@css/header.css">
          <children>
             <Pane layoutX="16.0" layoutY="14.0" prefHeight="79.0" prefWidth="75.0" styleClass="header" />
-            <ImageView fitHeight="102.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="clockImageView" fitHeight="102.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../Downloads/icons8-clock-50.png" />
                </image>
@@ -22,7 +22,7 @@
       <Pane layoutX="1196.0" layoutY="21.0" prefHeight="102.0" prefWidth="100.0" styleClass="header-icon">
          <children>
             <Pane layoutX="15.0" layoutY="14.0" prefHeight="79.0" prefWidth="75.0" styleClass="header" />
-            <ImageView fitHeight="102.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="heartImageView" fitHeight="102.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/favorite-icon.png" />
                </image>
@@ -32,7 +32,7 @@
       <Pane layoutX="1317.0" layoutY="21.0" prefHeight="102.0" prefWidth="100.0" styleClass="header-icon">
          <children>
             <Pane layoutX="15.0" layoutY="12.0" prefHeight="79.0" prefWidth="75.0" styleClass="header" />
-            <ImageView fitHeight="102.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="profileImageView" fitHeight="102.0" fitWidth="100.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/profile-icon.png" />
                </image>
