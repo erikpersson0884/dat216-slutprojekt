@@ -12,6 +12,16 @@
 .small-text {
     -fx-font-size: 26px;
 }
+.text-medium{
+    -fx-font-style: normal;
+    -fx-font-size: 48px;
+    -fx-text-fill: #000000;
+}
+.large-text{
+    -fx-font-style: normal;
+    -fx-font-size: 70px;
+    -fx-text-fill: #000000;
+}
 
 .h1 {
     -fx-font-size: 46px;
@@ -19,45 +29,38 @@
 
 
 .next-button {
-    -fx-font-size: 45px;
-    -fx-font-family: "Poppins";
-    -fx-display: flex;
-    -fx-flex-direction: column;
-    -fx-justify-content: center;
-    -fx-align-items: center;
-    -fx-padding: 0px;
-    -fx-gap: 8px;
-
-    -fx-position: relative;
-    -fx-min-width: 142px;
-    -fx-min-height: 61px;
-
+    -fx-font-size: 35px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 100px;
+    -fx-text-fill: #000000;
     -fx-background-color: #67E083;
     -fx-background-insets: 0;
     -fx-background-radius: 100px;
-
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
 }
 
 .previous-button {
-    -fx-font-size: 70px;
-    -fx-box-sizing: border-box;
-    -fx-display: flex;
-    -fx-flex-direction: column;
-    -fx-justify-content: center;
-    -fx-align-items: center;
-    -fx-padding: 0px;
-    -fx-gap: 8px;
-    -fx-position: relative;
-    -fx-min-width: 142px;
-    -fx-min-height: 61px;
+    -fx-font-size: 35px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 100px;
     -fx-background-color: #FFFFFF;
     -fx-border-width: 3px;
     -fx-border-color: #67E083;
     -fx-background-insets: 3px;
     -fx-border-radius: 71px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 2, 0, 0);
+    -fx-text-fill: #000000;
+}
+
+.slutfor-button{
+    -fx-font-size: 35px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 100px;
+    -fx-text-fill: #000000;
+    -fx-background-color: #ff991c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 100px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
-    -fx-color: #000000;
 }
 
 
@@ -137,21 +140,13 @@
 
 /* HEADER */
 
-.header.bakgrund{
+.header-bakgrund{
     -fx-background-color: #B6F3A5;
 }
 
 .header-text{
-
-    -fx-position: absolute;
-    -fx-left: 2.85%;
-    -fx-right: 76.32%;
-    -fx-top: -3.22%;
-    -fx-bottom: 91.89%;
     -fx-font-style: normal;
-    -fx-font-weight: 400;
     -fx-font-size: 90px;
-    -fx-line-height: 232px;
     -fx-color: #000000;
 }
 .header{
@@ -174,4 +169,144 @@
     -fx-font-size: 50px;
     -fx-font-style: normal;
     -fx-text-fill: #ffffff;
+}
+
+.betalning-textbox{
+    -fx-text-fill: #4b4d57;
+    -fx-font-size: 35px;
+    -fx-font-style: normal;
+}
+
+
+/* IMAT APP */
+.searchbar {
+    -fx-font-size: 24px;
+
+    -fx-display: flex;
+    -fx-flex-direction: row;
+    -fx-align-items: center;
+    -fx-padding: 0px;
+    -fx-gap: 4px;
+
+    -fx-background-color: #ECE6F0;
+    -fx-background-radius: 28px;
+}
+
+
+.sidebar {
+    -fx-background-color: #DAEAD7;
+
+}
+
+.secondary-header {
+    -fx-font-family: 'Inter';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 52px;
+    -fx-line-spacing: 68px;
+
+    -fx-text-fill: #000000;
+}
+
+/* PRODUCT CARD */
+.product-change-area {
+    -fx-border-radius: 100px;
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+
+.product-Label {
+    -fx-font-size: 18;
+}
+
+.product-header {
+    -fx-font-size: 26;
+}
+
+.heart-icon {
+    -fx-background-color: rgba(255, 255, 255, 0.8)
+}
+
+/* VARA I VARUKORG */
+.vara-vara{
+    -fx-display: flex;
+    -fx-flex-direction: row;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-padding: 0px;
+    -fx-gap: 4px;
+
+    -fx-width: 215px;
+    -fx-height: 24px;
+}
+.vara-header{
+    /* header */
+
+
+    -fx-width: 138px;
+    -fx-height: 24px;
+
+    -fx-font-family: 'Roboto';
+    -fx-font-style: bold;
+    -fx-font-weight: 500;
+    -fx-font-size: 25px;
+    -fx-line-height: 24px;
+
+    /* identical to box height, or 96% */
+
+    -fx-letter-spacing: 0.15px;
+
+    /* M3/sys/light/on-surface */
+
+    -fx-color: #1D1B20;
+}
+
+.vara-pris{
+    /* subhead */
+
+
+    -fx-width: 73px;
+    -fx-height: 20px;
+
+    -fx-font-family: 'Roboto';
+    -fx-font-style: normal;
+    -fx-font-weight: 400;
+    -fx-font-size: 20px;
+    -fx-line-height: 20px;
+    /* identical to box height, or 100% */
+
+    -fx-letter-spacing: 0.25px;
+
+    /* M3/sys/light/on-surface */
+
+    -fx-color: #1D1B20;
+
+}
+.vara-change-area {
+    -fx-border-radius: 100px;
+    -fx-border-color: #6750A4;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+}
+
+.vara-styck{
+    -fx-font-family: 'Roboto';
+    -fx-font-style: normal;
+    -fx-font-weight: 500;
+    -fx-font-size: 24px;
+    -fx-color: #6750A4;
+
+    -fx-display: flex;
+    -fx-align-items: center;
+    -fx-text-align: center;
+    -fx-letter-spacing: 0.1px;
+
+}
+
+/* LEVERANSADRESS */
+.leveransadress-textbox{
+    -fx-text-fill: #4b4d57;
+    -fx-font-size: 35px;
+    -fx-font-style: normal;
 }
