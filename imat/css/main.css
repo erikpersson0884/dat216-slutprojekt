@@ -29,14 +29,12 @@
 }
 
 .h1 {
-    -fx-font-size: 46px;
+    -fx-font-size: 38px;
 }
 
 
 .next-button {
     -fx-font-size: 35px;
-    -fx-pref-width: 200px;
-    -fx-pref-height: 100px;
     -fx-text-fill: #000000;
     -fx-background-color: #67E083;
     -fx-background-insets: 0;
@@ -46,8 +44,6 @@
 
 .previous-button {
     -fx-font-size: 35px;
-    -fx-pref-width: 200px;
-    -fx-pref-height: 100px;
     -fx-background-color: #FFFFFF;
     -fx-border-width: 3px;
     -fx-border-color: #67E083;
@@ -59,8 +55,6 @@
 
 .slutfor-button{
     -fx-font-size: 35px;
-    -fx-pref-width: 300px;
-    -fx-pref-height: 100px;
     -fx-text-fill: #000000;
     -fx-background-color: #ff991c;
     -fx-background-insets: 0;
@@ -71,8 +65,6 @@
 
 /*<<<<<<< HEAD  =======*/
 .textfield {
-    -fx-pref-height: 66px;
-
     -fx-background-color: #D9D9D9;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 0px, 4px, 4px);
     -fx-border-radius: 10px;
@@ -89,9 +81,6 @@
     -fx-align-items: center;
     -fx-padding: 16px;
     -fx-gap: 8px;
-
-    -fx-pref-width: 200px;
-    -fx-pref-height: 104px;
 
     -fx-background-color: #B6F3A5;
     -fx-border-radius: 8px;
@@ -118,9 +107,6 @@
     -fx-align-items: center;
     -fx-padding: 16px;
     -fx-gap: 8px;
-
-    -fx-pref-width: 250px;
-    -fx-pref-height: 104px;
 
     -fx-background-color: #B6F3A5;
     -fx-border-radius: 8px;
@@ -207,7 +193,7 @@
     -fx-font-family: 'Inter';
     -fx-font-style: normal;
     -fx-font-weight: 400;
-    -fx-font-size: 52px;
+    -fx-font-size: 45px;
     -fx-line-spacing: 68px;
 
     -fx-text-fill: #000000;
@@ -220,7 +206,7 @@
 
 .kundvagn-text{
     -fx-font-style: normal;
-    -fx-font-size: 30px;
+    -fx-font-size: 22px;
     -fx-text-fill: #000000;
 }
 .sok-text{
@@ -344,8 +330,6 @@
 
 .progress_bar .button {
     -fx-background-radius: 15px;
-    -fx-pref-width: 30px;
-    -fx-pref-height: 30px;
 }
 
 .progress_bar .button_inactive {

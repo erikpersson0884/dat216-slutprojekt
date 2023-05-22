@@ -15,19 +15,19 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <SplitPane dividerPositions="0.14" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0">
+      <SplitPane dividerPositions="0.15" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane dividerPositions="0.2976, 0.6884" prefHeight="876.0" prefWidth="1440.0" AnchorPane.rightAnchor="0.0">
+                  <SplitPane dividerPositions="0.2, 0.78" prefHeight="876.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                            <children>
                               <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-                              <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0">
+                              <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
                                     <FlowPane prefHeight="508.0" prefWidth="432.0">
                                        <children>
@@ -75,7 +75,7 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <TextField layoutX="67.0" layoutY="5.0" prefHeight="93.0" prefWidth="535.0" text="   sök i iMat" AnchorPane.bottomAnchor="776.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+                              <TextField layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" text="   sök i iMat" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -84,14 +84,14 @@
                                     <String fx:value="sok-text" />
                                  </styleClass>
                               </TextField>
-                              <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="484.0" layoutY="21.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                              <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
                                  <image>
                                     <Image url="@resources/search-icon.png" />
                                  </image>
                               </ImageView>
                               <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
-                                    <FlowPane fx:id="productListFlowPane" prefHeight="522.0" prefWidth="382.0" />
+                                    <FlowPane fx:id="productListFlowPane" prefHeight="504.0" prefWidth="708.0" />
                                  </content>
                               </ScrollPane>
                            </children>
@@ -107,18 +107,18 @@
                                     </ImageView>
                                  </graphic>
                               </Label>
-                              <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                              <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
-                                    <FlowPane prefHeight="546.0" prefWidth="444.0" styleClass="sidebar" />
+                                    <FlowPane prefHeight="324.0" prefWidth="271.0" styleClass="sidebar" />
                                  </content>
                               </ScrollPane>
-                              <AnchorPane prefHeight="242.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                              <AnchorPane prefHeight="242.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-                                    <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal Varor:" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="20.0" />
-                                    <Label layoutX="25.0" layoutY="72.0" styleClass="kundvagn-text" text="Totalt Pris:" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="25.0" />
-                                    <Label layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="5 st" AnchorPane.bottomAnchor="179.0" AnchorPane.rightAnchor="47.0" />
-                                    <Label layoutX="297.0" layoutY="42.0" styleClass="kundvagn-text" text="1 408,68 kr" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="21.0" />
+                                    <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal Varor:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" />
+                                    <Label layoutX="29.0" layoutY="463.0" styleClass="kundvagn-text" text="Totalt Pris:" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="20.0" />
+                                    <Label layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="5 st" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="20.0" />
+                                    <Label layoutX="297.0" layoutY="42.0" styleClass="kundvagn-text" text="1 408,68 kr" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="20.0" />
                                  </children>
                               </AnchorPane>
                            </children>
