@@ -61,6 +61,16 @@
     -fx-background-radius: 100px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
 }
+.spara-button{
+    -fx-font-size: 35px;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 75px;
+    -fx-text-fill: #000000;
+    -fx-background-color: #67E083;
+    -fx-background-insets: 0;
+    -fx-background-radius: 100px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
+}
 
 
 /*<<<<<<< HEAD  =======*/
@@ -75,12 +85,6 @@
 /* FRAME SPECIFIC CODE */
 
 .day-choosing-button {
-    -fx-display: flex;
-    -fx-flex-direction: row;
-    -fx-justify-content: center;
-    -fx-align-items: center;
-    -fx-padding: 16px;
-    -fx-gap: 8px;
 
     -fx-background-color: #B6F3A5;
     -fx-border-radius: 8px;
