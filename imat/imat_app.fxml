@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -12,6 +13,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
@@ -25,17 +27,17 @@
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                            <children>
                               <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-                              <ScrollPane layoutX="-5.0" layoutY="83.0" prefHeight="772.0" prefWidth="432.0">
+                              <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0">
                                  <content>
-                                    <FlowPane prefHeight="774.0" prefWidth="432.0">
+                                    <FlowPane prefHeight="508.0" prefWidth="432.0">
                                        <children>
-                                          <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Kött, Fågel &amp; Fisk">
+                                          <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Kött, Fågel &amp; Fisk">
                                             <items>
                                               <MenuItem mnemonicParsing="false" text="Fisk" />
                                               <MenuItem mnemonicParsing="false" text="Kött" />
                                             </items>
                                           </MenuButton>
-                                          <MenuButton minHeight="60.0" mnemonicParsing="false" prefWidth="420.0" text="Frukt &amp; Grönt">
+                                          <MenuButton minHeight="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Frukt &amp; Grönt">
                                             <items>
                                               <MenuItem mnemonicParsing="false" text="Baljväxter" />
                                               <MenuItem mnemonicParsing="false" text="Bär" />
@@ -47,8 +49,7 @@
                                                 <MenuItem mnemonicParsing="false" text="Stenfrukter" />
                                             </items>
                                           </MenuButton>
-                                          <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Mejeriprodukter" />
-                                          <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Dryck">
+                                          <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Dryck">
                                             <items>
                                               <MenuItem mnemonicParsing="false" text="Kalla drycker" />
                                               <MenuItem mnemonicParsing="false" text="Varma drycker" />
@@ -62,13 +63,10 @@
                                                 <MenuItem mnemonicParsing="false" text="Mjöl. socker, salt" />
                                             </items>
                                           </MenuButton>
-                                          <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Sött" />
-                                          <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Bröd" />
-                                          <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Kryddor">
-                                            <items>
-                                              <MenuItem mnemonicParsing="false" text="Örtkryddor" />
-                                            </items>
-                                          </MenuButton>
+                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Sött" />
+                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Mejeriprodukter" />
+                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Kryddor" />
+                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Bröd" />
                                        </children>
                                     </FlowPane>
                                  </content>
@@ -77,13 +75,21 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <TextField layoutX="67.0" layoutY="5.0" prefHeight="63.0" prefWidth="536.0" promptText="sök i iMat" styleClass="searchbar" AnchorPane.bottomAnchor="806.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0" />
-                              <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="484.0" layoutY="21.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+                              <TextField layoutX="67.0" layoutY="5.0" prefHeight="93.0" prefWidth="535.0" text="   sök i iMat" AnchorPane.bottomAnchor="776.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="searchbar" />
+                                    <String fx:value="sok-text" />
+                                 </styleClass>
+                              </TextField>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="484.0" layoutY="21.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
                                  <image>
                                     <Image url="@resources/search-icon.png" />
                                  </image>
                               </ImageView>
-                              <ScrollPane layoutX="83.0" layoutY="111.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                              <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
                                     <FlowPane prefHeight="522.0" prefWidth="382.0" />
                                  </content>
@@ -101,7 +107,7 @@
                                     </ImageView>
                                  </graphic>
                               </Label>
-                              <ScrollPane layoutX="54.0" layoutY="82.0" prefHeight="558.0" prefWidth="444.0" AnchorPane.bottomAnchor="241.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                              <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
                                     <FlowPane prefHeight="546.0" prefWidth="444.0" styleClass="sidebar" />
                                  </content>

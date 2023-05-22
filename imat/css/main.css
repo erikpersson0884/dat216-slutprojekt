@@ -223,6 +223,11 @@
     -fx-font-size: 30px;
     -fx-text-fill: #000000;
 }
+.sok-text{
+    -fx-text-fill: #949292;
+    -fx-font-size: 40px;
+    -fx-font-style: normal;
+}
 
 /* PRODUCT CARD */
 .product-change-area {
