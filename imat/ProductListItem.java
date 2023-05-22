@@ -16,10 +16,10 @@ public class ProductListItem extends AnchorPane {
     private Product product;
 
     @FXML Label ProductNameLabel;
+    @FXML ImageView ProductImageView;
     @FXML Label PriceLabel;
     @FXML Label AmountLabel;
     @FXML Label AmountUnitLabel;
-    @FXML ImageView ProductImageView;
     @FXML ImageView LikeImageView;
     @FXML ImageView AddImageView;
     @FXML Label MinusImageView;
@@ -41,7 +41,13 @@ public class ProductListItem extends AnchorPane {
         this.parentController = MainViewController;
 
 
+    }
+    public void initializeCard(){
+        ProductNameLabel.setText(product.getName());
+//        ProductImageView.setImage();
+        PriceLabel.setText(String.valueOf(product.getPrice()));
+        AmountLabel.setText(product.getUnit());
+        AmountUnitLabel.setText(product.getUnit());
 
-//        ProductImageView.setImage(product.getImageName());
     }
 }
