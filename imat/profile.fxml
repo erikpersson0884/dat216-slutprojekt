@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="1024.0" prefWidth="1440.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.resources.Profile">
@@ -11,9 +13,23 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
+                  <TextField layoutX="923.0" layoutY="377.0" prefHeight="75.0" prefWidth="311.0" styleClass="betalning-textbox" text="ÅÅ" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="410.0" />
                   <Label layoutX="497.0" layoutY="91.0" styleClass="large-text" text="Dina uppgifter" AnchorPane.leftAnchor="495.0" AnchorPane.rightAnchor="495.0" AnchorPane.topAnchor="30.0" />
-                  <Label layoutX="157.0" layoutY="141.0" styleClass="bigMedium-text" text="Betalning" />
-                  <Label layoutX="115.0" layoutY="257.0" styleClass="text-medium" text="Kortnummer" />
+                  <Label layoutX="157.0" layoutY="141.0" prefHeight="81.0" prefWidth="261.0" styleClass="bigMedium-text" text="Betalning" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="927.0" AnchorPane.topAnchor="150.0" />
+                  <Label layoutX="115.0" layoutY="257.0" prefHeight="70.0" prefWidth="289.0" styleClass="text-medium" text="Kortnummer" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="1079.0" AnchorPane.topAnchor="230.0" />
+                  <Label layoutX="145.0" layoutY="364.0" styleClass="text-medium" text="CVV" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="320.0" />
+                  <Label layoutX="174.0" layoutY="478.0" styleClass="text-medium" text="Giltighet" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="410.0" />
+                  <Label layoutX="317.0" layoutY="469.0" styleClass="bigMedium-text" text="Adress" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="570.0" />
+                  <Label layoutX="156.0" layoutY="575.0" styleClass="text-medium" text="Gatuadress" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="650.0" />
+                  <Label layoutX="156.0" layoutY="671.0" styleClass="text-medium" text="Postnummer" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="740.0" />
+                  <TextField layoutX="368.0" layoutY="237.0" prefHeight="70.0" prefWidth="897.0" styleClass="betalning-textbox" text="   1111 2222 3333 4444" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="230.0" />
+                  <TextField layoutX="367.0" layoutY="310.0" prefHeight="75.0" prefWidth="311.0" styleClass="betalning-textbox" text="  123" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="320.0" />
+                  <TextField layoutX="518.0" layoutY="383.0" prefHeight="75.0" prefWidth="311.0" styleClass="betalning-textbox" text="MM" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="410.0" />
+                  <Button layoutX="1147.0" layoutY="433.0" mnemonicParsing="false" styleClass="spara-button" text="Spara" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="410.0" />
+                  <TextField layoutX="496.0" layoutY="631.0" prefHeight="70.0" prefWidth="897.0" styleClass="betalning-textbox" text="   Gamlabergsgatan 27" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="650.0" />
+                  <TextField layoutX="589.0" layoutY="761.0" prefHeight="75.0" prefWidth="311.0" styleClass="betalning-textbox" text="ÅÅ" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="740.0" />
+                  <TextField layoutX="589.0" layoutY="761.0" prefHeight="75.0" prefWidth="311.0" styleClass="betalning-textbox" text="412 58" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="740.0" />
+                  <Button layoutX="1166.0" layoutY="766.0" mnemonicParsing="false" styleClass="spara-button" text="Spara" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="740.0" />
                </children>
             </AnchorPane>
         </items>
