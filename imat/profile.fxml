@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.resources.Profile">
+<AnchorPane prefHeight="1024.0" prefWidth="1440.0" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.resources.Profile">
    <children>
-      <ScrollPane layoutX="152.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
-         <content>
-            <FlowPane prefHeight="301.0" prefWidth="600.0">
+      <SplitPane dividerPositions="0.14" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TextField styleClass="my-textfield" />
+                  <Label layoutX="497.0" layoutY="91.0" styleClass="large-text" text="Dina uppgifter" AnchorPane.leftAnchor="495.0" AnchorPane.rightAnchor="495.0" AnchorPane.topAnchor="30.0" />
+                  <Label layoutX="157.0" layoutY="141.0" styleClass="bigMedium-text" text="Betalning" />
+                  <Label layoutX="115.0" layoutY="257.0" styleClass="text-medium" text="Kortnummer" />
                </children>
-            </FlowPane>
-         </content>
-      </ScrollPane>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
-   <stylesheets>
-      <URL value="@css/main.css" />
-      <URL value="@css/profile.css" />
-   </stylesheets>
 </AnchorPane>

@@ -17,6 +17,11 @@
     -fx-font-size: 48px;
     -fx-text-fill: #000000;
 }
+.bigMedium-text{
+    -fx-font-style: normal;
+    -fx-font-size: 55px;
+    -fx-text-fill: #000000;
+}
 .large-text{
     -fx-font-style: normal;
     -fx-font-size: 70px;
@@ -205,6 +210,17 @@
     -fx-font-size: 52px;
     -fx-line-spacing: 68px;
 
+    -fx-text-fill: #000000;
+}
+.menu-button{
+    -fx-font-style: normal;
+    -fx-font-size: 30px;
+    -fx-text-fill: #000000;
+}
+
+.kundvagn-text{
+    -fx-font-style: normal;
+    -fx-font-size: 30px;
     -fx-text-fill: #000000;
 }
 
