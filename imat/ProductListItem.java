@@ -26,10 +26,8 @@ public class ProductListItem extends AnchorPane {
 
 
 
-
-
     public ProductListItem(Product product, MainViewController MainViewController){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
