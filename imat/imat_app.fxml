@@ -91,7 +91,7 @@
                               </ImageView>
                               <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
-                                    <FlowPane prefHeight="522.0" prefWidth="382.0" />
+                                    <FlowPane fx:id="productListFlowPane" prefHeight="522.0" prefWidth="382.0" />
                                  </content>
                               </ScrollPane>
                            </children>
