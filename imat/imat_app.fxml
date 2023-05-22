@@ -17,17 +17,17 @@
 
 <AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="1024.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <SplitPane dividerPositions="0.14" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0">
+      <SplitPane dividerPositions="0.14" orientation="VERTICAL" prefHeight="1024.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane dividerPositions="0.2976, 0.6884" prefHeight="876.0" prefWidth="1440.0" AnchorPane.rightAnchor="0.0">
+                  <SplitPane dividerPositions="0.2976, 0.6884" prefHeight="876.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                            <children>
                               <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-                              <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0">
+                              <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
                                     <FlowPane prefHeight="508.0" prefWidth="432.0">
                                        <children>
@@ -91,7 +91,7 @@
                               </ImageView>
                               <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
-                                    <FlowPane prefHeight="522.0" prefWidth="382.0" />
+                                    <FlowPane fx:id="productListFlowPane" prefHeight="522.0" prefWidth="382.0" />
                                  </content>
                               </ScrollPane>
                            </children>
