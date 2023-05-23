@@ -114,7 +114,7 @@
                               </ScrollPane>
                               <AnchorPane prefHeight="242.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                                    <Button fx:id="nextButtonMain" mnemonicParsing="false" onAction="#openFile2" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                                     <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal Varor:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" />
                                     <Label layoutX="29.0" layoutY="463.0" styleClass="kundvagn-text" text="Totalt Pris:" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="20.0" />
                                     <Label layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="5 st" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="20.0" />
@@ -131,7 +131,6 @@
       </SplitPane>
    </children>
    <stylesheets>
-      <URL value="@css/imat_app.css" />
       <URL value="@css/main.css" />
    </stylesheets>
 </AnchorPane>
