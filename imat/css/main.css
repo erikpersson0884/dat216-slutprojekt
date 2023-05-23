@@ -322,6 +322,11 @@
     -fx-font-style: normal;
 }
 
+/* KVITTO */
+.kvitto{
+    -fx-background-color: #D9D9D9;
+}
+
 .progress_bar .bar_inactive {
     -fx-fill: #D9D9D9;
     -fx-stroke: #D9D9D9;
