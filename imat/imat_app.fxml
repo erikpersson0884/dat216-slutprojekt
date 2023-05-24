@@ -26,7 +26,7 @@
           <AnchorPane fx:id="HEADER" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane dividerPositions="0.2, 0.78" prefHeight="876.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.2, 0.71875" prefHeight="876.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                            <children>
@@ -79,7 +79,7 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <TextField layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" text="   sök i iMat" AnchorPane.bottomAnchor="510.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                              <TextField layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" promptText="   sök i iMat" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -95,7 +95,7 @@
                               </ImageView>
                               <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
-                                    <FlowPane fx:id="productListFlowPane" prefHeight="504.0" prefWidth="708.0" />
+                                    <FlowPane fx:id="productListFlowPane" alignment="TOP_CENTER" columnHalignment="CENTER" prefHeight="504.0" prefWidth="651.0" />
                                  </content>
                               </ScrollPane>
                            </children>
@@ -113,10 +113,10 @@
                               </Label>
                               <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                                  <content>
-                                    <FlowPane fx:id="shoppingCartFlowPane" prefHeight="324.0" prefWidth="271.0" styleClass="sidebar" />
+                                    <FlowPane fx:id="shoppingCartFlowPane" prefHeight="324.0" prefWidth="355.0" styleClass="sidebar" />
                                  </content>
                               </ScrollPane>
-                              <AnchorPane prefHeight="242.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <AnchorPane layoutY="431.0" prefHeight="174.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="431.0">
                                  <children>
                                     <Button fx:id="nextButtonMain" mnemonicParsing="false" onAction="#openFile2" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                                     <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal Varor:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" />
