@@ -161,15 +161,16 @@
 }
 
 .betalning-text{
-    -fx-font-size: 50px;
+    -fx-font-size: 35px;
     -fx-font-style: normal;
     -fx-text-fill: #ffffff;
 }
 
 .betalning-textbox{
     -fx-text-fill: #4b4d57;
-    -fx-font-size: 35px;
+    -fx-font-size: 25px;
     -fx-font-style: normal;
+
 }
 
 
@@ -236,7 +237,10 @@
 }
 
 .heart-icon {
-    -fx-background-color: rgba(255, 255, 255, 0.8)
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+.heart-icon:hover {
+    -fx-background-color: #BABABA;
 }
 
 /* VARA I VARUKORG */
@@ -321,7 +325,14 @@
     -fx-font-size: 35px;
     -fx-font-style: normal;
 }
-
+.background {
+    -fx-background-color: #FFFFFF;
+}
+.red_border {
+    -fx-border-color: #FF0000;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
 /* KVITTO */
 .kvitto{
     -fx-background-color: #D9D9D9;
@@ -338,11 +349,14 @@
 }
 
 .progress_bar .button {
-    -fx-background-radius: 15px;
+    -fx-background-radius: 30px;
+    -fx-pref-height: 45px;
+    -fx-pref-width: 45px;
 }
 
 .progress_bar .button_inactive {
     -fx-background-color: #D9D9D9;
+    -fx-border-width: 2px;
     -fx-effect: dropshadow(gaussian, #bfbfbf, 10, 0, 0, 0);
 }
 
