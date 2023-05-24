@@ -16,6 +16,7 @@ import java.util.Random;
 public class ProductListItem extends AnchorPane {
     private MainViewController parentController;
     private Product product;
+    private final Model model = Model.getInstance();
 
     @FXML Label ProductNameLabel;
     @FXML ImageView ProductImageView;
@@ -75,5 +76,11 @@ public class ProductListItem extends AnchorPane {
 
         return(newRandomValueString);
 
+    }
+
+    @FXML
+    public void addToCart(){
+        model.addToShoppingCart(product);
+        System.out.println("Added " + product.getName() + " to cart");
     }
 }

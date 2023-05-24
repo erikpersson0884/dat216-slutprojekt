@@ -24,7 +24,7 @@ public class ProgressBar extends AnchorPane {
     MainViewController mainViewController;
 
 
-    public ProgressBar(MainViewController mainViewController) {
+    public ProgressBar(MainViewController mainViewController, int indexActive) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("progress_bar.fxml"));
         fxmlLoader.setRoot(this);
@@ -40,16 +40,21 @@ public class ProgressBar extends AnchorPane {
         buttons.add(button2);
         buttons.add(button3);
         buttons.add(button4);
-        button1.getStyleClass().removeAll("button_inactive");
-        button1.getStyleClass().add("button_active");
+        buttonPressedAction(indexActive,buttons);
+        System.out.println("indexActive: " + indexActive);
+    }
 
+    public void changeCheckoutView(int index) {
+        mainViewController.changeCheckoutView(index);
     }
 
     public void onButtonClick(ActionEvent event){
         try {
             Button clicked = ((Button) event.getSource());
             var index = buttons.indexOf(clicked);
-            buttonPressedAction(index,buttons);
+            System.out.println(index);
+            changeCheckoutView(index);
+            //buttonPressedAction(index,buttons);
         }
         catch (Exception e){
             System.out.println("Error: " + e);
