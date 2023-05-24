@@ -6,15 +6,15 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class Payment extends AnchorPane {
+public class Leveransadress extends AnchorPane{
     MainViewController mainViewController;
+
     @FXML
     AnchorPane progressBarAnchorPane;
-    public Payment(MainViewController mainViewController) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("betalning.fxml"));
+    public Leveransadress(MainViewController mainViewController) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("leveransadress.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-        System.out.println("Payment");
 
         try {
             fxmlLoader.load();
@@ -22,16 +22,16 @@ public class Payment extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.mainViewController = mainViewController;
-        progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,3));
+        progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,2));
     }
     @FXML
     public void onNextButtonClick() {
         System.out.println("Next");
-        mainViewController.changeCheckoutView(4);
+        mainViewController.changeCheckoutView(3);
     }
     @FXML
     public void onBackButtonClick(){
         System.out.println("Back");
-        mainViewController.changeCheckoutView(2);
+        mainViewController.changeCheckoutView(1);
     }
 }

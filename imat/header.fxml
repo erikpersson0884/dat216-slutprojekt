@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="headerAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" styleClass="header-bakgrund" stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" styleClass="header-bakgrund" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutX="972.0" prefHeight="90.0" prefWidth="90.0" styleClass="header-icon" stylesheets="@css/header.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="940.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -43,4 +43,4 @@
          </children>
       </Pane>
    </children>
-</AnchorPane>
+</fx:root>

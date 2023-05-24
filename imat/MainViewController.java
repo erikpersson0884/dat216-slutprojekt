@@ -22,9 +22,9 @@ public class MainViewController implements Initializable {
     @FXML
     FlowPane productListFlowPane;
     @FXML
-    AnchorPane headerAnchorPane;
+    AnchorPane headerPane;
     @FXML
-    AnchorPane HEADER;
+    AnchorPane headerVarukorg;
 
     @FXML
     AnchorPane progressBarAnchorPane;
@@ -45,14 +45,20 @@ public class MainViewController implements Initializable {
     SplitPane iMatAppPane;
     @FXML
     FlowPane shoppingCartFlowPane;
+    @FXML
+    AnchorPane addressPane;
+    @FXML
+    AnchorPane dynamicPane;
 
 
-    private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml", "receipt_page.fxml"};
+    private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
     private ProgressBar progressBar = new ProgressBar(this,1);
     private final VarukorgUtcheckning varukorgUtcheckning = new VarukorgUtcheckning(this);
     private final Payment betalning = new Payment(this);
     private final DeliveryTime deliveryTime = new DeliveryTime(this);
+    private final Leveransadress leveransadress = new Leveransadress(this);
+    private final header Header = new header(this);
     //private final ReceiptPage receiptPage = new ReceiptPage(this);
 
     private final Model model = Model.getInstance();
@@ -69,10 +75,14 @@ public class MainViewController implements Initializable {
         basketCheckoutPane.getChildren().add(varukorgUtcheckning);
         paymentPane.getChildren().add(betalning);
         deliveryTimePane.getChildren().add(deliveryTime);
+        //dynamicPane.getChildren().add(leveransadress);
+        addressPane.getChildren().add(leveransadress);
+        headerPane.getChildren().add(Header);
         //receiptPane.getChildren().add(receiptPage);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
         checkoutViewPanes.add(deliveryTime);
+        checkoutViewPanes.add(leveransadress);
         checkoutViewPanes.add(betalning);
 
 
@@ -123,9 +133,12 @@ public class MainViewController implements Initializable {
                 deliveryTimePane.toFront();
                 break;
             case(2):
-                paymentPane.toFront();
+                addressPane.toFront();
                 break;
             case(3):
+                paymentPane.toFront();
+                break;
+            case(4):
                 receiptPane.toFront();
                 break;
         }
