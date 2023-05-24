@@ -18,7 +18,7 @@
             <Label layoutX="94.0" layoutY="103.0" styleClass="text-medium" text="Varukorg" />
             <Label layoutX="109.0" layoutY="629.0" styleClass="text-medium" text="Summa:" AnchorPane.bottomAnchor="100.0" />
             <Button layoutX="162.0" layoutY="625.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="61.0" prefWidth="142.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" />
-            <Button layoutX="1130.0" layoutY="634.0" mnemonicParsing="false" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
+            <Button layoutX="1130.0" layoutY="634.0" mnemonicParsing="false" onMouseClicked="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
             <AnchorPane fx:id="progressBarAnchorPane" prefHeight="100.0" prefWidth="600.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="5.0" />
          </children>
       </AnchorPane>

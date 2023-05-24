@@ -24,4 +24,14 @@ public class Payment extends AnchorPane {
         this.mainViewController = mainViewController;
         progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,2));
     }
+    @FXML
+    public void onNextButtonClick() {
+        System.out.println("Next");
+        mainViewController.changeCheckoutView(3);
+    }
+    @FXML
+    public void onBackButtonClick(){
+        System.out.println("Back");
+        mainViewController.changeCheckoutView(1);
+    }
 }

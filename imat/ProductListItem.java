@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -16,6 +17,7 @@ import java.util.Random;
 public class ProductListItem extends AnchorPane {
     private MainViewController parentController;
     private Product product;
+    private ShoppingItem shoppingItem;
     private final Model model = Model.getInstance();
 
     @FXML Label ProductNameLabel;
@@ -40,6 +42,7 @@ public class ProductListItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
 
         this.product = product;
         this.parentController = MainViewController;
@@ -77,10 +80,46 @@ public class ProductListItem extends AnchorPane {
         return(newRandomValueString);
 
     }
+    public void updateQuantity(){
+        //var quantity = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
+        var quantity = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
+        AmountLabel.setText((int)quantity + " st");
+        System.out.println((int)quantity + " st");
+    }
 
     @FXML
-    public void addToCart(){
-        model.addToShoppingCart(product);
-        System.out.println("Added " + product.getName() + " to cart");
+    public void onPlusButtonClick(){
+        System.out.println("Plus");
+        try {
+            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
+            updateQuantity();
+        } catch (Exception e) {
+            System.out.println("Can't increse amount");
+            model.getShoppingCart().addItem(new ShoppingItem(product, 1));
+
+        }
+        /*if (model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() == 0){
+            model.getShoppingCart().addItem(new ShoppingItem(product, 1));
+        } else {
+            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
+        }*/
+        //model.getShoppingCart().addItem(shoppingItem);
+        updateQuantity();
     }
+    @FXML
+    public void onMinusButtonClick(){
+        System.out.println("Minus");
+        try {
+            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() - 1);
+            updateQuantity();
+        } catch (Exception e) {
+            System.out.println("Can't remove item");
+        }
+    }
+    @FXML
+    public void onLikeButtonClick(){
+        System.out.println("Like button clicked");
+    }
+
+
 }

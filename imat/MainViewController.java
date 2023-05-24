@@ -81,7 +81,7 @@ public class MainViewController implements Initializable {
     }
 
     private void initializeHashMap() {
-        for (Product product : iMatDataHandler.getProducts()) {
+        for (Product product : model.getProducts()) {
             ProductListItem productListItem = new ProductListItem(product, this);
             productListItemMap.put(product.getName(), productListItem);
         }
@@ -90,7 +90,7 @@ public class MainViewController implements Initializable {
 
     private void updateProductList() {
         productListFlowPane.getChildren().clear();
-        for (Product product : iMatDataHandler.getProducts())
+        for (Product product : model.getProducts())
             productListFlowPane.getChildren().add(productListItemMap.get(product.getName()));
     }
 

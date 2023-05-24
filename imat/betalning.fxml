@@ -50,8 +50,8 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="995.0" layoutY="508.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="224.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="59.0" />
-                  <Button layoutX="79.0" layoutY="504.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="193.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="992.0" />
+                  <Button layoutX="995.0" layoutY="508.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" prefHeight="28.0" prefWidth="224.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="59.0" />
+                  <Button layoutX="79.0" layoutY="504.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefHeight="81.0" prefWidth="193.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="992.0" />
                </children>
             </AnchorPane>
         </items>

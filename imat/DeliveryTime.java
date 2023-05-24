@@ -23,4 +23,14 @@ public class DeliveryTime extends AnchorPane {
         this.mainViewController = mainViewController;
         progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,1));
     }
+    @FXML
+    public void onNextButtonClick() {
+        System.out.println("Next");
+        mainViewController.changeCheckoutView(2);
+    }
+    @FXML
+    public void onBackButtonClick(){
+        System.out.println("Back");
+        mainViewController.changeCheckoutView(0);
+    }
 }

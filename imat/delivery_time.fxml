@@ -6,12 +6,6 @@
 
 <fx:root prefHeight="720.0" prefWidth="1280.0" styleClass="background" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-    <AnchorPane layoutX="-8.0" layoutY="691.0" minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="1425.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button layoutX="111.0" layoutY="209.0" mnemonicParsing="false" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="992.0" />
-            <Button layoutX="1178.0" layoutY="205.0" mnemonicParsing="false" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
-         </children>
-      </AnchorPane>
     <AnchorPane layoutX="516.0" layoutY="354.0" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutX="791.0" layoutY="181.0" mnemonicParsing="false" styleClass="day-choosing-button" text="38 maj" AnchorPane.rightAnchor="298.0" AnchorPane.topAnchor="181.0" />
@@ -26,6 +20,12 @@
             <Button layoutX="230.0" layoutY="475.0" mnemonicParsing="false" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="157.0" AnchorPane.leftAnchor="230.0" />
             <Button layoutX="324.0" layoutY="167.0" mnemonicParsing="false" styleClass="day-choosing-button" text="Idag" AnchorPane.leftAnchor="324.0" AnchorPane.topAnchor="167.0" />
             <AnchorPane fx:id="progressBarAnchorPane" layoutX="500.0" layoutY="-86.0" prefHeight="100.0" prefWidth="600.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="15.0" />
+         </children>
+      </AnchorPane>
+    <AnchorPane layoutX="-11.0" layoutY="691.0" minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="1291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-11.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button layoutX="1178.0" layoutY="205.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
+            <Button layoutX="111.0" layoutY="209.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="992.0" />
          </children>
       </AnchorPane>
    </children>

@@ -47,4 +47,9 @@ public class VarukorgUtcheckning extends AnchorPane {
             System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
     }
+    @FXML
+    public void onNextButtonClick() {
+        System.out.println("Next");
+        mainViewController.changeCheckoutView(1);
+    }
 }

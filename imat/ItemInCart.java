@@ -35,6 +35,7 @@ public class ItemInCart extends AnchorPane {
         }
         this.shoppingItem = shoppingItem;
         this.product = shoppingItem.getProduct();
+        initializeCard();
     }
     public void initializeCard(){
         ProductNameLabel.setText(product.getName());
