@@ -54,7 +54,6 @@ public class ProductListItem extends AnchorPane {
     }
     public void initializeCard(){
         ProductNameLabel.setText(product.getName());
-//        ProductImageView.setImage();
         PriceLabel.setText(String.valueOf(product.getPrice()));
         AmountUnitLabel.setText(product.getUnit());
         ComparisonPriceLabel.setText(calculateComparisonPrice());
@@ -63,8 +62,11 @@ public class ProductListItem extends AnchorPane {
     }
 
 
-    private String calculateComparisonPrice(){
-//        This method does not have enough data to calculate the actual Comparision price, so for now it simply randomises a price
+    private String calculateComparisonPrice() {
+        if (product.getUnit() == "kr/kg"){
+            return String.valueOf(product.getPrice());
+        } else{
+
         double min = 20.0;
         double max = 120.0;
 
@@ -77,7 +79,8 @@ public class ProductListItem extends AnchorPane {
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
         String newRandomValueString = decimalFormat.format(newRandomValue);
 
-        return(newRandomValueString);
+        return (newRandomValueString);
+        }
 
     }
     public void updateQuantity(){
