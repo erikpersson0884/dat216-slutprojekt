@@ -24,7 +24,7 @@ public class ProductListItem extends AnchorPane {
     @FXML ImageView ProductImageView;
     @FXML Label PriceLabel;
     @FXML Label AmountLabel;
-    @FXML Label AmountUnitLabel, AmountUnitLabel2;
+    @FXML Label AmountUnitLabel;
     @FXML ImageView LikeImageView;
     @FXML Label ComparisonPriceLabel;
     @FXML ImageView AddImageView;
@@ -57,9 +57,9 @@ public class ProductListItem extends AnchorPane {
 //        ProductImageView.setImage();
         PriceLabel.setText(String.valueOf(product.getPrice()));
         AmountUnitLabel.setText(product.getUnit());
-        AmountUnitLabel2.setText(product.getUnit());
         ComparisonPriceLabel.setText(calculateComparisonPrice());
 
+        ProductImageView.setImage(parentController.iMatDataHandler.getFXImage(product));
     }
 
 
