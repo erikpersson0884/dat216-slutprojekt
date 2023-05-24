@@ -49,6 +49,7 @@
     -fx-border-color: #67E083;
     -fx-background-insets: 3px;
     -fx-border-radius: 71px;
+    -fx-background-radius: 71px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 2, 0, 0);
     -fx-text-fill: #000000;
 }
@@ -73,7 +74,7 @@
 }
 
 
-/*<<<<<<< HEAD  =======*/
+
 .textfield {
     -fx-background-color: #D9D9D9;
     /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 0px, 4px, 4px);*/
@@ -207,6 +208,7 @@
     -fx-font-style: normal;
     -fx-font-size: 30px;
     -fx-text-fill: #000000;
+    -fx-alignment: left;
 }
 
 .kundvagn-text{
