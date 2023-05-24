@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -22,11 +24,46 @@
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
                            <children>
-                              <AnchorPane layoutX="55.0" layoutY="61.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="50.0" />
-                              <AnchorPane layoutX="989.0" layoutY="57.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.rightAnchor="50.0" />
-                              <AnchorPane layoutX="766.0" layoutY="56.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.rightAnchor="282.0" />
-                              <AnchorPane layoutX="544.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="508.0" AnchorPane.rightAnchor="508.0" />
-                              <AnchorPane layoutX="292.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="292.0" />
+                              <AnchorPane layoutX="55.0" layoutY="61.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="50.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="154.0" layoutX="-2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/MasterCard-Logo-1990%20-%20kopia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="989.0" layoutY="57.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.rightAnchor="50.0">
+                                 <children>
+                                    <ImageView fitHeight="114.0" fitWidth="105.0" layoutX="24.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/985680%20-%20kopia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="766.0" layoutY="56.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.rightAnchor="282.0">
+                                 <children>
+                                    <ImageView fitHeight="117.0" fitWidth="154.0" layoutX="-4.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/Klarna-Logo.wine_-640x427%20-%20kopia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="544.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="508.0" AnchorPane.rightAnchor="508.0">
+                                 <children>
+                                    <ImageView fitHeight="123.0" fitWidth="148.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/American-Express-Color%20-%20kopia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="292.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="292.0">
+                                 <children>
+                                    <ImageView fitHeight="90.0" fitWidth="152.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/VISA-logo-62D5B26FE1-seeklogo.com%20-%20kopia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
                            </children>
                            <padding>
                               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -51,7 +88,7 @@
                      </children>
                   </AnchorPane>
                   <Button layoutX="995.0" layoutY="508.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" prefHeight="28.0" prefWidth="224.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="59.0" />
-                  <Button layoutX="79.0" layoutY="504.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefHeight="81.0" prefWidth="193.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="992.0" />
+                  <Button layoutX="128.0" layoutY="504.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefHeight="81.0" prefWidth="158.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="992.0" />
                </children>
             </AnchorPane>
         </items>
