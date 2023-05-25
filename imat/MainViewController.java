@@ -23,8 +23,6 @@ public class MainViewController implements Initializable {
     FlowPane productListFlowPane;
     @FXML
     AnchorPane headerPane;
-    @FXML
-    AnchorPane headerVarukorg;
 
     @FXML
     AnchorPane progressBarAnchorPane;
@@ -47,9 +45,6 @@ public class MainViewController implements Initializable {
     FlowPane shoppingCartFlowPane;
     @FXML
     AnchorPane addressPane;
-    @FXML
-    AnchorPane dynamicPane;
-
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
@@ -75,7 +70,6 @@ public class MainViewController implements Initializable {
         basketCheckoutPane.getChildren().add(varukorgUtcheckning);
         paymentPane.getChildren().add(betalning);
         deliveryTimePane.getChildren().add(deliveryTime);
-        //dynamicPane.getChildren().add(leveransadress);
         addressPane.getChildren().add(leveransadress);
         headerPane.getChildren().add(Header);
         //receiptPane.getChildren().add(receiptPage);

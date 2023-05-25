@@ -9,91 +9,86 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0" styleClass="background" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1280.0" styleClass="bet" AnchorPane.bottomAnchor="620.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-    <AnchorPane layoutX="-408.0" layoutY="243.0" minHeight="0.0" minWidth="0.0" prefHeight="622.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <AnchorPane layoutX="70.0" layoutY="210.0" prefHeight="300.0" prefWidth="1000.0" style="-fx-background-color: #623CEA;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="110.0">
          <children>
-            <AnchorPane layoutX="-504.0" layoutY="194.0" prefHeight="300.0" prefWidth="1000.0" style="-fx-background-color: #623CEA;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="110.0">
+            <AnchorPane layoutX="-6.0" layoutY="-10.0" prefHeight="142.0" prefWidth="1038.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <AnchorPane layoutX="-6.0" layoutY="-10.0" prefHeight="142.0" prefWidth="1038.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <AnchorPane layoutX="80.0" layoutY="40.0" prefHeight="100.0" prefWidth="178.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="897.0" AnchorPane.topAnchor="25.0">
                      <children>
-                        <AnchorPane layoutX="80.0" layoutY="40.0" prefHeight="100.0" prefWidth="178.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="897.0" AnchorPane.topAnchor="25.0">
-                           <children>
-                              <ImageView fitHeight="100.0" fitWidth="154.0" layoutX="-2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
-                                 <image>
-                                    <Image url="@resources/MasterCard-Logo-1990%20-%20kopia.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="989.0" layoutY="57.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="25.0">
-                           <children>
-                              <ImageView fitHeight="97.0" fitWidth="105.0" layoutX="24.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/985680%20-%20kopia.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="750.0" layoutY="40.0" prefHeight="100.0" prefWidth="172.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="680.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="25.0">
-                           <children>
-                              <ImageView fitHeight="103.0" fitWidth="144.0" layoutX="6.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/Klarna-Logo.wine_-640x427%20-%20kopia.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="544.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="25.0">
-                           <children>
-                              <ImageView fitHeight="123.0" fitWidth="148.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                 <image>
-                                    <Image url="@resources/American-Express-Color%20-%20kopia.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="292.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="25.0">
-                           <children>
-                              <ImageView fitHeight="90.0" fitWidth="152.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/VISA-logo-62D5B26FE1-seeklogo.com%20-%20kopia.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
+                        <ImageView fitHeight="100.0" fitWidth="154.0" layoutX="-2.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@resources/MasterCard-Logo-1990%20-%20kopia.png" />
+                           </image>
+                        </ImageView>
                      </children>
-                     <padding>
-                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-                     </padding>
                   </AnchorPane>
-                  <Label layoutX="199.0" layoutY="164.0" styleClass="betalning-text" text="Namn på kort" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="164.0" />
-                  <Label layoutX="199.0" layoutY="224.0" styleClass="betalning-text" text="Kortnummer" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="224.0" />
-                  <Label layoutX="199.0" layoutY="289.0" styleClass="betalning-text" text="CVV" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="289.0" />
-                  <Label layoutX="199.0" layoutY="344.0" prefHeight="56.0" prefWidth="260.0" styleClass="betalning-text" text="Kom ihåg mig:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="344.0" />
-                  <TextField layoutX="469.0" layoutY="164.0" prefHeight="48.0" prefWidth="513.0" promptText="Förnamn  Efternamn" styleClass="betalning-textbox" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="164.0" />
-                  <TextField layoutX="469.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="1111" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="566.0" AnchorPane.topAnchor="225.0" />
-                  <TextField layoutX="339.0" layoutY="294.0" prefHeight="50.0" prefWidth="150.0" promptText="123" styleClass="betalning-textbox" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="288.0" />
-                  <Label layoutX="619.0" layoutY="289.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="619.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="289.0" />
-                  <TextField layoutX="869.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="869.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="294.0" />
-                  <TextField layoutX="769.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="294.0" />
-                  <Label layoutX="734.0" layoutY="344.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="344.0">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <TextField layoutX="594.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="2222" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="594.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="225.0" />
-                  <TextField layoutX="719.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="3333" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="316.0" AnchorPane.topAnchor="225.0" />
-                  <TextField layoutX="844.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="4444" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="225.0" />
-                  <Button layoutX="469.0" layoutY="354.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="354.0" />
-                  <Label layoutX="844.0" layoutY="306.0" styleClass="betalning-text" text="/" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="294.0" />
+                  <AnchorPane layoutX="989.0" layoutY="57.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <ImageView fitHeight="97.0" fitWidth="105.0" layoutX="24.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/985680%20-%20kopia.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="750.0" layoutY="40.0" prefHeight="100.0" prefWidth="172.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="680.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <ImageView fitHeight="103.0" fitWidth="144.0" layoutX="6.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/Klarna-Logo.wine_-640x427%20-%20kopia.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="544.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <ImageView fitHeight="123.0" fitWidth="148.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <image>
+                              <Image url="@resources/American-Express-Color%20-%20kopia.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="292.0" layoutY="58.0" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(255,255,255,0.4);" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <ImageView fitHeight="90.0" fitWidth="152.0" layoutX="7.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/VISA-logo-62D5B26FE1-seeklogo.com%20-%20kopia.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
             </AnchorPane>
-            <Button layoutX="995.0" layoutY="508.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" prefHeight="75.0" prefWidth="238.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
-            <Button layoutX="137.0" layoutY="512.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefHeight="81.0" prefWidth="158.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
-            <AnchorPane fx:id="progressBarAnchorPane" prefHeight="100.0" prefWidth="600.0" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="8.0" />
+            <Label layoutX="199.0" layoutY="164.0" styleClass="betalning-text" text="Namn på kort" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="164.0" />
+            <Label layoutX="199.0" layoutY="224.0" styleClass="betalning-text" text="Kortnummer" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="224.0" />
+            <Label layoutX="199.0" layoutY="289.0" styleClass="betalning-text" text="CVV" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="289.0" />
+            <Label layoutX="199.0" layoutY="344.0" prefHeight="56.0" prefWidth="260.0" styleClass="betalning-text" text="Kom ihåg mig:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="344.0" />
+            <TextField layoutX="469.0" layoutY="164.0" prefHeight="48.0" prefWidth="513.0" promptText="Förnamn  Efternamn" styleClass="betalning-textbox" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="164.0" />
+            <TextField layoutX="469.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="1111" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="566.0" AnchorPane.topAnchor="225.0" />
+            <TextField layoutX="339.0" layoutY="294.0" prefHeight="50.0" prefWidth="150.0" promptText="123" styleClass="betalning-textbox" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="288.0" />
+            <Label layoutX="619.0" layoutY="289.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="619.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="289.0" />
+            <TextField layoutX="869.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="869.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="294.0" />
+            <TextField layoutX="769.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="294.0" />
+            <Label layoutX="734.0" layoutY="344.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="344.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="594.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="2222" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="594.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="225.0" />
+            <TextField layoutX="719.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="3333" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="316.0" AnchorPane.topAnchor="225.0" />
+            <TextField layoutX="844.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="4444" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="225.0" />
+            <Button layoutX="469.0" layoutY="354.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="354.0" />
+            <Label layoutX="844.0" layoutY="306.0" styleClass="betalning-text" text="/" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="294.0" />
          </children>
       </AnchorPane>
+      <Button layoutX="992.0" layoutY="635.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" prefHeight="75.0" prefWidth="238.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
+      <Button layoutX="50.0" layoutY="629.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefHeight="81.0" prefWidth="158.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
+      <AnchorPane fx:id="progressBarAnchorPane" layoutX="330.0" layoutY="108.0" prefHeight="100.0" prefWidth="600.0" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="8.0" />
    </children>
 </fx:root>
