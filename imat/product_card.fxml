@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,35 +16,39 @@
       </ImageView>
 
       <Label fx:id="ProductNameLabel" layoutX="24.0" layoutY="163.0" styleClass="product-header" text="Varunamn" />
-      <Label fx:id="ComparisonPriceLabel" layoutX="24.0" layoutY="226.0" styleClass="product-Label" text="XX" />
-      <Label layoutX="67.0" layoutY="227.0" styleClass="product-Label" text="Kr/Kg" />
-      <Label fx:id="PriceLabel" layoutX="24.0" layoutY="199.0" styleClass="product-Label" text="XX" />
-      <Label fx:id="AmountUnitLabel" layoutX="70.0" layoutY="200.0" styleClass="product-Label" text="kR" />
-      <Pane layoutX="24.0" layoutY="253.0" minHeight="26.0" minWidth="205.0" prefHeight="41.0" prefWidth="209.0" styleClass="product-change-area" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
-
-         <children>
-            <ImageView layoutX="161.0" layoutY="-3.0" onMouseClicked="#onPlusButtonClick">
-               <image>
-                  <Image url="@resources/add-icon.png" />
-               </image>
-            </ImageView>
-            <ImageView layoutY="-3.0" onMouseClicked="#onMinusButtonClick">
-               <image>
-                  <Image url="@resources/remove-icon.png" />
-               </image>
-            </ImageView>
-            <Label fx:id="AmountUnitLabel2" layoutX="109.0" layoutY="8.0" styleClass="product-Label" text="St" />
-            <Label fx:id="AmountLabel" layoutX="73.0" layoutY="8.0" styleClass="product-Label" text="0" />
-         </children>
-      </Pane>
+      <Label fx:id="ComparisonPriceLabel" layoutX="24.0" layoutY="226.0" styleClass="product-Label" text="XX jämf" />
+      <Label fx:id="PriceLabel" layoutX="24.0" layoutY="199.0" styleClass="product-Label" text="XX kR" />
       <Pane prefHeight="48.0" prefWidth="48.0" styleClass="heart-icon" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="48.0" fitWidth="48.0">
+            <ImageView fx:id="FavouriteImageView" fitHeight="48.0" fitWidth="48.0">
                <image>
                   <Image url="@resources/favorite-icon.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
+      <AnchorPane layoutX="10.0" layoutY="253.0" minHeight="26.0" minWidth="205.0" prefHeight="41.0" prefWidth="209.0" styleClass="product-change-area">
+         <children>
+            <Label fx:id="AmountLabel" layoutX="99.0" layoutY="3.0" styleClass="product-Label" text="0" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="3.0" />
+            <Button layoutX="147.0" layoutY="3.0" maxHeight="30.0" maxWidth="30.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onMouseClicked="#onPlusButtonClick" prefHeight="10.0" prefWidth="20.0" styleClass="change-area-button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView onMouseClicked="#onPlusButtonClick" styleClass="change-area-button">
+                     <image>
+                        <Image url="@resources/add-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onMouseClicked="#onMinusButtonClick" prefHeight="48.0" prefWidth="48.0" styleClass="change-area-button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView onMouseClicked="#onMinusButtonClick">
+                     <image>
+                        <Image url="@resources/remove-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

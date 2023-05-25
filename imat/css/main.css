@@ -40,6 +40,7 @@
     -fx-background-insets: 0;
     -fx-background-radius: 100px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
+    -fx-pref-width: 150px;
 }
 
 .previous-button {
@@ -52,6 +53,7 @@
     -fx-background-radius: 71px;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 2, 0, 0);
     -fx-text-fill: #000000;
+    -fx-pref-width: 150px;
 }
 
 .slutfor-button{
@@ -174,6 +176,10 @@
 
 }
 
+.saved-information-text {
+    -fx-text-fill: #00FF00;
+    -fx-font-size:20;
+}
 
 /* IMAT APP */
 .searchbar {
@@ -223,11 +229,21 @@
 }
 
 /* PRODUCT CARD */
+.card-background {
+    -fx-background-color: #FFFFFF;
+}
+
 .product-change-area {
     -fx-border-radius: 100px;
     -fx-border-color: gray;
     -fx-border-width: 1px;
     -fx-border-style: solid;
+}
+
+.change-area-button {
+    -fx-background-radius: 100px;
+    -fx-border-radius: 100px;
+    -fx-background-color: transparent;
 }
 
 .product-Label {
@@ -328,7 +344,7 @@
     -fx-font-style: normal;
 }
 .background {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #E0E0E0;
 }
 .red_border {
     -fx-border-color: #FF0000;

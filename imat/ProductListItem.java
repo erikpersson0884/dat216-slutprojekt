@@ -4,6 +4,7 @@ package imat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -25,10 +26,14 @@ public class ProductListItem extends AnchorPane {
     @FXML Label PriceLabel;
     @FXML Label AmountLabel;
     @FXML Label AmountUnitLabel;
-    @FXML ImageView LikeImageView;
+    @FXML ImageView FavouriteImageView;
     @FXML Label ComparisonPriceLabel;
     @FXML ImageView AddImageView;
     @FXML Label MinusImageView;
+
+
+    Image favoriteImage = new Image(getClass().getClassLoader().getResourceAsStream("iMat/resources/favorite.png"));
+    Image notFavoriteImage = new Image(getClass().getClassLoader().getResourceAsStream("iMat/resources/add-favorite.png"));
 
 
 
@@ -54,13 +59,32 @@ public class ProductListItem extends AnchorPane {
     }
     public void initializeCard(){
         ProductNameLabel.setText(product.getName());
-        PriceLabel.setText(String.valueOf(product.getPrice()));
-        AmountUnitLabel.setText(product.getUnit());
-        ComparisonPriceLabel.setText(calculateComparisonPrice());
+        PriceLabel.setText(String.valueOf(product.getPrice()) + product.getUnit());
+        ComparisonPriceLabel.setText("Jmf-pris " + calculateComparisonPrice() + "kr/kg");
+        ProductImageView.setImage(parentController.iMatDataHandler.getFXImage(product, 225,300 ));
 
-        ProductImageView.setImage(parentController.iMatDataHandler.getFXImage(product));
+
+        if (parentController.iMatDataHandler.isFavorite(product)) {
+            FavouriteImageView.setImage(favoriteImage);
+        } else {
+            FavouriteImageView.setImage(notFavoriteImage);
+        }
     }
 
+    public void changeFavouriteOnClick(){
+        if (parentController.iMatDataHandler.isFavorite(product)){
+            System.out.println(parentController.iMatDataHandler.favorites());
+            parentController.iMatDataHandler.removeFavorite(product);
+            FavouriteImageView.setImage(notFavoriteImage);
+
+        } else {
+            parentController.iMatDataHandler.addFavorite(product);
+            System.out.println(product.getName() + " is not favo");
+
+            FavouriteImageView.setImage(favoriteImage);
+
+        }
+    }
 
     private String calculateComparisonPrice() {
         if (product.getUnit() == "kr/kg"){

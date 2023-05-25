@@ -53,9 +53,7 @@ public class Model {
     }
 
     private void init() {
-
         iMatDataHandler = IMatDataHandler.getInstance();
-
     }
 
     public List<Product> getProducts() {
