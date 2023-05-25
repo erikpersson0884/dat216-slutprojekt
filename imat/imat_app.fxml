@@ -122,8 +122,8 @@
                                     <Button fx:id="nextButtonMain" mnemonicParsing="false" onAction="#openFile2" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                                     <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal Varor:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" />
                                     <Label layoutX="29.0" layoutY="463.0" styleClass="kundvagn-text" text="Totalt Pris:" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="20.0" />
-                                    <Label layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="5 st" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="20.0" />
-                                    <Label layoutX="297.0" layoutY="42.0" styleClass="kundvagn-text" text="1 408,68 kr" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="20.0" />
+                                    <Label fx:id="totalAmount" layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="X st" textAlignment="RIGHT" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="20.0" />
+                                    <Label fx:id="totalPrice" layoutX="297.0" layoutY="42.0" styleClass="kundvagn-text" text="X XXX,XX kR" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="20.0" />
                                  </children>
                               </AnchorPane>
                            </children>

@@ -6,6 +6,7 @@ import java.util.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -21,6 +22,10 @@ public class MainViewController implements Initializable {
     FlowPane productListFlowPane;
     @FXML
     TextField searchbar;
+    @FXML
+    Label totalAmount;
+    @FXML
+    Label totalPrice;
     @FXML
     AnchorPane headerAnchorPane;
 
@@ -52,6 +57,7 @@ public class MainViewController implements Initializable {
     AnchorPane dynamicPane;
 
 
+
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
     private ProgressBar progressBar = new ProgressBar(this,1);
@@ -77,7 +83,7 @@ public class MainViewController implements Initializable {
         deliveryTimePane.getChildren().add(deliveryTime);
         //dynamicPane.getChildren().add(leveransadress);
         addressPane.getChildren().add(leveransadress);
-        headerPane.getChildren().add(Header);
+//        headerPane.getChildren().add(Header);
         //receiptPane.getChildren().add(receiptPage);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
@@ -117,6 +123,12 @@ public class MainViewController implements Initializable {
     }
     public List<Product> getProducts(String s){
         return  model.findProducts(s);
+    }
+
+    // Methods for right sidebar
+
+    public void updateRightSidebar(){
+        totalAmount.setText(String.valueOf(iMatDataHandler.getProducts().size()));
     }
 
 
