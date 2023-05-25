@@ -6,26 +6,23 @@
 
 <fx:root prefHeight="720.0" prefWidth="1280.0" styleClass="background" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-    <AnchorPane layoutX="516.0" layoutY="354.0" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane layoutX="-11.0" layoutY="691.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.bottomAnchor="620.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <AnchorPane layoutX="516.0" layoutY="354.0" minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Button layoutX="791.0" layoutY="181.0" mnemonicParsing="false" styleClass="day-choosing-button" text="I övermorgon" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="167.0" />
-            <Button layoutX="522.0" layoutY="167.0" mnemonicParsing="false" styleClass="day-choosing-button" text="Imorgon" AnchorPane.leftAnchor="522.0" AnchorPane.topAnchor="167.0" />
-            <Label alignment="CENTER" layoutX="579.0" layoutY="94.0" styleClass="h1" text="Dag" textAlignment="CENTER" AnchorPane.leftAnchor="579.0" AnchorPane.rightAnchor="621.0" AnchorPane.topAnchor="94.0" />
-            <Label alignment="CENTER" layoutX="709.0" layoutY="314.0" styleClass="h1" text="Tid" textAlignment="CENTER" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" />
-            <Button layoutX="238.0" layoutY="363.0" mnemonicParsing="false" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="238.0" />
-            <Button layoutX="848.0" layoutY="362.0" mnemonicParsing="false" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="270.0" AnchorPane.rightAnchor="199.0" />
-            <Button layoutX="562.0" layoutY="362.0" mnemonicParsing="false" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="525.0" AnchorPane.topAnchor="362.0" />
-            <Button layoutX="836.0" layoutY="472.0" mnemonicParsing="false" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="198.0" />
-            <Button layoutX="557.0" layoutY="473.0" mnemonicParsing="false" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="159.0" AnchorPane.leftAnchor="522.0" />
-            <Button layoutX="230.0" layoutY="475.0" mnemonicParsing="false" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="157.0" AnchorPane.leftAnchor="230.0" />
-            <Button layoutX="324.0" layoutY="167.0" mnemonicParsing="false" styleClass="day-choosing-button" text="Idag" AnchorPane.leftAnchor="324.0" AnchorPane.topAnchor="167.0" />
-            <AnchorPane fx:id="progressBarAnchorPane" layoutX="500.0" layoutY="-86.0" prefHeight="100.0" prefWidth="600.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="15.0" />
-         </children>
-      </AnchorPane>
-    <AnchorPane layoutX="-11.0" layoutY="691.0" minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="1291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button layoutX="1099.0" layoutY="35.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0" />
-            <Button layoutX="111.0" layoutY="209.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefWidth="150.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" />
+            <Button layoutX="796.0" layoutY="181.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="day-choosing-button" text="Övermorgon" AnchorPane.bottomAnchor="355.0" AnchorPane.leftAnchor="786.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="180.0" />
+            <Button layoutX="506.0" layoutY="181.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="day-choosing-button" text="Imorgon" AnchorPane.bottomAnchor="355.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="180.0" />
+            <Label alignment="CENTER" layoutX="629.0" layoutY="108.0" prefHeight="56.0" prefWidth="92.0" styleClass="h1" text="Dag" textAlignment="CENTER" AnchorPane.bottomAnchor="445.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="120.0" />
+            <Label alignment="CENTER" layoutX="586.0" layoutY="271.0" styleClass="h1" text="Tid" textAlignment="CENTER" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="280.0" />
+            <Button layoutX="216.0" layoutY="335.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="786.0" AnchorPane.topAnchor="335.0" />
+            <Button layoutX="796.0" layoutY="335.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="786.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="335.0" />
+            <Button layoutX="506.0" layoutY="335.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="time-choosing-button" text="11:00-12:00" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="335.0" />
+            <Button layoutX="796.0" layoutY="432.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="786.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="432.0" />
+            <Button layoutX="506.0" layoutY="432.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="432.0" />
+            <Button layoutX="216.0" layoutY="432.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="time-choosing-button" text="13:00-14:00" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="786.0" AnchorPane.topAnchor="432.0" />
+            <Button layoutX="216.0" layoutY="181.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="280.0" styleClass="day-choosing-button" text="Idag" AnchorPane.bottomAnchor="355.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="786.0" AnchorPane.topAnchor="180.0" />
+            <AnchorPane fx:id="progressBarAnchorPane" layoutX="373.0" layoutY="23.0" prefHeight="100.0" prefWidth="600.0" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="8.0" />
+            <Button mnemonicParsing="false" onMousePressed="#onBackButtonClick" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
+            <Button mnemonicParsing="false" onMousePressed="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
          </children>
       </AnchorPane>
    </children>
