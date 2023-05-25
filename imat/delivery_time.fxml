@@ -8,7 +8,7 @@
    <children>
     <AnchorPane layoutX="516.0" layoutY="354.0" minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="791.0" layoutY="181.0" mnemonicParsing="false" styleClass="day-choosing-button" text="Övermorgon" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="167.0" />
+            <Button layoutX="791.0" layoutY="181.0" mnemonicParsing="false" styleClass="day-choosing-button" text="I övermorgon" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="167.0" />
             <Button layoutX="522.0" layoutY="167.0" mnemonicParsing="false" styleClass="day-choosing-button" text="Imorgon" AnchorPane.leftAnchor="522.0" AnchorPane.topAnchor="167.0" />
             <Label alignment="CENTER" layoutX="579.0" layoutY="94.0" styleClass="h1" text="Dag" textAlignment="CENTER" AnchorPane.leftAnchor="579.0" AnchorPane.rightAnchor="621.0" AnchorPane.topAnchor="94.0" />
             <Label alignment="CENTER" layoutX="709.0" layoutY="314.0" styleClass="h1" text="Tid" textAlignment="CENTER" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="600.0" />
@@ -22,10 +22,10 @@
             <AnchorPane fx:id="progressBarAnchorPane" layoutX="500.0" layoutY="-86.0" prefHeight="100.0" prefWidth="600.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="15.0" />
          </children>
       </AnchorPane>
-    <AnchorPane layoutX="-11.0" layoutY="691.0" minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="1291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-11.0" AnchorPane.rightAnchor="0.0">
+    <AnchorPane layoutX="-11.0" layoutY="691.0" minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="1291.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button layoutX="1178.0" layoutY="205.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="150.0" />
-            <Button layoutX="111.0" layoutY="209.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="992.0" />
+            <Button layoutX="1099.0" layoutY="35.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0" />
+            <Button layoutX="111.0" layoutY="209.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" prefWidth="150.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" />
          </children>
       </AnchorPane>
    </children>

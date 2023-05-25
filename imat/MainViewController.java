@@ -1,15 +1,13 @@
 package imat;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -21,6 +19,8 @@ public class MainViewController implements Initializable {
 
     @FXML
     FlowPane productListFlowPane;
+    @FXML
+    TextField searchbar;
     @FXML
     AnchorPane headerAnchorPane;
     @FXML
@@ -65,7 +65,6 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         String iMatDirectory = iMatDataHandler.imatDirectory();
         initializeHashMap();
-//        HEADER.getChildren().add(headerAnchorPane);
         basketCheckoutPane.getChildren().add(varukorgUtcheckning);
         paymentPane.getChildren().add(betalning);
         deliveryTimePane.getChildren().add(deliveryTime);
@@ -75,7 +74,7 @@ public class MainViewController implements Initializable {
         checkoutViewPanes.add(deliveryTime);
         checkoutViewPanes.add(betalning);
 
-
+        searchbar.setOnKeyTyped(event -> handleKeyPress());
 
         //checkoutViewPanes.add(receiptPage);
     }
@@ -88,11 +87,27 @@ public class MainViewController implements Initializable {
         updateProductList();
     }
 
-    private void updateProductList() {
+    public void updateProductList() {
         productListFlowPane.getChildren().clear();
         for (Product product : model.getProducts())
             productListFlowPane.getChildren().add(productListItemMap.get(product.getName()));
     }
+
+    public void updateProductList(List<Product> productList) {
+        productListFlowPane.getChildren().clear();
+        for (Product product : productList)
+            productListFlowPane.getChildren().add(productListItemMap.get(product.getName()));
+    }
+
+// Methods for searchbar
+    public void handleKeyPress(){
+        String text = searchbar.getText();
+        updateProductList(getProducts(text));
+    }
+    public List<Product> getProducts(String s){
+        return  model.findProducts(s);
+    }
+
 
 
     @FXML
@@ -141,4 +156,6 @@ public class MainViewController implements Initializable {
             System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
     }
+
+
 }
