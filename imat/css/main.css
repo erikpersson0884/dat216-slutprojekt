@@ -160,7 +160,7 @@
 /* BETALNING */
 
 .betalning-icon-bakgrund{
-    -fx-background-color: #a6bce0;
+    -fx-background-color: #b5b7c7;
 }
 
 .betalning-text{
@@ -344,7 +344,7 @@
     -fx-font-style: normal;
 }
 .background {
-    -fx-background-color: #E0E0E0;
+    -fx-background-color: #ffffff;
 }
 .red_border {
     -fx-border-color: #FF0000;
