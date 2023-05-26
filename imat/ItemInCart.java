@@ -51,29 +51,47 @@ public class ItemInCart extends AnchorPane {
         QuantityLabel.setText((int)quantity + " st");
         System.out.println((int)quantity + " st");
     }
+    public void updateQuantity(int quantity){
+        QuantityLabel.setText((int)quantity + " st");
+        System.out.println((int)quantity + " st");
+    }
 
     @FXML
     public void onRemoveButtonClick(){
         model.getShoppingCart().removeItem(shoppingItem);
         updateQuantity();
+        parentController.updateShoppingCart();
     }
     @FXML
-    public void onPlusButtonClick(){
-        if (model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() == 0){
-            model.getShoppingCart().addItem(shoppingItem);
-        } else {
-            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
-        }
-        //model.getShoppingCart().addItem(shoppingItem);
-        updateQuantity();
-    }
-    @FXML
-    public void onMinusButtonClick(){
+    public void onPlusButtonClick() {
+        System.out.println("Plus");
         try {
-            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() - 1);
+            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
             updateQuantity();
         } catch (Exception e) {
-            System.out.println("Can't remove item");
+            System.out.println("Can't increse amount");
+            model.getShoppingCart().addItem(new ShoppingItem(product, 1));
         }
+        updateQuantity();
+        parentController.updateShoppingCart();
+    }
+
+
+    @FXML
+    public void onMinusButtonClick() {
+        System.out.println("Minus");
+        double startNumberOfItems = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
+        if (startNumberOfItems > 0) {
+            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(startNumberOfItems - 1);
+            if ( startNumberOfItems == 1) {
+                model.getShoppingCart().removeProduct(product);
+            }
+            try {
+                updateQuantity();
+            } catch (Exception e){
+                updateQuantity(0);
+            }
+        }
+        parentController.updateShoppingCart();
     }
 }

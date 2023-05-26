@@ -21,23 +21,31 @@ public class ProductListItem extends AnchorPane {
     private ShoppingItem shoppingItem;
     private final Model model = Model.getInstance();
 
-    @FXML Label ProductNameLabel;
-    @FXML ImageView ProductImageView;
-    @FXML Label PriceLabel;
-    @FXML Label AmountLabel;
-    @FXML Label AmountUnitLabel;
-    @FXML ImageView FavouriteImageView;
-    @FXML Label ComparisonPriceLabel;
-    @FXML ImageView AddImageView;
-    @FXML Label MinusImageView;
+    @FXML
+    Label ProductNameLabel;
+    @FXML
+    ImageView ProductImageView;
+    @FXML
+    Label PriceLabel;
+    @FXML
+    Label AmountLabel;
+    @FXML
+    Label AmountUnitLabel;
+    @FXML
+    ImageView FavouriteImageView;
+    @FXML
+    Label ComparisonPriceLabel;
+    @FXML
+    ImageView AddImageView;
+    @FXML
+    Label MinusImageView;
 
 
     Image favoriteImage = new Image(getClass().getClassLoader().getResourceAsStream("iMat/resources/favorite.png"));
     Image notFavoriteImage = new Image(getClass().getClassLoader().getResourceAsStream("iMat/resources/add-favorite.png"));
 
 
-
-    public ProductListItem(Product product, MainViewController MainViewController){
+    public ProductListItem(Product product, MainViewController MainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -53,15 +61,15 @@ public class ProductListItem extends AnchorPane {
         this.parentController = MainViewController;
 
 
-
         initializeCard();
 
     }
-    public void initializeCard(){
+
+    public void initializeCard() {
         ProductNameLabel.setText(product.getName());
         PriceLabel.setText(String.valueOf(product.getPrice()) + product.getUnit());
         ComparisonPriceLabel.setText("Jmf-pris " + calculateComparisonPrice() + "kr/kg");
-        ProductImageView.setImage(parentController.iMatDataHandler.getFXImage(product, 225,300 ));
+        ProductImageView.setImage(parentController.iMatDataHandler.getFXImage(product, 225, 300));
 
 
         if (parentController.iMatDataHandler.isFavorite(product)) {
@@ -71,8 +79,8 @@ public class ProductListItem extends AnchorPane {
         }
     }
 
-    public void changeFavouriteOnClick(){
-        if (parentController.iMatDataHandler.isFavorite(product)){
+    public void changeFavouriteOnClick() {
+        if (parentController.iMatDataHandler.isFavorite(product)) {
             System.out.println(parentController.iMatDataHandler.favorites());
             parentController.iMatDataHandler.removeFavorite(product);
             FavouriteImageView.setImage(notFavoriteImage);
@@ -87,35 +95,40 @@ public class ProductListItem extends AnchorPane {
     }
 
     private String calculateComparisonPrice() {
-        if (product.getUnit() == "kr/kg"){
+        if (product.getUnit() == "kr/kg") {
             return String.valueOf(product.getPrice());
-        } else{
+        } else {
 
-        double min = 20.0;
-        double max = 120.0;
+            double min = 20.0;
+            double max = 120.0;
 
-        // Create an instance of the Random class
-        Random random = new Random();
+            // Create an instance of the Random class
+            Random random = new Random();
 
-        // Generate a random double between min and max
-        double newRandomValue = min + (max - min) * random.nextDouble();
+            // Generate a random double between min and max
+            double newRandomValue = min + (max - min) * random.nextDouble();
 
-        DecimalFormat decimalFormat = new DecimalFormat("#.00");
-        String newRandomValueString = decimalFormat.format(newRandomValue);
+            DecimalFormat decimalFormat = new DecimalFormat("#.00");
+            String newRandomValueString = decimalFormat.format(newRandomValue);
 
-        return (newRandomValueString);
+            return (newRandomValueString);
         }
 
     }
-    public void updateQuantity(){
+
+    public void updateQuantity() {
         //var quantity = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
         var quantity = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
-        AmountLabel.setText((int)quantity + " st");
-        System.out.println((int)quantity + " st");
+        AmountLabel.setText((int) quantity + " st");
+        System.out.println((int) quantity + " st");
+    }
+    public void updateQuantity(int quantity) {
+        AmountLabel.setText((int) quantity + " st");
+        System.out.println((int) quantity + " st");
     }
 
     @FXML
-    public void onPlusButtonClick(){
+    public void onPlusButtonClick() {
         System.out.println("Plus");
         try {
             model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
@@ -123,30 +136,34 @@ public class ProductListItem extends AnchorPane {
         } catch (Exception e) {
             System.out.println("Can't increse amount");
             model.getShoppingCart().addItem(new ShoppingItem(product, 1));
-
         }
-        /*if (model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() == 0){
-            model.getShoppingCart().addItem(new ShoppingItem(product, 1));
-        } else {
-            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
-        }*/
-        //model.getShoppingCart().addItem(shoppingItem);
         updateQuantity();
+        parentController.updateShoppingCart();
     }
+
     @FXML
-    public void onMinusButtonClick(){
+    public void onMinusButtonClick() {
         System.out.println("Minus");
-        try {
-            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() - 1);
-            updateQuantity();
-        } catch (Exception e) {
-            System.out.println("Can't remove item");
+        double currentNumberOfItems = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
+        if (currentNumberOfItems > 0) {
+            model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(currentNumberOfItems - 1);
+            if ( currentNumberOfItems == 1) {
+                model.getShoppingCart().removeProduct(product);
+            }
+            try {
+//                updateQuantity();
+            } catch (Exception e){
+//                updateQuantity(0);
+            }
         }
+        parentController.updateShoppingCart();
     }
-    @FXML
-    public void onLikeButtonClick(){
-        System.out.println("Like button clicked");
-    }
+
+//    @FXML
+//    public void onLikeButtonClick(){
+//        System.out.println("Like button clicked");
+//    }
+
 
 
 }
