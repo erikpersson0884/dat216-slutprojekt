@@ -14,7 +14,7 @@
                <children>
                   <ImageView fx:id="clockImageView" fitHeight="84.0" fitWidth="82.0" layoutX="-9.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Downloads/icons8-clock-50.png" />
+                        <Image url="@resources/icons8-clock-50.png" />
                      </image>
                   </ImageView>
                </children>
@@ -35,7 +35,7 @@
       <Pane layoutX="1317.0" layoutY="21.0" prefHeight="90.0" prefWidth="90.0" styleClass="header-icon" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="1170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
          <children>
             <Pane layoutX="15.0" layoutY="12.0" prefHeight="70.0" prefWidth="70.0" styleClass="header" />
-            <ImageView fx:id="profileImageView" fitHeight="91.0" fitWidth="88.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="profileImageView" fitHeight="91.0" fitWidth="88.0" layoutY="1.0" onMousePressed="#onClickProfile" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/profile-icon.png" />
                </image>

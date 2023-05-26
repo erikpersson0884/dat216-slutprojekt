@@ -27,10 +27,7 @@ public class MainViewController implements Initializable {
     @FXML
     Label totalPrice;
     @FXML
-    AnchorPane headerAnchorPane;
-
-    @FXML
-    AnchorPane headerVarukorg;
+    AnchorPane headerPane;
 
     @FXML
     AnchorPane progressBarAnchorPane;
@@ -79,7 +76,7 @@ public class MainViewController implements Initializable {
         paymentPane.getChildren().add(betalning);
         deliveryTimePane.getChildren().add(deliveryTime);
         addressPane.getChildren().add(leveransadress);
-//        headerPane.getChildren().add(Header);
+        headerPane.getChildren().add(Header);
         //receiptPane.getChildren().add(receiptPage);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
