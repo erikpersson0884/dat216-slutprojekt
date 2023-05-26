@@ -60,7 +60,7 @@ public class MainViewController implements Initializable {
     private final DeliveryTime deliveryTime = new DeliveryTime(this);
     private final Leveransadress leveransadress = new Leveransadress(this);
     private final header Header = new header(this);
-    //private final ReceiptPage receiptPage = new ReceiptPage(this);
+    private final RecieptPage receiptPage = new RecieptPage(this);
 
     private final Model model = Model.getInstance();
     private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);
@@ -77,7 +77,7 @@ public class MainViewController implements Initializable {
         deliveryTimePane.getChildren().add(deliveryTime);
         addressPane.getChildren().add(leveransadress);
         headerPane.getChildren().add(Header);
-        //receiptPane.getChildren().add(receiptPage);
+        receiptPane.getChildren().add(receiptPage);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
         checkoutViewPanes.add(deliveryTime);
@@ -87,7 +87,7 @@ public class MainViewController implements Initializable {
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateRightSidebar();
 
-        //checkoutViewPanes.add(receiptPage);
+        checkoutViewPanes.add(receiptPage);
     }
 
     private void initializeHashMap() {
