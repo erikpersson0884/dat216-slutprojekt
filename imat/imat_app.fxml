@@ -23,118 +23,114 @@
       <AnchorPane fx:id="checkoutPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="basketCheckoutPane" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="paymentPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
-      <SplitPane fx:id="iMatAppPane" dividerPositions="0.15" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane fx:id="headerPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1280.0" />
-          <AnchorPane layoutY="100.0" minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1280.0">
-               <children>
-                  <SplitPane dividerPositions="0.2, 0.71875" prefHeight="876.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <items>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
-                           <children>
-                              <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-                              <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
-                                 <content>
-                                    <FlowPane prefHeight="508.0" prefWidth="432.0">
-                                       <children>
-                                          <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Kött &amp; Fisk">
-                                            <items>
-                                              <MenuItem mnemonicParsing="false" text="Fisk" />
-                                              <MenuItem mnemonicParsing="false" text="Kött" />
-                                            </items>
-                                          </MenuButton>
-                                          <MenuButton minHeight="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Frukt &amp; Grönt">
-                                            <items>
-                                              <MenuItem mnemonicParsing="false" text="Baljväxter" />
-                                              <MenuItem mnemonicParsing="false" text="Bär" />
-                                                <MenuItem mnemonicParsing="false" text="Citrusfrukter" />
-                                                <MenuItem mnemonicParsing="false" text="Exotiska frukter" />
-                                                <MenuItem mnemonicParsing="false" text="Grönsaksfrukter" />
-                                                <MenuItem mnemonicParsing="false" text="Kål" />
-                                                <MenuItem mnemonicParsing="false" text="Meloner" />
-                                                <MenuItem mnemonicParsing="false" text="Stenfrukter" />
-                                            </items>
-                                          </MenuButton>
-                                          <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Dryck">
-                                            <items>
-                                              <MenuItem mnemonicParsing="false" text="Kalla drycker" />
-                                              <MenuItem mnemonicParsing="false" text="Varma drycker" />
-                                            </items>
-                                          </MenuButton>
-                                          <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Skafferi">
-                                            <items>
-                                              <MenuItem mnemonicParsing="false" text="Pasta" />
-                                              <MenuItem mnemonicParsing="false" text="Ris" />
-                                                <MenuItem mnemonicParsing="false" text="Nötter" />
-                                                <MenuItem mnemonicParsing="false" text="Mjöl. socker, salt" />
-                                            </items>
-                                          </MenuButton>
-                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Sött" />
-                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Mejeriprodukter" />
-                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Kryddor" />
-                                          <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Bröd" />
-                                       </children>
-                                    </FlowPane>
-                                 </content>
-                              </ScrollPane>
-                           </children>
-                        </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <TextField fx:id="searchbar" layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" promptText="   sök i iMat" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                                 <styleClass>
-                                    <String fx:value="searchbar" />
-                                    <String fx:value="sok-text" />
-                                 </styleClass>
-                              </TextField>
-                              <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+    <AnchorPane fx:id="headerPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="1280.0" AnchorPane.bottomAnchor="620.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <SplitPane dividerPositions="0.2, 0.71875" prefHeight="876.0" prefWidth="1440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
+                     <children>
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                        <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                           <content>
+                              <FlowPane prefHeight="508.0" prefWidth="432.0">
+                                 <children>
+                                    <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Kött &amp; Fisk">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Fisk" />
+                                        <MenuItem mnemonicParsing="false" text="Kött" />
+                                      </items>
+                                    </MenuButton>
+                                    <MenuButton minHeight="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Frukt &amp; Grönt">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Baljväxter" />
+                                        <MenuItem mnemonicParsing="false" text="Bär" />
+                                          <MenuItem mnemonicParsing="false" text="Citrusfrukter" />
+                                          <MenuItem mnemonicParsing="false" text="Exotiska frukter" />
+                                          <MenuItem mnemonicParsing="false" text="Grönsaksfrukter" />
+                                          <MenuItem mnemonicParsing="false" text="Kål" />
+                                          <MenuItem mnemonicParsing="false" text="Meloner" />
+                                          <MenuItem mnemonicParsing="false" text="Stenfrukter" />
+                                      </items>
+                                    </MenuButton>
+                                    <MenuButton mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" text="Dryck">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Kalla drycker" />
+                                        <MenuItem mnemonicParsing="false" text="Varma drycker" />
+                                      </items>
+                                    </MenuButton>
+                                    <MenuButton mnemonicParsing="false" prefWidth="420.0" text="Skafferi">
+                                      <items>
+                                        <MenuItem mnemonicParsing="false" text="Pasta" />
+                                        <MenuItem mnemonicParsing="false" text="Ris" />
+                                          <MenuItem mnemonicParsing="false" text="Nötter" />
+                                          <MenuItem mnemonicParsing="false" text="Mjöl. socker, salt" />
+                                      </items>
+                                    </MenuButton>
+                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Sött" />
+                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Mejeriprodukter" />
+                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Kryddor" />
+                                    <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="420.0" styleClass="menu-button" text="Bröd" />
+                                 </children>
+                              </FlowPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="searchbar" layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" promptText="   sök i iMat" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="searchbar" />
+                              <String fx:value="sok-text" />
+                           </styleClass>
+                        </TextField>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@resources/search-icon.png" />
+                           </image>
+                        </ImageView>
+                        <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                           <content>
+                              <FlowPane fx:id="productListFlowPane" alignment="TOP_CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="504.0" prefWidth="651.0" styleClass="background" vgap="10.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="713.0" styleClass="sidebar">
+                     <children>
+                        <Label alignment="CENTER" layoutX="90.0" layoutY="14.0" styleClass="secondary-header" text="Kundvagn" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                           <graphic>
+                              <ImageView>
                                  <image>
-                                    <Image url="@resources/search-icon.png" />
+                                    <Image url="@resources/shopping-cart.png" />
                                  </image>
                               </ImageView>
-                              <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
-                                 <content>
-                                    <FlowPane fx:id="productListFlowPane" alignment="TOP_CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="504.0" prefWidth="651.0" styleClass="background" vgap="10.0" />
-                                 </content>
-                              </ScrollPane>
-                           </children>
-                        </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="713.0" styleClass="sidebar">
+                           </graphic>
+                        </Label>
+                        <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                           <content>
+                              <FlowPane fx:id="shoppingCartFlowPane" prefHeight="324.0" prefWidth="355.0" styleClass="sidebar" />
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane layoutY="431.0" prefHeight="174.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="431.0">
                            <children>
-                              <Label alignment="CENTER" layoutX="90.0" layoutY="14.0" styleClass="secondary-header" text="Kundvagn" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
-                                 <graphic>
-                                    <ImageView>
-                                       <image>
-                                          <Image url="@resources/shopping-cart.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Label>
-                              <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
-                                 <content>
-                                    <FlowPane fx:id="shoppingCartFlowPane" prefHeight="324.0" prefWidth="355.0" styleClass="sidebar" />
-                                 </content>
-                              </ScrollPane>
-                              <AnchorPane layoutY="431.0" prefHeight="174.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="431.0">
-                                 <children>
-                                    <Button fx:id="nextButtonMain" mnemonicParsing="false" onAction="#openFile2" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-                                    <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal varor:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" />
-                                    <Label layoutX="29.0" layoutY="463.0" styleClass="kundvagn-text" text="Totalt pris:" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="20.0" />
-                                    <Label fx:id="totalAmount" layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="X st" textAlignment="RIGHT" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="20.0" />
-                                    <Label fx:id="totalPrice" layoutX="297.0" layoutY="42.0" styleClass="kundvagn-text" text="X XXX,XX kR" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="20.0" />
-                                 </children>
-                              </AnchorPane>
+                              <Button fx:id="nextButtonMain" mnemonicParsing="false" onAction="#openFile2" prefHeight="61.0" prefWidth="227.0" styleClass="next-button" text="Till Kassa" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                              <Label layoutX="20.0" layoutY="13.0" styleClass="kundvagn-text" text="Antal varor:" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" />
+                              <Label layoutX="29.0" layoutY="463.0" styleClass="kundvagn-text" text="Totalt pris:" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="20.0" />
+                              <Label fx:id="totalAmount" layoutX="349.0" layoutY="18.0" styleClass="kundvagn-text" text="X st" textAlignment="RIGHT" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="20.0" />
+                              <Label fx:id="totalPrice" layoutX="297.0" layoutY="42.0" styleClass="kundvagn-text" text="X XXX,XX kR" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="20.0" />
                            </children>
                         </AnchorPane>
-                    </items>
-                  </SplitPane>
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
    </children>
    <stylesheets>
       <URL value="@css/main.css" />
