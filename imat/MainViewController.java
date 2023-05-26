@@ -1,5 +1,6 @@
 package imat;
 
+import java.io.Serializable;
 import java.net.URL;
 import java.util.*;
 
@@ -93,12 +94,6 @@ public class MainViewController implements Initializable {
         //checkoutViewPanes.add(receiptPage);
     }
 
-    private void initializeCategorys(){
-        List<ProductCategory> enumList = Arrays.asList(ProductCategory.values());
-        for (ProductCategory productCategory: enumList){
-            CategoryFlowPane.getChildren().add(productCategory);
-        }
-    }
     private void initializeHashMap() {
         for (Product product : model.getProducts()) {
             ProductListItem productListItem = new ProductListItem(product, this);
@@ -186,7 +181,72 @@ public class MainViewController implements Initializable {
         }
     }
 
-
+    public void showPod(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.POD));
+    }
+    public void showBread(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.BREAD));
+    }
+    public void showBerry(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.BERRY));
+    }
+    public void showFruit(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.FRUIT));
+    }
+    public void showCitrusFruit(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.CITRUS_FRUIT));
+    }
+    public void showExoticFruit(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.EXOTIC_FRUIT));
+    }
+    public void showHotDrinks(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.HOT_DRINKS));
+    }
+    public void showColdDrinks(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.COLD_DRINKS));
+    }
+    public void showFish(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.FISH));
+    }
+    public void showMEAT(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.MEAT));
+    }
+    public void showVegetables(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.VEGETABLE_FRUIT));
+    }
+    public void showCabbage(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.CABBAGE));
+    }
+    public void showDaires(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.DAIRIES));
+    }
+    public void showMelons(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.MELONS));
+    }
+    public void showFlourSugarSalt(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+    }
+    public void showNutsAndSeeds(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.NUTS_AND_SEEDS));
+    }
+    public void showPasta(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.PASTA));
+    }
+    public void showPotatoAndRice(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.POTATO_RICE));
+    }
+    public void showRootVegetable(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.ROOT_VEGETABLE));
+    }
+    public void showSweets(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.SWEET));
+    }
+    public void showHerbs(){
+        updateProductList(iMatDataHandler.getProducts(ProductCategory.HERB));
+    }
+    public void showAll(){
+        updateProductList();
+    }
 
 
 }
