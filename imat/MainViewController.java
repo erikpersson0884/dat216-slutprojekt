@@ -88,6 +88,7 @@ public class MainViewController implements Initializable {
         checkoutViewPanes.add(betalning);
 
         searchbar.setOnKeyTyped(event -> handleKeyPress());
+        updateRightSidebar();
 
         //checkoutViewPanes.add(receiptPage);
     }
@@ -177,6 +178,7 @@ public class MainViewController implements Initializable {
             shoppingCartFlowPane.getChildren().add(new ItemInCart(shoppingItem));
             System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
+
     }
 
 
