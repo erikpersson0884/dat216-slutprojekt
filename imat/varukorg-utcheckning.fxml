@@ -13,7 +13,7 @@
             <FlowPane fx:id="shoppingCartFlowPane" prefHeight="375.0" prefWidth="1094.0" />
          </content>
       </ScrollPane>
-      <Label layoutX="100.0" layoutY="203.0" styleClass="text-medium" text="Varukorg" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="984.0" AnchorPane.topAnchor="103.0" />
+      <Label layoutX="100.0" layoutY="203.0" prefHeight="48.0" prefWidth="143.0" styleClass="text-wiz" text="Varukorg" AnchorPane.bottomAnchor="502.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="70.0" />
       <Label layoutX="100.0" layoutY="550.0" prefHeight="70.0" prefWidth="487.0" styleClass="text-medium" text="Summa:" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="450.0" />
       <Button layoutX="50.0" layoutY="629.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="61.0" prefWidth="142.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
       <Button layoutX="1095.0" layoutY="635.0" mnemonicParsing="false" onMouseClicked="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
