@@ -13,6 +13,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
@@ -90,6 +91,13 @@ public class MainViewController implements Initializable {
         //checkoutViewPanes.add(receiptPage);
     }
 
+    private void initializeCategorys(){
+        List<ProductCategory> enumList = Arrays.asList(ProductCategory.values());
+        for (ProductCategory productCategory: enumList){
+
+        }
+
+    }
     private void initializeHashMap() {
         for (Product product : model.getProducts()) {
             ProductListItem productListItem = new ProductListItem(product, this);
@@ -175,8 +183,9 @@ public class MainViewController implements Initializable {
             shoppingCartFlowPane.getChildren().add(new ItemInCart(shoppingItem));
             System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
-
     }
+
+
 
 
 }
