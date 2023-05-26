@@ -9,6 +9,6 @@ public class CategoryListItem {
     }
 
     public void onClick(){
-        ProductCategory.g
+//        ProductCategory.
     }
 }

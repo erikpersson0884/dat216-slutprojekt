@@ -51,6 +51,8 @@ public class MainViewController implements Initializable {
     FlowPane shoppingCartFlowPane;
     @FXML
     AnchorPane addressPane;
+    @FXML
+    FlowPane CategoryFlowPane;
 
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
@@ -94,9 +96,8 @@ public class MainViewController implements Initializable {
     private void initializeCategorys(){
         List<ProductCategory> enumList = Arrays.asList(ProductCategory.values());
         for (ProductCategory productCategory: enumList){
-
+            CategoryFlowPane.getChildren().add(productCategory);
         }
-
     }
     private void initializeHashMap() {
         for (Product product : model.getProducts()) {
