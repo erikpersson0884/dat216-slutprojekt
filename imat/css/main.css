@@ -107,7 +107,7 @@
 }
 
 /* FRAME SPECIFIC CODE */
-    .time-choosing-button {
+.time-choosing-button {
     -fx-display: flex;
     -fx-flex-direction: row;
     -fx-justify-content: center;
@@ -131,7 +131,6 @@
     -fx-font-weight: 500;
     -fx-font-size: 40px;
     -fx-line-height: 72px;
-
 }
 
 
@@ -214,8 +213,16 @@
     -fx-font-style: normal;
     -fx-font-size: 30px;
     -fx-text-fill: #000000;
-    -fx-background-color: #
 }
+
+.menu-button:hover {
+    -fx-background-color: #A0A0A0;
+}
+
+.menu-button:focused {
+    -fx-background-color: #00BB00;
+}
+
 
 .kundvagn-text{
     -fx-font-style: normal;

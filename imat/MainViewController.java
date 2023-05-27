@@ -1,6 +1,5 @@
 package imat;
 
-import java.io.Serializable;
 import java.net.URL;
 import java.util.*;
 
@@ -52,8 +51,7 @@ public class MainViewController implements Initializable {
     FlowPane shoppingCartFlowPane;
     @FXML
     AnchorPane addressPane;
-    @FXML
-    FlowPane CategoryFlowPane;
+
 
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
