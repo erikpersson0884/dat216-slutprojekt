@@ -421,6 +421,10 @@
     -fx-pref-width: 180px;
     -fx-pref-height: 25px;
 }
+.kvitto-button:pressed{
+    -fx-background-color: #00FF00;
+}
+
 .kvitto-check{
     -fx-background-color: #67E083;
     -fx-background-radius: 100px;

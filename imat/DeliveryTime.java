@@ -6,9 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class DeliveryTime extends AnchorPane {
     MainViewController mainViewController;
@@ -59,24 +62,33 @@ public class DeliveryTime extends AnchorPane {
         clickedButton.setStyle("-fx-background-color: #00FF00;");
 
         if (clickedButton == todayMorning){
-            chosenDay = "Idag 11-12";
+            chosenDay = getDateWithOffset(0, clickedButton.getText());
         }
         else if (clickedButton == todayEvening){
-            chosenDay = "Idag 13-14";
+            chosenDay = getDateWithOffset(0, clickedButton.getText());
         }
         else if (clickedButton == tomorrowMorning){
-            chosenDay = "Imorgon 13-14";
+            chosenDay = getDateWithOffset(1, clickedButton.getText());
         }
         else if (clickedButton == tomorrowEvening){
-            chosenDay = "Imorgon 13-14";
+            chosenDay = getDateWithOffset(1, clickedButton.getText());
         }
         else if (clickedButton == nextDayMorning){
-            chosenDay = "Övermorgon 13-14";
+            chosenDay = getDateWithOffset(2, clickedButton.getText());
         }
         else if (clickedButton == nextDayEvening){
-            chosenDay = "Övermorgon 13-14";
+            chosenDay = getDateWithOffset(2, clickedButton.getText());
         }
-        System.out.println(chosenDay);
+        mainViewController.setDeliveryTime(chosenDay);
+
+    }
+
+    public static String getDateWithOffset(int offset, String time) {
+        LocalDate today = LocalDate.now();
+        LocalDate desiredDate = today.plusDays(offset);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMM", new Locale("sv", "SE"));
+        String date = desiredDate.format(formatter) + " " + time;
+        return date;
     }
 
     @FXML

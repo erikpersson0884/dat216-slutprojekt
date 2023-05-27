@@ -67,7 +67,7 @@ public class MainViewController implements Initializable {
     private final Model model = Model.getInstance();
     private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);
 
-
+    private String decidedDeliveryTime;
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -246,5 +246,16 @@ public class MainViewController implements Initializable {
         updateProductList();
     }
 
+    public String getDeliveryTime() {
+        return decidedDeliveryTime;
+    }
 
+    public void setDeliveryTime(String deliveryTime) {
+        this.decidedDeliveryTime = deliveryTime;
+        updateDeliveryTimeLabel();
+    }
+
+    public void updateDeliveryTimeLabel(){
+        receiptPage.deliveryTimeLabel.setText("Ordern kommer att levereras: " + decidedDeliveryTime);
+    }
 }
