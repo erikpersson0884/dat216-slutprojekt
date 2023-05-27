@@ -112,7 +112,7 @@
 }
 
 /* FRAME SPECIFIC CODE */
-    .time-choosing-button {
+.time-choosing-button {
     -fx-display: flex;
     -fx-flex-direction: row;
     -fx-justify-content: center;
@@ -136,7 +136,6 @@
     -fx-font-weight: 500;
     -fx-font-size: 40px;
     -fx-line-height: 72px;
-
 }
 
 
@@ -149,15 +148,18 @@
 
 .header-text{
     -fx-font-style: normal;
+    -fx-font-family: "Bauhaus 93";
     -fx-font-size: 90px;
-    -fx-color: #000000;
+    -fx-text-fill: #092619;
 }
 .header{
-    -fx-background-color: #623CEA;
+    //-fx-background-color: #623CEA;
+    -fx-background-color: #509452;
 }
 .header-icon {
     -fx-border-radius: 10px;
-    -fx-border-color: #623CEA;
+    //-fx-border-color: #623CEA;
+    -fx-border-color: #509452;
     -fx-border-width: 20px;
     -fx-border-style: solid;
 }
@@ -220,6 +222,15 @@
     -fx-font-size: 30px;
     -fx-text-fill: #000000;
 }
+
+.menu-button:hover {
+    -fx-background-color: #A0A0A0;
+}
+
+.menu-button:focused {
+    -fx-background-color: #00BB00;
+}
+
 
 .kundvagn-text{
     -fx-font-style: normal;
@@ -413,6 +424,10 @@
     -fx-pref-width: 180px;
     -fx-pref-height: 25px;
 }
+.kvitto-button:pressed{
+    -fx-background-color: #00FF00;
+}
+
 .kvitto-check{
     -fx-background-color: #67E083;
     -fx-background-radius: 100px;

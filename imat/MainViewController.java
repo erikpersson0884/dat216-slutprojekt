@@ -1,6 +1,5 @@
 package imat;
 
-import java.io.Serializable;
 import java.net.URL;
 import java.util.*;
 
@@ -37,6 +36,8 @@ public class MainViewController implements Initializable {
     // Imageviews
     @FXML
     ImageView profileImageView;
+    @FXML
+    ImageView favoriteImageView;
 
     // AnchorPanes to add views to
     @FXML
@@ -61,6 +62,7 @@ public class MainViewController implements Initializable {
     AnchorPane favoritePane;
 
 
+
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
     private ProgressBar progressBar = new ProgressBar(this,1);
@@ -75,7 +77,7 @@ public class MainViewController implements Initializable {
     private final Model model = Model.getInstance();
     private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);
 
-
+    private String decidedDeliveryTime;
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -88,6 +90,7 @@ public class MainViewController implements Initializable {
         addressPane.getChildren().add(leveransadress);
         headerPane.getChildren().add(Header);
         receiptPane.getChildren().add(receiptPage);
+        favoritePane.getChildren().add(favorite);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
         checkoutViewPanes.add(deliveryTime);
@@ -254,5 +257,16 @@ public class MainViewController implements Initializable {
         updateProductList();
     }
 
+    public String getDeliveryTime() {
+        return decidedDeliveryTime;
+    }
 
+    public void setDeliveryTime(String deliveryTime) {
+        this.decidedDeliveryTime = deliveryTime;
+        updateDeliveryTimeLabel();
+    }
+
+    public void updateDeliveryTimeLabel(){
+        receiptPage.deliveryTimeLabel.setText("Ordern kommer att levereras: " + decidedDeliveryTime);
+    }
 }

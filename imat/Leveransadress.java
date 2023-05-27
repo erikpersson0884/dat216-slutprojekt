@@ -2,6 +2,7 @@ package imat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -11,6 +12,9 @@ public class Leveransadress extends AnchorPane{
 
     @FXML
     AnchorPane progressBarAnchorPane;
+
+
+
     public Leveransadress(MainViewController mainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("leveransadress.fxml"));
         fxmlLoader.setRoot(this);
@@ -23,6 +27,7 @@ public class Leveransadress extends AnchorPane{
         }
         this.mainViewController = mainViewController;
         progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,2));
+
     }
     @FXML
     public void onNextButtonClick() {

@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class Favorites extends AnchorPane {
     MainViewController mainViewController;
+
     public Favorites(MainViewController mainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("favoriter.fxml"));
         fxmlLoader.setRoot(this);
@@ -21,3 +22,4 @@ public class Favorites extends AnchorPane {
         }
         this.mainViewController = mainViewController;
     }
+}
