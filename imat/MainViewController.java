@@ -46,14 +46,15 @@ public class MainViewController implements Initializable {
     @FXML
     AnchorPane basketCheckoutPane;
     @FXML
-    SplitPane iMatAppPane;
+    AnchorPane iMatAppPane;
     @FXML
     FlowPane shoppingCartFlowPane;
     @FXML
     AnchorPane addressPane;
     @FXML
     FlowPane CategoryFlowPane;
-
+    @FXML
+    AnchorPane historyPane;
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
@@ -62,6 +63,7 @@ public class MainViewController implements Initializable {
     private final Payment betalning = new Payment(this);
     private final DeliveryTime deliveryTime = new DeliveryTime(this);
     private final Leveransadress leveransadress = new Leveransadress(this);
+    private final History history = new History(this);
     private final header Header = new header(this);
     //private final ReceiptPage receiptPage = new ReceiptPage(this);
 
@@ -86,19 +88,21 @@ public class MainViewController implements Initializable {
         checkoutViewPanes.add(deliveryTime);
         checkoutViewPanes.add(leveransadress);
         checkoutViewPanes.add(betalning);
-
+        historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateRightSidebar();
+
+        historyPane.toFront();
 
         //checkoutViewPanes.add(receiptPage);
     }
 
-    private void initializeCategorys(){
+    /*private void initializeCategorys(){
         List<ProductCategory> enumList = Arrays.asList(ProductCategory.values());
         for (ProductCategory productCategory: enumList){
             CategoryFlowPane.getChildren().add(productCategory);
         }
-    }
+    }*/
     private void initializeHashMap() {
         for (Product product : model.getProducts()) {
             ProductListItem productListItem = new ProductListItem(product, this);
@@ -184,6 +188,7 @@ public class MainViewController implements Initializable {
             shoppingCartFlowPane.getChildren().add(new ItemInCart(shoppingItem));
             System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
+        //model.getShoppingCart().fireShoppingCartChanged(null, true);
     }
 
 

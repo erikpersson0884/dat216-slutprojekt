@@ -390,3 +390,17 @@
 .progress_bar .button_active:hover {
     -fx-background-color: #58bb6f;
 }
+
+.historyItemHeader{
+    -fx-background-color: #D9D9D9;
+    -fx-border-width: 2px;
+    -fx-border-color: #54426B;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+
+}
+.historyItemBody{
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 2px;
+    -fx-border-color: #54426B;
+}

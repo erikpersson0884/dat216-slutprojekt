@@ -133,12 +133,14 @@ public class ProductListItem extends AnchorPane {
         try {
             model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
             updateQuantity();
+            model.getShoppingCart().fireShoppingCartChanged(null,true);
         } catch (Exception e) {
             System.out.println("Can't increse amount");
             model.getShoppingCart().addItem(new ShoppingItem(product, 1));
         }
         updateQuantity();
-        parentController.updateShoppingCart();
+        //parentController.updateShoppingCart();
+        //model.getShoppingCart().fireShoppingCartChanged(null,true);
     }
 
     @FXML
@@ -147,16 +149,18 @@ public class ProductListItem extends AnchorPane {
         double currentNumberOfItems = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
         if (currentNumberOfItems > 0) {
             model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(currentNumberOfItems - 1);
+            model.getShoppingCart().fireShoppingCartChanged(null,true);
             if ( currentNumberOfItems == 1) {
                 model.getShoppingCart().removeProduct(product);
             }
             try {
-//                updateQuantity();
+                updateQuantity();
             } catch (Exception e){
-//                updateQuantity(0);
+                updateQuantity(0);
             }
         }
-        parentController.updateShoppingCart();
+        //parentController.updateShoppingCart();
+       // model.getShoppingCart().fireShoppingCartChanged(null,true);
     }
 
 //    @FXML
