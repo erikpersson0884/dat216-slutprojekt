@@ -21,4 +21,15 @@ public class header extends AnchorPane {
         }
         this.mainViewController = mainViewController;
     }
+
+    @FXML
+    public void onHistoryButtonClick() {
+        mainViewController.showHistoryView();
+    }
+
+    @FXML
+    public void onHomeButtonClick() {
+        mainViewController.changeToMainView();
+        System.out.println("Home button clicked");
+    }
 }

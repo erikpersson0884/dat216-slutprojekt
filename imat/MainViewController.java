@@ -261,4 +261,8 @@ public class MainViewController implements Initializable {
     public void updateDeliveryTimeLabel(){
         receiptPage.deliveryTimeLabel.setText("Ordern kommer att levereras: " + decidedDeliveryTime);
     }
+
+    public void showHistoryView(){
+        historyPane.toFront();
+    }
 }
