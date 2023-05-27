@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -33,7 +34,9 @@ public class MainViewController implements Initializable {
 
     @FXML
     AnchorPane progressBarAnchorPane;
-
+    // Imageviews
+    @FXML
+    ImageView profileImageView;
 
     // AnchorPanes to add views to
     @FXML
@@ -54,6 +57,8 @@ public class MainViewController implements Initializable {
     AnchorPane addressPane;
     @FXML
     FlowPane CategoryFlowPane;
+    @FXML
+    AnchorPane favoritePane;
 
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
@@ -65,6 +70,7 @@ public class MainViewController implements Initializable {
     private final Leveransadress leveransadress = new Leveransadress(this);
     private final header Header = new header(this);
     private final RecieptPage receiptPage = new RecieptPage(this);
+    private final Favorites favorite = new Favorites(this);
 
     private final Model model = Model.getInstance();
     private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);

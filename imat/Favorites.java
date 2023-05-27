@@ -6,13 +6,13 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class header extends AnchorPane {
+public class Favorites extends AnchorPane {
     MainViewController mainViewController;
-
-    public header(MainViewController mainViewController) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("header.fxml"));
+    public Favorites(MainViewController mainViewController) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("favoriter.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
+        System.out.println("Favoriter");
 
         try {
             fxmlLoader.load();
@@ -21,6 +21,3 @@ public class header extends AnchorPane {
         }
         this.mainViewController = mainViewController;
     }
-}
-
-
