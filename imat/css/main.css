@@ -12,6 +12,11 @@
 .small-text {
     -fx-font-size: 26px;
 }
+.text-wiz{
+    -fx-font-style: normal;
+    -fx-font-size: 35px;
+    -fx-text-fill: #000000;
+}
 .text-medium{
     -fx-font-style: normal;
     -fx-font-size: 48px;
@@ -107,7 +112,7 @@
 }
 
 /* FRAME SPECIFIC CODE */
-    .time-choosing-button {
+.time-choosing-button {
     -fx-display: flex;
     -fx-flex-direction: row;
     -fx-justify-content: center;
@@ -131,7 +136,6 @@
     -fx-font-weight: 500;
     -fx-font-size: 40px;
     -fx-line-height: 72px;
-
 }
 
 
@@ -214,8 +218,16 @@
     -fx-font-style: normal;
     -fx-font-size: 30px;
     -fx-text-fill: #000000;
-    -fx-alignment: left;
 }
+
+.menu-button:hover {
+    -fx-background-color: #A0A0A0;
+}
+
+.menu-button:focused {
+    -fx-background-color: #00BB00;
+}
+
 
 .kundvagn-text{
     -fx-font-style: normal;
@@ -389,6 +401,35 @@
 
 .progress_bar .button_active:hover {
     -fx-background-color: #58bb6f;
+}
+
+.kvitto-tack{
+    -fx-font-size: 50px;
+    -fx-text-fill: #000000;
+}
+.kvitto-text{
+    -fx-font-size: 40px;
+    -fx-text-fill: #000000;
+}
+
+.kvitto-button {
+    -fx-font-size: 20px;
+    -fx-text-fill: #000000;
+    -fx-background-color: #67E083;
+    -fx-background-radius: 100px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
+    -fx-pref-width: 180px;
+    -fx-pref-height: 25px;
+}
+.kvitto-button:pressed{
+    -fx-background-color: #00FF00;
+}
+
+.kvitto-check{
+    -fx-background-color: #67E083;
+    -fx-background-radius: 100px;
+    -fx-pref-width: 25px;
+    -fx-pref-height: 25px;
 }
 
 .historyItemHeader{

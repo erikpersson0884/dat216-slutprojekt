@@ -11,12 +11,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane minHeight="720.0" minWidth="1000.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
       <AnchorPane fx:id="historyPane" layoutX="10.0" layoutY="110.0" prefHeight="620.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="addressPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+      <AnchorPane fx:id="receiptPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="dynamicPane" prefHeight="620.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="deliveryTimePane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="checkoutPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
@@ -30,9 +32,29 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                      <children>
                         <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-                        <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="432.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                        <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="253.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                            <content>
-                              <FlowPane fx:id="CategoryFlowPane" prefHeight="505.0" prefWidth="248.0" />
+                              <VBox prefHeight="830.0" prefWidth="250.0" spacing="5.0">
+                                 <children>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#showAll" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Alla Varor" />
+                                    <Button mnemonicParsing="false" onMouseClicked="#showPod" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Baljväxter" />
+                                    <Button layoutX="10.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#showFruit" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Frukt" />
+                                    <Button layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#showCitrusFruit" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Citrusfrukter" />
+                                    <Button layoutX="10.0" layoutY="580.0" mnemonicParsing="false" onMouseClicked="#showRootVegetable" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Rotfrukter" />
+                                    <Button mnemonicParsing="false" onMouseClicked="#showBerry" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Bär" />
+                                    <Button layoutX="10.0" layoutY="694.0" mnemonicParsing="false" onMouseClicked="#showHerbs" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Örter" />
+                                    <Button layoutX="10.0" layoutY="426.0" mnemonicParsing="false" onMouseClicked="#showFlourSugarSalt" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Skafferi" />
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#showBread" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Bröd" />
+                                    <Button layoutX="10.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#showDaires" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Mjökprodukter" />
+                                    <Button mnemonicParsing="false" onMouseClicked="#showMEAT" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Kött" />
+                                    <Button layoutX="10.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#showFish" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Fisk" />
+                                    <Button layoutX="10.0" layoutY="523.0" mnemonicParsing="false" onMouseClicked="#showNutsAndSeeds" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Nötter &amp; Frön" />
+                                    <Button mnemonicParsing="false" onMouseClicked="#showHotDrinks" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Varm Dryck" />
+                                    <Button layoutX="10.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#showColdDrinks" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Kall Dryck" />
+                                    <Button layoutX="10.0" layoutY="637.0" mnemonicParsing="false" onMouseClicked="#showSweets" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Godis" />
+                                    <Button layoutX="10.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#showCabbage" prefHeight="52.0" prefWidth="250.0" styleClass="menu-button" text="Kål" />
+                                 </children>
+                              </VBox>
                            </content>
                         </ScrollPane>
                      </children>
