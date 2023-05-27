@@ -25,6 +25,15 @@ public class header extends AnchorPane {
 
     public void onFavoriteClicked(){
         mainViewController.favoritePane.toFront();
+    @FXML
+    public void onHistoryButtonClick() {
+        mainViewController.showHistoryView();
+    }
+
+    @FXML
+    public void onHomeButtonClick() {
+        mainViewController.changeToMainView();
+        System.out.println("Home button clicked");
     }
 }
 

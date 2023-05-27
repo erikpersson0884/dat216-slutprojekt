@@ -46,6 +46,8 @@ public class VarukorgUtcheckning extends AnchorPane {
             shoppingCartFlowPane.getChildren().add(new ItemInCart(shoppingItem));
             System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
+        //mainViewController.updateShoppingCart();
+        //model.getShoppingCart().fireShoppingCartChanged(null,true);
     }
     @FXML
     public void onNextButtonClick() {

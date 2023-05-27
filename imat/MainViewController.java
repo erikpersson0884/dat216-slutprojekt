@@ -51,7 +51,7 @@ public class MainViewController implements Initializable {
     @FXML
     AnchorPane basketCheckoutPane;
     @FXML
-    SplitPane iMatAppPane;
+    AnchorPane iMatAppPane;
     @FXML
     FlowPane shoppingCartFlowPane;
     @FXML
@@ -62,6 +62,7 @@ public class MainViewController implements Initializable {
     AnchorPane favoritePane;
 
 
+    AnchorPane historyPane;
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
@@ -70,6 +71,7 @@ public class MainViewController implements Initializable {
     private final Payment betalning = new Payment(this);
     private final DeliveryTime deliveryTime = new DeliveryTime(this);
     private final Leveransadress leveransadress = new Leveransadress(this);
+    private final History history = new History(this);
     private final header Header = new header(this);
     private final RecieptPage receiptPage = new RecieptPage(this);
     private final Favorites favorite = new Favorites(this);
@@ -96,7 +98,7 @@ public class MainViewController implements Initializable {
         checkoutViewPanes.add(deliveryTime);
         checkoutViewPanes.add(leveransadress);
         checkoutViewPanes.add(betalning);
-
+        historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateRightSidebar();
 
@@ -268,5 +270,9 @@ public class MainViewController implements Initializable {
 
     public void updateDeliveryTimeLabel(){
         receiptPage.deliveryTimeLabel.setText("Ordern kommer att levereras: " + decidedDeliveryTime);
+    }
+
+    public void showHistoryView(){
+        historyPane.toFront();
     }
 }

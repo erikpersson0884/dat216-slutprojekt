@@ -60,7 +60,8 @@ public class ItemInCart extends AnchorPane {
     public void onRemoveButtonClick(){
         model.getShoppingCart().removeItem(shoppingItem);
         updateQuantity();
-        parentController.updateShoppingCart();
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        //parentController.updateShoppingCart();
     }
     @FXML
     public void onPlusButtonClick() {
@@ -73,7 +74,10 @@ public class ItemInCart extends AnchorPane {
             model.getShoppingCart().addItem(new ShoppingItem(product, 1));
         }
         updateQuantity();
-        parentController.updateShoppingCart();
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        //parentController.updateShoppingCart();
+        //model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+
     }
 
 
@@ -92,6 +96,7 @@ public class ItemInCart extends AnchorPane {
                 updateQuantity(0);
             }
         }
-        parentController.updateShoppingCart();
+        //parentController.updateShoppingCart();
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<fx:root prefHeight="500.0" prefWidth="1100.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="openAnchorPane" prefHeight="400.0" prefWidth="1100.0" styleClass="historyItemBody" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <FlowPane fx:id="historyItemFlowPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <ImageView fitHeight="385.0" fitWidth="1074.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/american-express.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onOpenButtonClick" prefHeight="100.0" prefWidth="1100.0" styleClass="historyItemHeader" stylesheets="@css/main.css" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="dateLabel" layoutX="58.0" layoutY="17.0" styleClass="text-medium" text="Label" />
+            <Label fx:id="priceLabel" layoutX="325.0" layoutY="29.0" styleClass="small-text" text="Label" />
+            <Label fx:id="quantityLabel" layoutX="493.0" layoutY="31.0" styleClass="small-text" text="Label" />
+            <ImageView fx:id="openArrowImageView" fitHeight="80.0" fitWidth="80.0" layoutX="939.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+               <image>
+                  <Image url="@resources/arrow_open.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeArrowImageView" fitHeight="80.0" fitWidth="80.0" layoutX="1009.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+               <image>
+                  <Image url="@resources/arrow_closed.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

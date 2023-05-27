@@ -13,7 +13,7 @@
          <children>
             <Pane layoutX="13.0" layoutY="12.0" prefHeight="70.0" prefWidth="70.0" styleClass="header">
                <children>
-                  <ImageView fx:id="clockImageView" fitHeight="84.0" fitWidth="82.0" layoutX="-9.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="clockImageView" fitHeight="84.0" fitWidth="82.0" layoutX="-9.0" layoutY="-7.0" onMouseClicked="#onHistoryButtonClick" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/icons8-clock-50.png" />
                      </image>
@@ -22,7 +22,7 @@
             </Pane>
          </children>
       </Pane>
-      <Label layoutX="38.0" layoutY="-12.0" prefHeight="48.0" prefWidth="216.0" styleClass="header-text" text="iMat" AnchorPane.bottomAnchor="-19.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="1026.0" AnchorPane.topAnchor="-12.0">
+      <Label layoutX="38.0" layoutY="-12.0" onMouseClicked="#onHomeButtonClick" prefHeight="48.0" prefWidth="216.0" styleClass="header-text" text="iMat" AnchorPane.bottomAnchor="-19.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="1026.0" AnchorPane.topAnchor="-12.0">
          <font>
             <Font name="Bauhaus 93" size="12.0" />
          </font></Label>
