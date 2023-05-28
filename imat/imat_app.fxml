@@ -33,7 +33,7 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="sidebar">
                      <children>
                         <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" styleClass="secondary-header" text="Kategorier" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
-                        <ScrollPane layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="253.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="-5.0" layoutY="105.0" prefHeight="512.0" prefWidth="253.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                            <content>
                               <VBox prefHeight="830.0" prefWidth="250.0" spacing="5.0">
                                  <children>
@@ -76,7 +76,7 @@
                               <Image url="@resources/search-icon.png" />
                            </image>
                         </ImageView>
-                        <ScrollPane layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="83.0" layoutY="105.0" prefHeight="769.0" prefWidth="555.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                            <content>
                               <FlowPane fx:id="productListFlowPane" alignment="TOP_CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="504.0" prefWidth="651.0" styleClass="background" vgap="10.0" />
                            </content>
@@ -94,9 +94,9 @@
                               </ImageView>
                            </graphic>
                         </Label>
-                        <ScrollPane layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+                        <ScrollPane hbarPolicy="NEVER" layoutX="54.0" layoutY="105.0" prefHeight="512.0" prefWidth="444.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
                            <content>
-                              <FlowPane fx:id="shoppingCartFlowPane" prefHeight="324.0" prefWidth="355.0" styleClass="sidebar" />
+                              <FlowPane fx:id="shoppingCartFlowPane" prefHeight="350.0" prefWidth="355.0" styleClass="sidebar" />
                            </content>
                         </ScrollPane>
                         <AnchorPane layoutY="431.0" prefHeight="174.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="431.0">

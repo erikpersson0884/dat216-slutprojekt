@@ -47,6 +47,9 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
     -fx-pref-width: 150px;
 }
+.next-button:hover{
+    -fx-background-color: #47ad4e;
+}
 
 .previous-button {
     -fx-font-size: 35px;
@@ -59,6 +62,9 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 2, 0, 0);
     -fx-text-fill: #000000;
     -fx-pref-width: 150px;
+}
+.previous-button:hover{
+    -fx-background-color: #A0A0A0;
 }
 
 .slutfor-button{
@@ -162,7 +168,9 @@
     -fx-background-color: #ECE6F0;
     -fx-background-radius: 28px;
 }
-
+.searchbar:hover {
+    -fx-background-color: #dcd6e0;
+}
 
 .sidebar {
     -fx-background-color: #DAEAD7;
@@ -217,9 +225,12 @@
 }
 
 .change-area-button {
-    -fx-background-radius: 100px;
-    -fx-border-radius: 100px;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
     -fx-background-color: transparent;
+}
+.change-area-button:hover {
+    -fx-background-color: #ECE6F0;
 }
 
 .product-Label {
@@ -228,6 +239,11 @@
 
 .product-header {
     -fx-font-size: 26;
+}
+.item_button:hover {
+    -fx-background-color: #ECE6F0;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
 }
 
 .heart-icon {
