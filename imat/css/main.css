@@ -145,6 +145,11 @@
     -fx-border-style: solid;
 }
 
+.header-icon:pressed{
+    -fx-background-color: #AAFFAA;
+    -fx-border-color: #AAFFAA;
+}
+
 /* BETALNING */
 
 .betalning-icon-bakgrund{
@@ -247,6 +252,10 @@
 }
 .change-area-button:hover {
     -fx-background-color: #ECE6F0;
+}
+
+.change-area-button:pressed {
+    -fx-background-color: #00AA00;
 }
 
 .product-Label {
@@ -441,4 +450,10 @@
     -fx-border-width: 2px;
     -fx-border-color: #54426B;
 }
-
+.historyListItem {
+    -fx-background-color: #A0A0A0;
+    -fx-background-radius: 5px;
+    -fx-border-color: #54426B;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}

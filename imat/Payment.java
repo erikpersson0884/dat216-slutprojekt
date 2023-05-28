@@ -100,5 +100,6 @@ public class Payment extends AnchorPane {
 
     private void placeOrder(){
         iMatDataHandler.placeOrder();
+        mainViewController.updateHistory();
     }
 }
