@@ -8,6 +8,8 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
 
 public class History extends AnchorPane {
     private MainViewController mainViewController;
@@ -33,7 +35,9 @@ public class History extends AnchorPane {
     }
     public void updateOrders() {
         historyFlowPane.getChildren().clear();
-        for (Order order : iMatDataHandler.getOrders()) {
+        var orders  = iMatDataHandler.getOrders();
+        Collections.reverse(orders);
+        for (Order order : orders) {
             historyFlowPane.getChildren().add(new HistoryItem(mainViewController, order));
         }
     }
