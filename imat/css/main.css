@@ -95,6 +95,9 @@
     -fx-font-style: normal;
     -fx-font-size: 40px;
 }
+.time-choosing-button: hover{
+    -fx-background-color: #67E083;
+}
 
 /* HEADER */
 
@@ -124,6 +127,9 @@
 
 .betalning-icon-bakgrund{
     -fx-background-color: #b5b7c7;
+}
+.betalning-icon-bakgrund: hover{
+    -fx-background-color: #ffffff;
 }
 
 .betalning-text{
@@ -405,3 +411,4 @@
     -fx-border-width: 2px;
     -fx-border-color: #54426B;
 }
+

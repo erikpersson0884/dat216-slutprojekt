@@ -36,7 +36,7 @@
             <Label layoutX="844.0" layoutY="306.0" styleClass="betalning-text" text="/" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="294.0" />
             <Pane prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="910.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="masterCard" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/mastercard-logo.png" />
                      </image>
@@ -45,7 +45,7 @@
             </Pane>
             <Pane layoutX="196.0" layoutY="26.0" prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="690.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="visa" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/visa-logo.png" />
                      </image>
@@ -54,7 +54,7 @@
             </Pane>
             <Pane layoutX="519.0" layoutY="26.0" prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="470.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="americanExpress" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/american-express.png" />
                      </image>
@@ -63,14 +63,14 @@
             </Pane>
             <Pane layoutX="651.0" layoutY="45.0" prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="690.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="20.0">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="klarna" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/klarna-logo.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Pane layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="910.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+            <Pane fx:id="paypal" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="910.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
                <children>
                   <ImageView fitHeight="110.0" fitWidth="100.0" layoutX="50.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>

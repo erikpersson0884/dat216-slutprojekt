@@ -59,7 +59,7 @@ public class DeliveryTime extends AnchorPane {
 
 
         clickedButton = (Button) event.getSource();
-        clickedButton.setStyle("-fx-background-color: #00FF00;");
+        clickedButton.setStyle("-fx-background-color: #67E083;");
 
         if (clickedButton == todayMorning){
             chosenDay = getDateWithOffset(0, clickedButton.getText());
