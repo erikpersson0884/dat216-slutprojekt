@@ -86,6 +86,12 @@ public class Payment extends AnchorPane {
         iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(ValidYearTextField.getText()));
         iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(VerificationCodeTextField.getText()));
         displaySavedInfoLabel(5);
+        try {
+            mainViewController.updatePayment();
+
+        } catch (Exception e) {
+            System.out.println("No saved information updated");
+        }
     }
 
     public void setSavedInformation(){
@@ -94,6 +100,12 @@ public class Payment extends AnchorPane {
         ValidMonthTextField.setText(String.valueOf(iMatDataHandler.getCreditCard().getValidMonth()));
         ValidYearTextField.setText(String.valueOf(iMatDataHandler.getCreditCard().getValidYear()));
         VerificationCodeTextField.setText(String.valueOf(iMatDataHandler.getCreditCard().getVerificationCode()));
+        try {
+            mainViewController.updatePayment();
+
+        } catch (Exception e) {
+            System.out.println("No saved information updated");
+        }
     }
 
     private void displaySavedInfoLabel(int seconds) {
@@ -118,5 +130,12 @@ public class Payment extends AnchorPane {
     private void placeOrder(){
         iMatDataHandler.placeOrder();
         mainViewController.updateHistory();
+    }
+    public void updatePayment() {
+        cardNumberTextField.setText(iMatDataHandler.getCreditCard().getCardNumber());
+        ValidMonthTextField.setText(String.valueOf(iMatDataHandler.getCreditCard().getValidMonth()));
+        ValidYearTextField.setText(String.valueOf(iMatDataHandler.getCreditCard().getValidYear()));
+        VerificationCodeTextField.setText(String.valueOf(iMatDataHandler.getCreditCard().getVerificationCode()));
+        NameTextField.setText(iMatDataHandler.getCreditCard().getHoldersName());
     }
 }
