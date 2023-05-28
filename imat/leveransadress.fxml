@@ -18,7 +18,7 @@
       <Label layoutX="260.0" layoutY="425.0" prefHeight="70.0" prefWidth="243.0" styleClass="text-medium" text="Postadress:" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="777.0" AnchorPane.topAnchor="325.0" />
       <Label layoutX="252.0" layoutY="314.0" styleClass="text-medium" text="Gatuadress:" AnchorPane.bottomAnchor="336.0" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="781.0" AnchorPane.topAnchor="214.0" />
       <Button layoutX="50.0" layoutY="629.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
-      <TextField fx:id="streesAdressTextField" layoutX="542.0" layoutY="314.0" prefWidth="783.0" promptText="Gamlabergsgatan 25" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="214.0">
+      <TextField fx:id="streetAdressTextField" layoutX="542.0" layoutY="314.0" prefWidth="783.0" promptText="Gamlabergsgatan 25" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="214.0">
          <styleClass>
             <String fx:value="leveransadress-textbox" />
             <String fx:value="textfield" />

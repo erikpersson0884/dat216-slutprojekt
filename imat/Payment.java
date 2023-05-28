@@ -86,6 +86,12 @@ public class Payment extends AnchorPane {
         iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(ValidYearTextField.getText()));
         iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(VerificationCodeTextField.getText()));
         displaySavedInfoLabel(5);
+        try {
+            mainViewController.updatePayment();
+
+        } catch (Exception e) {
+            System.out.println("No saved information updated");
+        }
     }
 
     public void setSavedInformation(){

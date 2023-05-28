@@ -44,6 +44,7 @@ public class Profile extends AnchorPane {
         }
         this.mainViewController = mainViewController;
         this.creditCard = iMatDataHandler.getCreditCard();
+        updatePayment();
     }
     public void updatePayment() {
         cardNumberTextField.setText(creditCard.getCardNumber());
