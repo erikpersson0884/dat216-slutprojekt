@@ -49,6 +49,7 @@ public class DeliveryTime extends AnchorPane {
         }
         this.mainViewController = mainViewController;
         progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,1));
+        noTimeChosenLabel.setVisible(false); // Make the label visible
     }
 
 
@@ -63,7 +64,7 @@ public class DeliveryTime extends AnchorPane {
 
 
         clickedButton = (Button) event.getSource();
-        clickedButton.setStyle("-fx-background-color: #67E083;");
+        clickedButton.setStyle("-fx-background-color: #8fce00;");
 
         if (clickedButton == todayMorning){
             chosenDay = getDateWithOffset(0, clickedButton.getText());
@@ -112,7 +113,6 @@ public class DeliveryTime extends AnchorPane {
 
     @FXML
     public void onNextButtonClick() {
-        System.out.println("Next");
         if (clickedButton != null) {
             mainViewController.changeCheckoutView(2);
         } else {
@@ -126,7 +126,6 @@ public class DeliveryTime extends AnchorPane {
 
     @FXML
     public void onBackButtonClick(){
-        System.out.println("Back");
         mainViewController.changeCheckoutView(0);
     }
 }

@@ -29,5 +29,11 @@
       <Button fx:id="saveInformationButton" layoutX="956.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#saveInformationOnClick" prefHeight="50.0" prefWidth="50.0" styleClass="saved-information-button" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="430.0" />
       <Label layoutX="572.0" layoutY="432.0" styleClass="text-wiz" text="Spara mina uppgifter:" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="430.0" />
       <Label fx:id="savedInfoLabel" layoutX="1035.0" layoutY="432.0" prefHeight="61.0" prefWidth="242.0" styleClass="saved-information-text" text="Din information har sparats" AnchorPane.rightAnchor="6.0" />
+      <Label fx:id="noAdressChosenLabel" layoutX="490.0" layoutY="505.0" text="Ingen adress vald">
+         <styleClass>
+            <String fx:value="text-medium" />
+            <String fx:value="noChosenTimeLabel" />
+         </styleClass>
+      </Label>
    </children>
 </fx:root>
