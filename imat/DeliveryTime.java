@@ -3,6 +3,7 @@ package imat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -30,6 +31,9 @@ public class DeliveryTime extends AnchorPane {
     Button nextDayMorning;
     @FXML
     Button nextDayEvening;
+    @FXML Button nextButton;
+    @FXML
+    Label noTimeChosenLabel;
 
     Button clickedButton;
 
@@ -91,11 +95,35 @@ public class DeliveryTime extends AnchorPane {
         return date;
     }
 
+    private void displayLabel(int seconds, Label label) {
+        label.setVisible(true); // Make the label visible
+
+        new Thread(() -> {
+            try {
+                Thread.sleep(seconds * 1000); // Sleep for the specified duration in milliseconds
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Run on the JavaFX Application Thread to modify the UI
+            javafx.application.Platform.runLater(() -> label.setVisible(false));
+        }).start();
+    }
+
     @FXML
     public void onNextButtonClick() {
         System.out.println("Next");
-        mainViewController.changeCheckoutView(2);
+        if (clickedButton != null) {
+            mainViewController.changeCheckoutView(2);
+        } else {
+            displayLabel(4, noTimeChosenLabel);
+            System.out.println("No time chosen");
+
+        }
     }
+
+
+
     @FXML
     public void onBackButtonClick(){
         System.out.println("Back");

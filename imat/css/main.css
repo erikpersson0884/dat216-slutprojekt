@@ -114,6 +114,11 @@
     -fx-background-color: #67E083;
 }
 
+.noChosenTimeLabel {
+    -fx-text-fill: #FF0000;
+}
+
+
 /* HEADER */
 
 .header-bakgrund{
@@ -130,7 +135,6 @@
     -fx-text-fill: #A0A0A0;
 }
 .header{
-    //-fx-background-color: #623CEA;
     -fx-background-color: #47ad4e;
 }
 .header-icon {
@@ -252,16 +256,19 @@
 }
 
 .change-area-button {
-    -fx-background-radius: 50px;
-    -fx-border-radius: 50px;
+    -fx-background-radius: 100px;
+    -fx-border-radius: 100px;
     -fx-background-color: transparent;
 }
 .change-area-button:hover {
     -fx-background-color: #ECE6F0;
 }
 
-.change-area-button:pressed {
+.plus_button:pressed {
     -fx-background-color: #00AA00;
+}
+.minus_button:pressed {
+    -fx-background-color: #AA0000;
 }
 
 .product-Label {
