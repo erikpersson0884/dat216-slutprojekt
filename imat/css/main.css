@@ -47,6 +47,9 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
     -fx-pref-width: 150px;
 }
+.next-button:hover{
+    -fx-background-color: #47ad4e;
+}
 
 .previous-button {
     -fx-font-size: 35px;
@@ -59,6 +62,9 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 6, 2, 0, 0);
     -fx-text-fill: #000000;
     -fx-pref-width: 150px;
+}
+.previous-button:hover{
+    -fx-background-color: #A0A0A0;
 }
 
 .slutfor-button{
@@ -95,6 +101,9 @@
     -fx-font-style: normal;
     -fx-font-size: 40px;
 }
+.time-choosing-button: hover{
+    -fx-background-color: #67E083;
+}
 
 /* HEADER */
 
@@ -108,6 +117,9 @@
     -fx-font-size: 90px;
     -fx-text-fill: #092619;
 }
+.header-text:hover{
+    -fx-text-fill: #A0A0A0;
+}
 .header{
     //-fx-background-color: #623CEA;
     -fx-background-color: #47ad4e;
@@ -118,12 +130,25 @@
     -fx-border-color: #47ad4e;
     -fx-border-width: 20px;
     -fx-border-style: solid;
+    -fx-background-color: #47ad4e;
+    -fx-background-radius: 20px;
+
+}
+.header-icon:hover {
+    -fx-background-color: #67E083;
+    -fx-border-color: #67E083;
+    -fx-border-radius: 10px;
+    -fx-border-width: 20px;
+    -fx-border-style: solid;
 }
 
 /* BETALNING */
 
 .betalning-icon-bakgrund{
     -fx-background-color: #b5b7c7;
+}
+.betalning-icon-bakgrund: hover{
+    -fx-background-color: #ffffff;
 }
 
 .betalning-text{
@@ -156,7 +181,9 @@
     -fx-background-color: #ECE6F0;
     -fx-background-radius: 28px;
 }
-
+.searchbar:hover {
+    -fx-background-color: #dcd6e0;
+}
 
 .sidebar {
     -fx-background-color: #DAEAD7;
@@ -211,9 +238,12 @@
 }
 
 .change-area-button {
-    -fx-background-radius: 100px;
-    -fx-border-radius: 100px;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
     -fx-background-color: transparent;
+}
+.change-area-button:hover {
+    -fx-background-color: #ECE6F0;
 }
 
 .product-Label {
@@ -222,6 +252,11 @@
 
 .product-header {
     -fx-font-size: 26;
+}
+.item_button:hover {
+    -fx-background-color: #ECE6F0;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
 }
 
 .heart-icon {
@@ -403,3 +438,4 @@
     -fx-border-width: 2px;
     -fx-border-color: #54426B;
 }
+
