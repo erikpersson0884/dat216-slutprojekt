@@ -2,17 +2,24 @@ package imat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.List;
+
 public class VarukorgUtcheckning extends AnchorPane {
     @FXML
     AnchorPane progressBarAnchorPane;
     @FXML
     FlowPane shoppingCartFlowPane;
+    @FXML
+    Label totalPriceLabel;
+
     private final Model model = Model.getInstance();
 
     private MainViewController mainViewController;
@@ -32,7 +39,6 @@ public class VarukorgUtcheckning extends AnchorPane {
     }
     @FXML
     public void onBackButtonClick(){
-        System.out.println("Back");
         mainViewController.changeToMainView();
     }
     @FXML
@@ -44,14 +50,14 @@ public class VarukorgUtcheckning extends AnchorPane {
         shoppingCartFlowPane.getChildren().clear();
         for (ShoppingItem shoppingItem : model.getShoppingCart().getItems()) {
             shoppingCartFlowPane.getChildren().add(new ItemInCart(shoppingItem));
-            System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
-        //mainViewController.updateShoppingCart();
-        //model.getShoppingCart().fireShoppingCartChanged(null,true);
     }
     @FXML
     public void onNextButtonClick() {
-        System.out.println("Next");
         mainViewController.changeCheckoutView(1);
+    }
+
+    public void updateTotalLabel(){
+        totalPriceLabel.setText("Totalt: " + mainViewController.getTotalPriceOfProducts() + " Kr");
     }
 }

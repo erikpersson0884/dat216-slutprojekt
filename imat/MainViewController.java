@@ -1,6 +1,7 @@
 package imat;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.*;
 
 import imat.Profile;
@@ -26,9 +27,9 @@ public class MainViewController implements Initializable {
     @FXML
     TextField searchbar;
     @FXML
-    Label totalAmount;
+    Label totalAmountLabel;
     @FXML
-    Label totalPrice;
+    Label totalPriceLabel;
     @FXML
     AnchorPane headerPane;
 
@@ -80,11 +81,14 @@ public class MainViewController implements Initializable {
     private final Profile profile = new Profile(this);
 
     private final Model model = Model.getInstance();
-    private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);
+    private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning, betalning);
 
     private String decidedDeliveryTime;
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+
+    private String totalNumberOfProducts;
+    private String totalPriceOfProducts;
 
     public void initialize(URL url, ResourceBundle rb) {
         String iMatDirectory = iMatDataHandler.imatDirectory();
@@ -105,7 +109,7 @@ public class MainViewController implements Initializable {
         checkoutViewPanes.add(betalning);
         historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
-        updateRightSidebar();
+        updateTotalValues();
         model.getShoppingCart().fireShoppingCartChanged(null, true);
         checkoutViewPanes.add(receiptPage);
     }
@@ -141,10 +145,37 @@ public class MainViewController implements Initializable {
 
     // Methods for right sidebar
 
-    public void updateRightSidebar(){
-        totalAmount.setText(String.valueOf(iMatDataHandler.getProducts().size()));
+    public void updateTotalLabels(){
+        totalPriceLabel.setText(getTotalPriceOfProducts());
+        totalAmountLabel.setText(totalNumberOfProducts);
+
     }
 
+    public void updateTotalValues(){
+        int totalNumberOfProducts = getNumberOfAddedItems();
+        this.totalNumberOfProducts = String.valueOf(totalNumberOfProducts);
+
+        double totalPrice = iMatDataHandler.getShoppingCart().getTotal();
+        DecimalFormat df = new DecimalFormat("#.##");
+        String roundedValue = df.format(totalPrice);
+        this.totalPriceOfProducts = roundedValue;
+    }
+
+        private int getNumberOfAddedItems(){
+        List<ShoppingItem> addedItems = iMatDataHandler.getShoppingCart().getItems();
+        int totalNumberOfItems = 0;
+        for (ShoppingItem item: addedItems){
+            totalNumberOfItems += item.getAmount();
+        }
+        return totalNumberOfItems;
+    }
+
+    public String getTotalNumberOfProducts(){
+        return this.totalNumberOfProducts;
+    }
+    public String getTotalPriceOfProducts(){
+        return this.totalPriceOfProducts;
+    }
 
 
     @FXML
@@ -193,7 +224,6 @@ public class MainViewController implements Initializable {
         shoppingCartFlowPane.getChildren().clear();
         for (ShoppingItem shoppingItem : model.getShoppingCart().getItems()) {
             shoppingCartFlowPane.getChildren().add(new ItemInCart(shoppingItem));
-            System.out.println(shoppingItem.getProduct().getName() + " added to shopping cart");
         }
     }
 

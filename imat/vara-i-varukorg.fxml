@@ -18,16 +18,24 @@
       <Label fx:id="PriceLabel" layoutX="287.0" layoutY="12.0" prefHeight="30.0" prefWidth="59.0" styleClass="vara-pris" text="pris" />
       <Pane layoutX="126.0" layoutY="56.0" prefHeight="40.0" prefWidth="171.0" styleClass="vara-change-area">
          <children>
-            <ImageView fx:id="plusImageView" fitHeight="41.0" fitWidth="38.0" layoutX="119.0" onMouseClicked="#onPlusButtonClick" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/add-icon.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="minusImageView" fitHeight="41.0" fitWidth="38.0" layoutX="14.0" layoutY="1.0" onMouseClicked="#onMinusButtonClick" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/remove-icon.png" />
-               </image>
-            </ImageView>
+            <Pane layoutX="119.0" styleClass="item_button">
+               <children>
+                  <ImageView fx:id="plusImageView" fitHeight="41.0" fitWidth="38.0" onMouseClicked="#onPlusButtonClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/add-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="1.0" styleClass="item_button">
+               <children>
+                  <ImageView fx:id="minusImageView" fitHeight="41.0" fitWidth="38.0" onMouseClicked="#onMinusButtonClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/remove-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
             <Label fx:id="QuantityLabel" alignment="CENTER" layoutX="61.0" layoutY="2.0" prefHeight="22.0" prefWidth="50.0" styleClass="vara-styck" text="2 st" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="20.0" />
@@ -35,10 +43,14 @@
             </Label>
          </children>
       </Pane>
-      <ImageView fx:id="binImageView" fitHeight="40.0" fitWidth="40.0" layoutX="309.0" layoutY="56.0" onMouseClicked="#onRemoveButtonClick" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@resources/delete-icon.png" />
-         </image>
-      </ImageView>
+      <Pane layoutX="309.0" layoutY="56.0" styleClass="item_button">
+         <children>
+            <ImageView fx:id="binImageView" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#onRemoveButtonClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/delete-icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </fx:root>

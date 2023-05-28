@@ -9,11 +9,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.io.IOException;
 
 public class Leveransadress extends AnchorPane{
     MainViewController mainViewController;
+    private final IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     @FXML
     AnchorPane progressBarAnchorPane;
@@ -54,8 +56,12 @@ public class Leveransadress extends AnchorPane{
     public void saveInformationOnClick(){
         mainViewController.iMatDataHandler.getCustomer().setAddress(streesAdressTextField.getText());
         mainViewController.iMatDataHandler.getCustomer().setPostAddress(postalNumberTextField.getText());
-        System.out.println("Saved");
         displaySavedInfoLabel(4);
+    }
+
+    public void setSavedInformation(){
+        streesAdressTextField.setText(iMatDataHandler.getCustomer().getAddress());
+        postalNumberTextField.setText(iMatDataHandler.getCustomer().getPostCode());
     }
 
     private void displaySavedInfoLabel(int seconds) {
