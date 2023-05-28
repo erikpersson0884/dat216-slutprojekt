@@ -3,6 +3,7 @@ package imat;
 import java.net.URL;
 import java.util.*;
 
+import imat.Profile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -62,6 +63,8 @@ public class MainViewController implements Initializable {
     AnchorPane favoritePane;
     @FXML
     AnchorPane historyPane;
+    @FXML
+    AnchorPane profilePane;
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
@@ -74,6 +77,7 @@ public class MainViewController implements Initializable {
     private final header Header = new header(this);
     private final RecieptPage receiptPage = new RecieptPage(this);
     private final Favorites favorite = new Favorites(this);
+    private final Profile profile = new Profile(this);
 
     private final Model model = Model.getInstance();
     private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);
@@ -93,6 +97,7 @@ public class MainViewController implements Initializable {
         headerPane.getChildren().add(Header);
         receiptPane.getChildren().add(receiptPage);
         favoritePane.getChildren().add(favorite);
+        profilePane.getChildren().add(profile);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
         checkoutViewPanes.add(deliveryTime);
@@ -281,4 +286,5 @@ public class MainViewController implements Initializable {
     public void updateFavorites(){
         favorite.loadFavorites();
     }
+
 }

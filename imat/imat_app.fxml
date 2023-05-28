@@ -18,6 +18,7 @@
    <children>
       <AnchorPane fx:id="historyPane" layoutX="10.0" layoutY="110.0" prefHeight="620.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="addressPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+      <AnchorPane fx:id="profilePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="favoritePane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="receiptPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
       <AnchorPane fx:id="dynamicPane" prefHeight="620.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
@@ -71,7 +72,7 @@
                               <String fx:value="sok-text" />
                            </styleClass>
                         </TextField>
-                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="27.0">
                            <image>
                               <Image url="@resources/search-icon.png" />
                            </image>

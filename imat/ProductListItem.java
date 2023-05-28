@@ -71,7 +71,7 @@ public class ProductListItem extends AnchorPane {
         ProductNameLabel.setText(product.getName());
         PriceLabel.setText(String.valueOf(product.getPrice()) + product.getUnit());
         ComparisonPriceLabel.setText("Jmf-pris " + calculateComparisonPrice() + "kr/kg");
-        ProductImageView.setImage(iMatDataHandler.getFXImage(product, 225, 300));
+        ProductImageView.setImage(iMatDataHandler.getFXImage(product, 225, 225));
 
 
         if (iMatDataHandler.isFavorite(product)) {
@@ -178,7 +178,4 @@ public class ProductListItem extends AnchorPane {
         }
         parentController.updateFavorites();
     }
-
-
-
 }
