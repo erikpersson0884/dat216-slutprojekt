@@ -5,6 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1280.0" styleClass="header-bakgrund" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -21,15 +22,20 @@
             </Pane>
          </children>
       </Pane>
-      <Label layoutX="38.0" layoutY="-12.0" onMouseClicked="#onHomeButtonClick" prefHeight="48.0" prefWidth="216.0" styleClass="header-text" text="iMat" AnchorPane.bottomAnchor="-19.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="1026.0" AnchorPane.topAnchor="-12.0" />
+      <Label layoutX="38.0" layoutY="-12.0" onMouseClicked="#onHomeButtonClick" prefHeight="48.0" prefWidth="216.0" styleClass="header-text" text="iMat" AnchorPane.bottomAnchor="-19.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="1026.0" AnchorPane.topAnchor="-12.0">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font></Label>
       <Pane layoutX="1196.0" layoutY="21.0" prefHeight="90.0" prefWidth="90.0" styleClass="header-icon" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="1055.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="5.0">
          <children>
-            <Pane layoutX="15.0" layoutY="14.0" prefHeight="70.0" prefWidth="70.0" styleClass="header" />
-            <ImageView fx:id="heartImageView" fitHeight="89.0" fitWidth="89.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/favorite-icon.png" />
-               </image>
-            </ImageView>
+            <Pane layoutX="15.0" layoutY="14.0" prefHeight="70.0" prefWidth="70.0" styleClass="header">
+               <children>
+                  <ImageView fx:id="favoriteImageView" fitHeight="82.0" fitWidth="82.0" layoutX="-12.0" layoutY="-6.0" onMousePressed="#onFavoriteClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/favorite-icon.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
          </children>
       </Pane>
       <Pane layoutX="1317.0" layoutY="21.0" prefHeight="90.0" prefWidth="90.0" styleClass="header-icon" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="1170.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">

@@ -31,6 +31,6 @@
          </styleClass>
       </TextField>
       <AnchorPane fx:id="progressBarAnchorPane" layoutX="330.0" layoutY="108.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="8.0" />
-      <Label layoutX="728.0" layoutY="117.0" styleClass="text-wiz" text="Leveransadress" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="70.0" />
+      <Label layoutX="728.0" layoutY="117.0" styleClass="text-wiz" text="Leveransadress" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="70.0" />
    </children>
 </fx:root>
