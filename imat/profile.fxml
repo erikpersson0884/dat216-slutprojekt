@@ -5,11 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="620.0" prefWidth="1280.0" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="620.0" prefWidth="1280.0" styleClass="background" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="695.0" layoutY="292.0" prefHeight="75.0" prefWidth="295.0" styleClass="betalning-textbox" text="ÅÅ" AnchorPane.leftAnchor="695.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="292.0" />
-      <Label layoutX="495.0" layoutY="30.0" prefHeight="81.0" prefWidth="378.0" styleClass="bigMedium-text" text="Dina uppgifter" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="460.0" AnchorPane.topAnchor="20.0" />
-      <Label layoutX="74.0" layoutY="121.0" prefHeight="53.0" prefWidth="199.0" styleClass="text-wiz" text="Kortnummer" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="961.0" AnchorPane.topAnchor="135.0" />
+      <Label layoutX="495.0" layoutY="30.0" prefHeight="81.0" prefWidth="360.0" styleClass="bigMedium-text" text="Dina uppgifter" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="460.0" AnchorPane.topAnchor="20.0" />
+      <Label layoutX="74.0" layoutY="121.0" prefHeight="53.0" prefWidth="199.0" styleClass="text-wiz" text="Kortnummer" AnchorPane.bottomAnchor="519.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="961.0" AnchorPane.topAnchor="135.0" />
       <Label layoutX="74.0" layoutY="202.0" styleClass="text-wiz" text="CVV" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="212.0" />
       <Label layoutX="74.0" layoutY="292.0" styleClass="text-wiz" text="Giltighet" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="292.0" />
       <Label layoutX="72.0" layoutY="438.0" styleClass="text-wiz" text="Gatuadress" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="438.0" />

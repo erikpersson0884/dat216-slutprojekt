@@ -8,7 +8,7 @@
 
 <fx:root prefHeight="620.0" prefWidth="1280.0" styleClass="background" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="postalNumberTextField" layoutX="542.0" layoutY="425.0" prefHeight="75.0" prefWidth="480.0" promptText="12 345" text="123 45 Din_stad" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="325.0">
+      <TextField fx:id="postalNumberTextField" layoutX="542.0" layoutY="425.0" prefHeight="75.0" prefWidth="480.0" promptText="12 345    Göteborg" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="325.0">
          <styleClass>
             <String fx:value="textfield" />
             <String fx:value="leveransadress-textbox" />
@@ -18,7 +18,7 @@
       <Label layoutX="13.0" layoutY="425.0" prefHeight="70.0" prefWidth="490.0" styleClass="text-medium" text="Stad och postnummer:" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="777.0" AnchorPane.topAnchor="325.0" />
       <Label layoutX="252.0" layoutY="314.0" styleClass="text-medium" text="Gatuadress:" AnchorPane.bottomAnchor="336.0" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="781.0" AnchorPane.topAnchor="214.0" />
       <Button layoutX="50.0" layoutY="629.0" mnemonicParsing="false" onMousePressed="#onBackButtonClick" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
-      <TextField fx:id="streesAdressTextField" layoutX="542.0" layoutY="314.0" prefWidth="783.0" promptText="Gamlabergsgatan 25" text="Gatuadress" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="214.0">
+      <TextField fx:id="streesAdressTextField" layoutX="542.0" layoutY="314.0" prefWidth="783.0" promptText="Gamlabergsgatan 25" AnchorPane.bottomAnchor="331.0" AnchorPane.leftAnchor="542.0" AnchorPane.rightAnchor="258.0" AnchorPane.topAnchor="214.0">
          <styleClass>
             <String fx:value="leveransadress-textbox" />
             <String fx:value="textfield" />

@@ -7,7 +7,7 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1280.0" styleClass="background" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label prefHeight="103.0" prefWidth="424.0" styleClass="large-text" text="Dina favoriter" AnchorPane.bottomAnchor="507.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="10.0" />
+      <Label prefHeight="103.0" prefWidth="424.0" styleClass="bigMedium-text" text="Dina favoriter" AnchorPane.bottomAnchor="507.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="470.0" AnchorPane.topAnchor="20.0" />
       <ScrollPane hbarPolicy="NEVER" prefHeight="618.0" prefWidth="1238.0" styleClass="background" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="150.0">
          <content>
             <FlowPane fx:id="favoritesFlowPane" prefHeight="618.0" prefWidth="1238.0" styleClass="background" />

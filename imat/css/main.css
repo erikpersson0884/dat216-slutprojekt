@@ -85,6 +85,9 @@
     -fx-background-radius: 100px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
 }
+.spara-button: hover{
+    -fx-background-color: #67E083;
+}
 
 .textfield {
     -fx-background-color: #D9D9D9;

@@ -36,6 +36,11 @@ public class header extends AnchorPane {
         mainViewController.changeToMainView();
         System.out.println("Home button clicked");
     }
+
+    @FXML
+    public void onProfileButtonClicked(){
+        mainViewController.profilePane.toFront();
+    }
 }
 
 
