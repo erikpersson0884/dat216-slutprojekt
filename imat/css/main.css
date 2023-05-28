@@ -117,6 +117,9 @@
     -fx-font-size: 90px;
     -fx-text-fill: #092619;
 }
+.header-text:hover{
+    -fx-text-fill: #A0A0A0;
+}
 .header{
     //-fx-background-color: #623CEA;
     -fx-background-color: #47ad4e;
@@ -125,6 +128,16 @@
     -fx-border-radius: 10px;
     //-fx-border-color: #623CEA;
     -fx-border-color: #47ad4e;
+    -fx-border-width: 20px;
+    -fx-border-style: solid;
+    -fx-background-color: #47ad4e;
+    -fx-background-radius: 20px;
+
+}
+.header-icon:hover {
+    -fx-background-color: #67E083;
+    -fx-border-color: #67E083;
+    -fx-border-radius: 10px;
     -fx-border-width: 20px;
     -fx-border-style: solid;
 }
