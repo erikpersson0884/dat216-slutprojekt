@@ -12,7 +12,9 @@ public class ShoppingCartUpdater implements ShoppingCartListener {
     public ShoppingCartUpdater(MainViewController mainViewController, VarukorgUtcheckning varukorgUtcheckning) {
         this.mainViewController = mainViewController;
         this.varukorgUtcheckning = varukorgUtcheckning;
-        shoppingCart.addShoppingCartListener(this);
+        //shoppingCart.addShoppingCartListener(this);
+        shoppingCart.addShoppingCartListener(e -> shoppingCartChanged(e));
+
     }
 
 

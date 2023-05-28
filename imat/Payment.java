@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class Payment extends AnchorPane {
     MainViewController mainViewController;
+    private final IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     @FXML
     AnchorPane progressBarAnchorPane;
 
@@ -23,8 +24,6 @@ public class Payment extends AnchorPane {
 
     @FXML
     Label savedInfoLabel;
-
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public Payment(MainViewController mainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("betalning.fxml"));
@@ -46,7 +45,9 @@ public class Payment extends AnchorPane {
     @FXML
     public void onNextButtonClick() {
         System.out.println("Next");
+        placeOrder();
         mainViewController.changeCheckoutView(4);
+
     }
     @FXML
     public void onBackButtonClick(){
@@ -88,4 +89,8 @@ public class Payment extends AnchorPane {
         }).start();
     }
 
+
+    private void placeOrder(){
+        iMatDataHandler.placeOrder();
+    }
 }

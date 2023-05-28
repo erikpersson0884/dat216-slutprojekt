@@ -6,12 +6,12 @@
 
 <fx:root fx:id="progressBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" styleClass="progress_bar" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="82.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="120.0" />
-      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="237.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="135.0" />
-      <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="399.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="127.0" />
-      <Button fx:id="button2" layoutX="199.0" layoutY="30.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" />
-      <Button fx:id="button1" layoutX="37.0" layoutY="29.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_active" />
-      <Button fx:id="button3" layoutX="365.0" layoutY="25.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" stylesheets="@css/main.css" />
-      <Button fx:id="button4" layoutX="519.0" layoutY="25.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" />
+      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="82.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="120.0" />
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="237.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="135.0" />
+      <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="399.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" styleClass="bar_inactive" width="127.0" />
+      <Button fx:id="button2" layoutX="199.0" layoutY="28.0" mnemonicParsing="false" onAction="#onButtonClick" prefWidth="0.0" styleClass="button_inactive" />
+      <Button fx:id="button1" layoutX="37.0" layoutY="28.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_active" />
+      <Button fx:id="button3" layoutX="365.0" layoutY="28.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" stylesheets="@css/main.css" />
+      <Button fx:id="button4" layoutX="519.0" layoutY="28.0" mnemonicParsing="false" onAction="#onButtonClick" styleClass="button_inactive" />
    </children>
 </fx:root>

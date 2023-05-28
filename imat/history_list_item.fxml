@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" styleClass="historyListItem" stylesheets="@css/main.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImageView" fitHeight="80.0" fitWidth="80.0" layoutX="-19.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@resources/icon_close_hover.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nameLabel" layoutX="122.0" layoutY="10.0" styleClass="small-text" text="Varunamn" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="priceLabel" layoutX="111.0" layoutY="50.0" text="999 kr" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="50.0" />
+      <Label fx:id="quantityLabel" layoutX="229.0" layoutY="50.0" text="9 st" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="50.0" />
+   </children>
+</fx:root>

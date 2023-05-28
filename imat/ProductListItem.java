@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -20,6 +21,7 @@ public class ProductListItem extends AnchorPane {
     private Product product;
     private ShoppingItem shoppingItem;
     private final Model model = Model.getInstance();
+    private final IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     @FXML
     Label ProductNameLabel;
@@ -69,10 +71,10 @@ public class ProductListItem extends AnchorPane {
         ProductNameLabel.setText(product.getName());
         PriceLabel.setText(String.valueOf(product.getPrice()) + product.getUnit());
         ComparisonPriceLabel.setText("Jmf-pris " + calculateComparisonPrice() + "kr/kg");
-        ProductImageView.setImage(parentController.iMatDataHandler.getFXImage(product, 225, 300));
+        ProductImageView.setImage(iMatDataHandler.getFXImage(product, 225, 300));
 
 
-        if (parentController.iMatDataHandler.isFavorite(product)) {
+        if (iMatDataHandler.isFavorite(product)) {
             FavouriteImageView.setImage(favoriteImage);
         } else {
             FavouriteImageView.setImage(notFavoriteImage);
@@ -80,13 +82,13 @@ public class ProductListItem extends AnchorPane {
     }
 
     public void changeFavouriteOnClick() {
-        if (parentController.iMatDataHandler.isFavorite(product)) {
-            System.out.println(parentController.iMatDataHandler.favorites());
-            parentController.iMatDataHandler.removeFavorite(product);
+        if (iMatDataHandler.isFavorite(product)) {
+            System.out.println(iMatDataHandler.favorites());
+            iMatDataHandler.removeFavorite(product);
             FavouriteImageView.setImage(notFavoriteImage);
 
         } else {
-            parentController.iMatDataHandler.addFavorite(product);
+            iMatDataHandler.addFavorite(product);
             System.out.println(product.getName() + " is not favo");
 
             FavouriteImageView.setImage(favoriteImage);
@@ -133,12 +135,14 @@ public class ProductListItem extends AnchorPane {
         try {
             model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount() + 1);
             updateQuantity();
+            model.getShoppingCart().fireShoppingCartChanged(null,true);
         } catch (Exception e) {
             System.out.println("Can't increse amount");
             model.getShoppingCart().addItem(new ShoppingItem(product, 1));
         }
         updateQuantity();
-        parentController.updateShoppingCart();
+        //parentController.updateShoppingCart();
+        //model.getShoppingCart().fireShoppingCartChanged(null,true);
     }
 
     @FXML
@@ -147,22 +151,33 @@ public class ProductListItem extends AnchorPane {
         double currentNumberOfItems = model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().getAmount();
         if (currentNumberOfItems > 0) {
             model.getShoppingCart().getItems().stream().filter(item -> item.getProduct().equals(product)).findFirst().get().setAmount(currentNumberOfItems - 1);
+            model.getShoppingCart().fireShoppingCartChanged(null,true);
             if ( currentNumberOfItems == 1) {
                 model.getShoppingCart().removeProduct(product);
             }
             try {
-//                updateQuantity();
+                updateQuantity();
             } catch (Exception e){
-//                updateQuantity(0);
+                updateQuantity(0);
             }
         }
-        parentController.updateShoppingCart();
+        //parentController.updateShoppingCart();
+       // model.getShoppingCart().fireShoppingCartChanged(null,true);
     }
 
-//    @FXML
-//    public void onLikeButtonClick(){
-//        System.out.println("Like button clicked");
-//    }
+    @FXML
+    public void onLikeButtonClick(){
+        if (iMatDataHandler.isFavorite(product)) {
+            iMatDataHandler.removeFavorite(product);
+            FavouriteImageView.setImage(notFavoriteImage);
+
+        } else {
+            iMatDataHandler.addFavorite(product);
+            FavouriteImageView.setImage(favoriteImage);
+
+        }
+        parentController.updateFavorites();
+    }
 
 
 

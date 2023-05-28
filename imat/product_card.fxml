@@ -18,7 +18,7 @@
       <Label fx:id="ProductNameLabel" layoutX="24.0" layoutY="163.0" styleClass="product-header" text="Varunamn" />
       <Label fx:id="ComparisonPriceLabel" layoutX="24.0" layoutY="226.0" styleClass="product-Label" text="XX jämf" />
       <Label fx:id="PriceLabel" layoutX="24.0" layoutY="199.0" styleClass="product-Label" text="XX kR" />
-      <Pane prefHeight="48.0" prefWidth="48.0" styleClass="heart-icon" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane onMouseClicked="#onLikeButtonClick" prefHeight="48.0" prefWidth="48.0" styleClass="heart-icon" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="FavouriteImageView" fitHeight="48.0" fitWidth="48.0">
                <image>

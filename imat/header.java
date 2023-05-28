@@ -2,6 +2,7 @@ package imat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -21,4 +22,20 @@ public class header extends AnchorPane {
         }
         this.mainViewController = mainViewController;
     }
+    @FXML
+    public void onFavoriteClicked() {
+        mainViewController.favoritePane.toFront();
+    }
+    @FXML
+    public void onHistoryButtonClick() {
+        mainViewController.showHistoryView();
+    }
+
+    @FXML
+    public void onHomeButtonClick() {
+        mainViewController.changeToMainView();
+        System.out.println("Home button clicked");
+    }
 }
+
+

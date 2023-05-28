@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -32,7 +33,11 @@ public class MainViewController implements Initializable {
 
     @FXML
     AnchorPane progressBarAnchorPane;
-
+    // Imageviews
+    @FXML
+    ImageView profileImageView;
+    @FXML
+    ImageView favoriteImageView;
 
     // AnchorPanes to add views to
     @FXML
@@ -46,13 +51,17 @@ public class MainViewController implements Initializable {
     @FXML
     AnchorPane basketCheckoutPane;
     @FXML
-    SplitPane iMatAppPane;
+    AnchorPane iMatAppPane;
     @FXML
     FlowPane shoppingCartFlowPane;
     @FXML
     AnchorPane addressPane;
-
-
+    @FXML
+    FlowPane CategoryFlowPane;
+    @FXML
+    AnchorPane favoritePane;
+    @FXML
+    AnchorPane historyPane;
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
@@ -61,8 +70,10 @@ public class MainViewController implements Initializable {
     private final Payment betalning = new Payment(this);
     private final DeliveryTime deliveryTime = new DeliveryTime(this);
     private final Leveransadress leveransadress = new Leveransadress(this);
+    private final History history = new History(this);
     private final header Header = new header(this);
     private final RecieptPage receiptPage = new RecieptPage(this);
+    private final Favorites favorite = new Favorites(this);
 
     private final Model model = Model.getInstance();
     private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning);
@@ -74,21 +85,23 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         String iMatDirectory = iMatDataHandler.imatDirectory();
         initializeHashMap();
+        //iMatDataHandler
         basketCheckoutPane.getChildren().add(varukorgUtcheckning);
         paymentPane.getChildren().add(betalning);
         deliveryTimePane.getChildren().add(deliveryTime);
         addressPane.getChildren().add(leveransadress);
         headerPane.getChildren().add(Header);
         receiptPane.getChildren().add(receiptPage);
+        favoritePane.getChildren().add(favorite);
         //productListFlowPane.getChildren().add(progressBar);
         checkoutViewPanes.add(varukorgUtcheckning);
         checkoutViewPanes.add(deliveryTime);
         checkoutViewPanes.add(leveransadress);
         checkoutViewPanes.add(betalning);
-
+        historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateRightSidebar();
-
+        model.getShoppingCart().fireShoppingCartChanged(null, true);
         checkoutViewPanes.add(receiptPage);
     }
 
@@ -257,5 +270,15 @@ public class MainViewController implements Initializable {
 
     public void updateDeliveryTimeLabel(){
         receiptPage.deliveryTimeLabel.setText("Ordern kommer att levereras: " + decidedDeliveryTime);
+    }
+
+    public void showHistoryView(){
+        historyPane.toFront();
+    }
+    public void LoadHistory(){
+
+    }
+    public void updateFavorites(){
+        favorite.loadFavorites();
     }
 }

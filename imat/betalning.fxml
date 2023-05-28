@@ -18,12 +18,14 @@
             <Label layoutX="199.0" layoutY="224.0" styleClass="betalning-text" text="Kortnummer" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="224.0" />
             <Label layoutX="199.0" layoutY="289.0" styleClass="betalning-text" text="CVV" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="289.0" />
             <Label layoutX="199.0" layoutY="344.0" prefHeight="56.0" prefWidth="260.0" styleClass="betalning-text" text="Kom ihåg mig:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="344.0" />
+
             <TextField fx:id="NameTextField" layoutX="469.0" layoutY="164.0" prefHeight="48.0" prefWidth="513.0" promptText="Förnamn  Efternamn" styleClass="betalning-textbox" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="164.0" />
             <TextField fx:id="cardNumberTextField" layoutX="469.0" layoutY="234.0" prefHeight="43.0" prefWidth="475.0" promptText="1111222233334444" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="225.0" />
             <Label layoutX="619.0" layoutY="289.0" prefHeight="50.0" prefWidth="132.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="619.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="289.0" />
             <TextField fx:id="ValidMonthTextField" layoutX="869.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="869.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="294.0" />
             <TextField fx:id="ValidYearTextField" layoutX="769.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="294.0" />
             <Label layoutX="905.0" layoutY="347.0" prefHeight="50.0" prefWidth="210.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="347.0">
+
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

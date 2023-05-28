@@ -38,6 +38,10 @@ public class iMatApp extends Application {
         stage.show();
 
     }
+    @Override
+    public void stop() throws Exception {
+        Model.getInstance().shutDown();
+    }
 
 
 
