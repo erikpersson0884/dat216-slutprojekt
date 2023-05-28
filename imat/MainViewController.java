@@ -232,7 +232,7 @@ public class MainViewController implements Initializable {
         try {
             clickedButton.setStyle("");
         } catch (Exception e){
-            System.out.println("No chosen time yet");
+
         }
 
 
