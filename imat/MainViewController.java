@@ -4,12 +4,10 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.*;
 
-import imat.Profile;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -72,7 +70,7 @@ public class MainViewController implements Initializable {
     private ArrayList<AnchorPane> checkoutViewPanes = new ArrayList<AnchorPane>();
     private ProgressBar progressBar = new ProgressBar(this,1);
     private final VarukorgUtcheckning varukorgUtcheckning = new VarukorgUtcheckning(this);
-    private final Payment betalning = new Payment(this);
+    private final Payment payment = new Payment(this);
     private final DeliveryTime deliveryTime = new DeliveryTime(this);
     private final Leveransadress leveransadress = new Leveransadress(this);
     private final History history = new History(this);
@@ -82,7 +80,7 @@ public class MainViewController implements Initializable {
     private final Profile profile = new Profile(this);
 
     private final Model model = Model.getInstance();
-    private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning, betalning);
+    private ShoppingCartUpdater shoppingCartUpdater = new ShoppingCartUpdater(this, varukorgUtcheckning, payment);
 
     private String decidedDeliveryTime;
     private Map<String, ProductListItem> productListItemMap = new HashMap<String, ProductListItem>();
@@ -98,7 +96,7 @@ public class MainViewController implements Initializable {
         initializeHashMap();
         //iMatDataHandler
         basketCheckoutPane.getChildren().add(varukorgUtcheckning);
-        paymentPane.getChildren().add(betalning);
+        paymentPane.getChildren().add(payment);
         deliveryTimePane.getChildren().add(deliveryTime);
         addressPane.getChildren().add(leveransadress);
         headerPane.getChildren().add(Header);
@@ -109,7 +107,7 @@ public class MainViewController implements Initializable {
         checkoutViewPanes.add(varukorgUtcheckning);
         checkoutViewPanes.add(deliveryTime);
         checkoutViewPanes.add(leveransadress);
-        checkoutViewPanes.add(betalning);
+        checkoutViewPanes.add(payment);
         historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateTotalValues();
@@ -354,6 +352,10 @@ public class MainViewController implements Initializable {
     }
     public void updateHistory(){
         history.updateOrders();
+    }
+    public void updatePayment(){
+        payment.updatePayment();
+        profile.updatePayment();
     }
 
 }
