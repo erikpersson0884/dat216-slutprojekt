@@ -29,6 +29,10 @@ public class Profile extends AnchorPane {
     private TextField yearTextField;
     @FXML
     private TextField nameTextField;
+    @FXML
+    private TextField addressTextField;
+    @FXML
+    private TextField postCodeTextField;
 
     public Profile(MainViewController mainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("profile.fxml"));
@@ -45,6 +49,7 @@ public class Profile extends AnchorPane {
         this.mainViewController = mainViewController;
         this.creditCard = iMatDataHandler.getCreditCard();
         updatePayment();
+        updateAddress();
     }
     public void updatePayment() {
         cardNumberTextField.setText(creditCard.getCardNumber());
@@ -52,6 +57,11 @@ public class Profile extends AnchorPane {
         monthTextField.setText(String.valueOf(creditCard.getValidMonth()));
         yearTextField.setText(String.valueOf(creditCard.getValidYear()));
         nameTextField.setText(creditCard.getHoldersName());
+    }
+
+    public void updateAddress() {
+        addressTextField.setText(iMatDataHandler.getCustomer().getAddress());
+        postCodeTextField.setText(iMatDataHandler.getCustomer().getPostCode());
     }
     @FXML
     private void saveCardInformation() {
@@ -83,7 +93,16 @@ public class Profile extends AnchorPane {
         } catch (Exception e) {
             System.out.println("Error updating payment");
         }
-
+    }
+    @FXML
+    private void saveAddress() {
+        iMatDataHandler.getCustomer().setAddress(addressTextField.getText());
+        iMatDataHandler.getCustomer().setPostCode(postCodeTextField.getText());
+        try {
+            mainViewController.updateAddress();
+        } catch (Exception e) {
+            System.out.println("Error updating payment");
+        }
     }
 }
 

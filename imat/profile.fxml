@@ -19,10 +19,9 @@
       <TextField fx:id="cvvTextField" layoutX="372.0" layoutY="239.0" prefHeight="75.0" prefWidth="311.0" promptText="123" styleClass="betalning-textbox" AnchorPane.leftAnchor="372.0" AnchorPane.topAnchor="239.0" />
       <TextField fx:id="monthTextField" layoutX="372.0" layoutY="319.0" prefHeight="75.0" prefWidth="311.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.leftAnchor="372.0" AnchorPane.topAnchor="319.0" />
       <Button layoutX="1008.0" layoutY="319.0" mnemonicParsing="false" onMouseClicked="#saveCardInformation" styleClass="spara-button" text="Spara" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="319.0" />
-      <TextField layoutX="372.0" layoutY="465.0" prefHeight="70.0" prefWidth="897.0" promptText="Gamlabergsgatan 27" styleClass="betalning-textbox" AnchorPane.leftAnchor="372.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="465.0" />
-      <TextField layoutX="693.0" layoutY="542.0" prefHeight="75.0" prefWidth="311.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.leftAnchor="693.0" AnchorPane.rightAnchor="292.0" AnchorPane.topAnchor="542.0" />
-      <TextField layoutX="372.0" layoutY="542.0" prefHeight="75.0" prefWidth="311.0" promptText="412 63" styleClass="betalning-textbox" AnchorPane.leftAnchor="372.0" AnchorPane.topAnchor="542.0" />
-      <Button layoutX="1008.0" layoutY="542.0" mnemonicParsing="false" styleClass="spara-button" text="Spara" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="542.0" />
+      <TextField fx:id="addressTextField" layoutX="372.0" layoutY="465.0" prefHeight="70.0" prefWidth="897.0" promptText="Gamlabergsgatan 27" styleClass="betalning-textbox" AnchorPane.leftAnchor="372.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="465.0" />
+      <TextField fx:id="postCodeTextField" layoutX="372.0" layoutY="542.0" prefHeight="75.0" prefWidth="311.0" promptText="412 63" styleClass="betalning-textbox" AnchorPane.leftAnchor="372.0" AnchorPane.topAnchor="542.0" />
+      <Button layoutX="1008.0" layoutY="542.0" mnemonicParsing="false" onMouseClicked="#saveAddress" styleClass="spara-button" text="Spara" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="542.0" />
       <Label fx:id="errorLabel" layoutX="683.0" layoutY="411.0" style="-fx-text-fill: red;">
          <font>
             <Font size="18.0" />

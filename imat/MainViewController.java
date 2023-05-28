@@ -357,5 +357,9 @@ public class MainViewController implements Initializable {
         payment.updatePayment();
         profile.updatePayment();
     }
+    public void updateAddress(){
+        leveransadress.updateAddress();
+        profile.updateAddress();
+    }
 
 }

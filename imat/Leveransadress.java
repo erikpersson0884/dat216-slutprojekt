@@ -43,7 +43,7 @@ public class Leveransadress extends AnchorPane{
         setSavedInformation();
         noAdressChosenLabel.setVisible(false); // Hide the label initially
         savedInfoLabel.setVisible(false); // Hide the label initially
-
+        updateAddress();
 
     }
     private void displayLabel(int seconds, Label label) {
@@ -80,8 +80,9 @@ public class Leveransadress extends AnchorPane{
 
     public void saveInformationOnClick(){
         mainViewController.iMatDataHandler.getCustomer().setAddress(streetAdressTextField.getText());
-        mainViewController.iMatDataHandler.getCustomer().setPostAddress(postalNumberTextField.getText());
+        mainViewController.iMatDataHandler.getCustomer().setPostCode(postalNumberTextField.getText());
         displaySavedInfoLabel(4);
+        mainViewController.updateAddress();
     }
 
     public void setSavedInformation(){
@@ -102,6 +103,11 @@ public class Leveransadress extends AnchorPane{
             // Run on the JavaFX Application Thread to modify the UI
             javafx.application.Platform.runLater(() -> savedInfoLabel.setVisible(false));
         }).start();
+    }
+
+    public void updateAddress(){
+        streetAdressTextField.setText(iMatDataHandler.getCustomer().getAddress());
+        postalNumberTextField.setText(iMatDataHandler.getCustomer().getPostCode());
     }
 
 }
