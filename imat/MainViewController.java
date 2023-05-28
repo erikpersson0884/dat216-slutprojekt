@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -89,6 +90,8 @@ public class MainViewController implements Initializable {
 
     private String totalNumberOfProducts;
     private String totalPriceOfProducts;
+
+    public Button clickedButton;
 
     public void initialize(URL url, ResourceBundle rb) {
         String iMatDirectory = iMatDataHandler.imatDirectory();
@@ -227,70 +230,103 @@ public class MainViewController implements Initializable {
         }
     }
 
-    public void showPod(){
+    public void onCategoryButtonClicked(MouseEvent event){
+        try {
+            clickedButton.setStyle("");
+        } catch (Exception e){
+            System.out.println("No chosen time yet");
+        }
+
+
+        clickedButton = (Button) event.getSource();
+        clickedButton.setStyle("-fx-background-color: #67E083;");
+    }
+    public void showPod(MouseEvent event) {
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.POD));
     }
-    public void showBread(){
+    public void showBread(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.BREAD));
     }
-    public void showBerry(){
+    public void showBerry(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.BERRY));
     }
-    public void showFruit(){
+    public void showFruit(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.FRUIT));
     }
-    public void showCitrusFruit(){
+    public void showCitrusFruit(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.CITRUS_FRUIT));
     }
-    public void showExoticFruit(){
+    public void showExoticFruit(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.EXOTIC_FRUIT));
     }
-    public void showHotDrinks(){
+    public void showHotDrinks(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.HOT_DRINKS));
     }
-    public void showColdDrinks(){
+    public void showColdDrinks(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.COLD_DRINKS));
     }
-    public void showFish(){
+    public void showFish(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.FISH));
     }
-    public void showMEAT(){
+    public void showMEAT(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.MEAT));
     }
-    public void showVegetables(){
+    public void showVegetables(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.VEGETABLE_FRUIT));
     }
-    public void showCabbage(){
+    public void showCabbage(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.CABBAGE));
     }
-    public void showDaires(){
+    public void showDaires(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.DAIRIES));
     }
-    public void showMelons(){
+    @FXML public void showMelons(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.MELONS));
     }
-    public void showFlourSugarSalt(){
+    @FXML public void showFlourSugarSalt(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.FLOUR_SUGAR_SALT));
     }
-    public void showNutsAndSeeds(){
+    @FXML public void showNutsAndSeeds(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.NUTS_AND_SEEDS));
     }
-    public void showPasta(){
+    @FXML public void showPasta(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.PASTA));
     }
-    public void showPotatoAndRice(){
+    public void showPotatoAndRice(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.POTATO_RICE));
     }
-    public void showRootVegetable(){
+    public void showRootVegetable(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.ROOT_VEGETABLE));
     }
-    public void showSweets(){
+    public void showSweets(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.SWEET));
     }
-    public void showHerbs(){
+    public void showHerbs(MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList(iMatDataHandler.getProducts(ProductCategory.HERB));
     }
-    public void showAll(){
+    public void showAll(javafx.scene.input.MouseEvent event){
+        onCategoryButtonClicked(event);
         updateProductList();
     }
 
