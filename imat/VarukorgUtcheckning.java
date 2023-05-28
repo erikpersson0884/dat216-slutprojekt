@@ -58,6 +58,6 @@ public class VarukorgUtcheckning extends AnchorPane {
     }
 
     public void updateTotalLabel(){
-        totalPriceLabel.setText("Totalt: " + mainViewController.getTotalPriceOfProducts() + " Kr");
+        totalPriceLabel.setText(mainViewController.getTotalPriceOfProducts() + " Kr");
     }
 }
