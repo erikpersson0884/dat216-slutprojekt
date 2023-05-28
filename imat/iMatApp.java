@@ -40,16 +40,7 @@ public class iMatApp extends Application {
     }
 
 
-    //===============================================
 
-
-
-
-
-
-
-
-// ===========================================
 
     /**
      * @param args the command line arguments
