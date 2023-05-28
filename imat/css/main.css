@@ -380,8 +380,7 @@
     -fx-pref-height: 25px;
 }
 .kvitto-button:pressed{
-    //-fx-background-color: #00FF00;
-    -fx-background-color: #67E083;
+    -fx-background-color: #FFFFFF;
 }
 
 .kvitto-check{

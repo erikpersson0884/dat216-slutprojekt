@@ -24,7 +24,7 @@
             <Label layoutX="619.0" layoutY="289.0" prefHeight="50.0" prefWidth="132.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="619.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="289.0" />
             <TextField fx:id="ValidMonthTextField" layoutX="869.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="869.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="294.0" />
             <TextField fx:id="ValidYearTextField" layoutX="769.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="294.0" />
-            <Label layoutX="905.0" layoutY="347.0" prefHeight="50.0" prefWidth="210.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="347.0">
+            <Label fx:id="totalPriceLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="905.0" layoutY="347.0" prefHeight="50.0" prefWidth="285.0" styleClass="betalning-text" text=" Total:  XXX kr" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="347.0">
 
                <font>
                   <Font name="System Bold" size="12.0" />

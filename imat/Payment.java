@@ -25,6 +25,8 @@ public class Payment extends AnchorPane {
     @FXML
     Label savedInfoLabel;
 
+    @FXML Label totalPriceLabel;
+
     public Payment(MainViewController mainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("betalning.fxml"));
         fxmlLoader.setRoot(this);
@@ -38,8 +40,8 @@ public class Payment extends AnchorPane {
         }
         this.mainViewController = mainViewController;
         progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,3));
+        savedInfoLabel.setVisible(false); // Hide the label initially
         setSavedInformation();
-        System.out.println(iMatDataHandler.getCreditCard().getHoldersName());
 
     }
     @FXML
@@ -61,9 +63,7 @@ public class Payment extends AnchorPane {
         iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(ValidMonthTextField.getText()));
         iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(ValidYearTextField.getText()));
         iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(VerificationCodeTextField.getText()));
-//        displaySavedInfoLabel(5);
-        System.out.println(NameTextField.getText());
-        //iMatDataHandler.getCreditCard().
+        displaySavedInfoLabel(5);
     }
 
     public void setSavedInformation(){
@@ -89,6 +89,9 @@ public class Payment extends AnchorPane {
         }).start();
     }
 
+    public void updateTotalLabel(){
+        totalPriceLabel.setText("Totalt: " + mainViewController.getTotalPriceOfProducts() + " Kr");
+    }
 
     private void placeOrder(){
         iMatDataHandler.placeOrder();

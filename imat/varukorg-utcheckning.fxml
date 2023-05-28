@@ -18,5 +18,6 @@
       <Button layoutX="50.0" layoutY="629.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="61.0" prefWidth="142.0" styleClass="previous-button" text="Bakåt" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" />
       <Button layoutX="1095.0" layoutY="635.0" mnemonicParsing="false" onMouseClicked="#onNextButtonClick" styleClass="next-button" text="Nästa" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />
       <AnchorPane fx:id="progressBarAnchorPane" layoutX="330.0" layoutY="108.0" prefHeight="100.0" prefWidth="600.0" AnchorPane.bottomAnchor="512.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="8.0" />
+      <Label fx:id="totalPriceLabel" layoutX="280.0" layoutY="450.0" styleClass="text-medium" text="XXX Kr" />
    </children>
 </fx:root>
