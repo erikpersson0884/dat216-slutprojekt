@@ -101,7 +101,7 @@ public class MainViewController implements Initializable {
         historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateRightSidebar();
-
+        updateShoppingCart();
         checkoutViewPanes.add(receiptPage);
     }
 
