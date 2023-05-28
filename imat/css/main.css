@@ -80,8 +80,6 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
 }
 
-
-
 .textfield {
     -fx-background-color: #D9D9D9;
     /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 0px, 4px, 4px);*/
@@ -89,56 +87,14 @@
 
 }
 
-
-/* FRAME SPECIFIC CODE */
-
-.day-choosing-button {
-
-    -fx-background-color: #B6F3A5;
-    -fx-border-radius: 8px;
-
-    /* Inside auto layout */
-
-    -fx-flex: none;
-    -fx-order: 0;
-    -fx-flex-grow: 0;
-
-    -fx-font-family: "Poppins";
-    -fx-font-style: normal;
-    -fx-font-weight: 500;
-    -fx-font-size: 40px;
-    -fx-line-height: 72px;
-
-}
-
 /* FRAME SPECIFIC CODE */
 .time-choosing-button {
-    -fx-display: flex;
-    -fx-flex-direction: row;
-    -fx-justify-content: center;
-    -fx-align-items: center;
-    -fx-padding: 16px;
-    -fx-gap: 8px;
-
     -fx-background-color: #B6F3A5;
     -fx-border-radius: 8px;
-
-    /* Inside auto layout */
-
-    -fx-flex: none;
-    -fx-order: 0;
-    -fx-flex-grow: 0;
-
-
-
     -fx-font-family: "Poppins";
     -fx-font-style: normal;
-    -fx-font-weight: 500;
     -fx-font-size: 40px;
-    -fx-line-height: 72px;
 }
-
-
 
 /* HEADER */
 
@@ -154,12 +110,12 @@
 }
 .header{
     //-fx-background-color: #623CEA;
-    -fx-background-color: #509452;
+    -fx-background-color: #47ad4e;
 }
 .header-icon {
     -fx-border-radius: 10px;
     //-fx-border-color: #623CEA;
-    -fx-border-color: #509452;
+    -fx-border-color: #47ad4e;
     -fx-border-width: 20px;
     -fx-border-style: solid;
 }
@@ -184,7 +140,7 @@
 }
 
 .saved-information-text {
-    -fx-text-fill: #00FF00;
+    -fx-text-fill: #67E083;
     -fx-font-size:20;
 }
 
@@ -228,7 +184,7 @@
 }
 
 .menu-button:focused {
-    -fx-background-color: #00BB00;
+    -fx-background-color: #67E083;
 }
 
 
@@ -383,8 +339,8 @@
 
 .progress_bar .button {
     -fx-background-radius: 30px;
-    -fx-pref-height: 45px;
-    -fx-pref-width: 45px;
+    -fx-pref-height: 44px;
+    -fx-pref-width: 44px;
 }
 
 .progress_bar .button_inactive {
@@ -425,7 +381,8 @@
     -fx-pref-height: 25px;
 }
 .kvitto-button:pressed{
-    -fx-background-color: #00FF00;
+    //-fx-background-color: #00FF00;
+    -fx-background-color: #67E083;
 }
 
 .kvitto-check{

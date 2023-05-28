@@ -22,9 +22,10 @@ public class header extends AnchorPane {
         }
         this.mainViewController = mainViewController;
     }
-
-    public void onFavoriteClicked(){
+    @FXML
+    public void onFavoriteClicked() {
         mainViewController.favoritePane.toFront();
+    }
     @FXML
     public void onHistoryButtonClick() {
         mainViewController.showHistoryView();

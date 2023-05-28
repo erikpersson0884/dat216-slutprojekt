@@ -60,8 +60,7 @@ public class MainViewController implements Initializable {
     FlowPane CategoryFlowPane;
     @FXML
     AnchorPane favoritePane;
-
-
+    @FXML
     AnchorPane historyPane;
 
     private String[] checkoutViews = {"betalning.fxml", "varukorg-utcheckning.fxml","delivery_time.fxml","receipt_page.fxml","leveransadress.fxml", "header.fxml"};
