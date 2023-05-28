@@ -41,7 +41,6 @@ public class ProgressBar extends AnchorPane {
         buttons.add(button3);
         buttons.add(button4);
         buttonPressedAction(indexActive,buttons);
-        System.out.println("indexActive: " + indexActive);
     }
 
     public void changeCheckoutView(int index) {
@@ -52,7 +51,7 @@ public class ProgressBar extends AnchorPane {
         try {
             Button clicked = ((Button) event.getSource());
             var index = buttons.indexOf(clicked);
-            System.out.println(index);
+
             changeCheckoutView(index);
             //buttonPressedAction(index,buttons);
         }

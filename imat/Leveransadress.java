@@ -23,9 +23,10 @@ public class Leveransadress extends AnchorPane{
     @FXML
     Button saveInformationButton;
     @FXML
-    TextField streesAdressTextField;
+    TextField streetAdressTextField;
     @FXML TextField postalNumberTextField;
     @FXML Label savedInfoLabel;
+    @FXML Label noAdressChosenLabel;
 
     public Leveransadress(MainViewController mainViewController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("leveransadress.fxml"));
@@ -39,13 +40,37 @@ public class Leveransadress extends AnchorPane{
         }
         this.mainViewController = mainViewController;
         progressBarAnchorPane.getChildren().add(new ProgressBar(mainViewController,2));
+        setSavedInformation();
+        noAdressChosenLabel.setVisible(false); // Hide the label initially
         savedInfoLabel.setVisible(false); // Hide the label initially
 
+
     }
+    private void displayLabel(int seconds, Label label) {
+        label.setVisible(true); // Make the label visible
+
+        new Thread(() -> {
+            try {
+                Thread.sleep(seconds * 1000); // Sleep for the specified duration in milliseconds
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            // Run on the JavaFX Application Thread to modify the UI
+            javafx.application.Platform.runLater(() -> label.setVisible(false));
+        }).start();
+    }
+
     @FXML
     public void onNextButtonClick() {
-        System.out.println("Next");
-        mainViewController.changeCheckoutView(3);
+        System.out.println(streetAdressTextField.getText());
+        if (!streetAdressTextField.getText().isEmpty() & !postalNumberTextField.getText().isEmpty()) {
+            mainViewController.changeCheckoutView(3);
+        } else {
+            displayLabel(4, noAdressChosenLabel);
+            System.out.println("No adress chosen");
+
+        }
     }
     @FXML
     public void onBackButtonClick(){
@@ -54,13 +79,13 @@ public class Leveransadress extends AnchorPane{
     }
 
     public void saveInformationOnClick(){
-        mainViewController.iMatDataHandler.getCustomer().setAddress(streesAdressTextField.getText());
+        mainViewController.iMatDataHandler.getCustomer().setAddress(streetAdressTextField.getText());
         mainViewController.iMatDataHandler.getCustomer().setPostAddress(postalNumberTextField.getText());
         displaySavedInfoLabel(4);
     }
 
     public void setSavedInformation(){
-        streesAdressTextField.setText(iMatDataHandler.getCustomer().getAddress());
+        streetAdressTextField.setText(iMatDataHandler.getCustomer().getAddress());
         postalNumberTextField.setText(iMatDataHandler.getCustomer().getPostCode());
     }
 
