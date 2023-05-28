@@ -29,8 +29,9 @@ public class Payment extends AnchorPane {
     @FXML
     public void onNextButtonClick() {
         System.out.println("Next");
-        mainViewController.changeCheckoutView(4);
         placeOrder();
+        mainViewController.changeCheckoutView(4);
+
     }
     @FXML
     public void onBackButtonClick(){
@@ -40,6 +41,5 @@ public class Payment extends AnchorPane {
 
     private void placeOrder(){
         iMatDataHandler.placeOrder();
-        mainViewController.showHistoryView();
     }
 }

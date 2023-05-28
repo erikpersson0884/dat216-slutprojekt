@@ -278,4 +278,7 @@ public class MainViewController implements Initializable {
     public void LoadHistory(){
 
     }
+    public void updateFavorites(){
+        favorite.loadFavorites();
+    }
 }
