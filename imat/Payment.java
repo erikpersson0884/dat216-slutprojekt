@@ -3,11 +3,13 @@ package imat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.io.IOException;
 
 public class Payment extends AnchorPane {
     MainViewController mainViewController;
+    private final IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     @FXML
     AnchorPane progressBarAnchorPane;
     public Payment(MainViewController mainViewController) {
@@ -28,10 +30,16 @@ public class Payment extends AnchorPane {
     public void onNextButtonClick() {
         System.out.println("Next");
         mainViewController.changeCheckoutView(4);
+        placeOrder();
     }
     @FXML
     public void onBackButtonClick(){
         System.out.println("Back");
         mainViewController.changeCheckoutView(2);
+    }
+
+    private void placeOrder(){
+        iMatDataHandler.placeOrder();
+        mainViewController.showHistoryView();
     }
 }

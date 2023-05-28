@@ -77,6 +77,7 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         String iMatDirectory = iMatDataHandler.imatDirectory();
         initializeHashMap();
+        //iMatDataHandler
         basketCheckoutPane.getChildren().add(varukorgUtcheckning);
         paymentPane.getChildren().add(betalning);
         deliveryTimePane.getChildren().add(deliveryTime);
@@ -264,5 +265,8 @@ public class MainViewController implements Initializable {
 
     public void showHistoryView(){
         historyPane.toFront();
+    }
+    public void LoadHistory(){
+
     }
 }
