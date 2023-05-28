@@ -18,21 +18,19 @@
             <Label layoutX="199.0" layoutY="224.0" styleClass="betalning-text" text="Kortnummer" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="224.0" />
             <Label layoutX="199.0" layoutY="289.0" styleClass="betalning-text" text="CVV" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="289.0" />
             <Label layoutX="199.0" layoutY="344.0" prefHeight="56.0" prefWidth="260.0" styleClass="betalning-text" text="Kom ihåg mig:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="344.0" />
-            <TextField layoutX="469.0" layoutY="164.0" prefHeight="48.0" prefWidth="513.0" promptText="Förnamn  Efternamn" styleClass="betalning-textbox" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="164.0" />
-            <TextField layoutX="469.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="1111" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="566.0" AnchorPane.topAnchor="225.0" />
-            <TextField layoutX="339.0" layoutY="294.0" prefHeight="50.0" prefWidth="150.0" promptText="123" styleClass="betalning-textbox" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="288.0" />
-            <Label layoutX="619.0" layoutY="289.0" prefHeight="51.0" prefWidth="132.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="619.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="289.0" />
-            <TextField layoutX="869.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="869.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="294.0" />
-            <TextField layoutX="769.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="294.0" />
-            <Label layoutX="734.0" layoutY="344.0" prefHeight="50.0" prefWidth="210.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="344.0">
+
+            <TextField fx:id="NameTextField" layoutX="469.0" layoutY="164.0" prefHeight="48.0" prefWidth="513.0" promptText="Förnamn  Efternamn" styleClass="betalning-textbox" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="164.0" />
+            <TextField fx:id="cardNumberTextField" layoutX="469.0" layoutY="234.0" prefHeight="43.0" prefWidth="475.0" promptText="1111222233334444" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="225.0" />
+            <Label layoutX="619.0" layoutY="289.0" prefHeight="50.0" prefWidth="132.0" styleClass="betalning-text" text="Giltighet" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="619.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="289.0" />
+            <TextField fx:id="ValidMonthTextField" layoutX="869.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="MM" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="869.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="294.0" />
+            <TextField fx:id="ValidYearTextField" layoutX="769.0" layoutY="294.0" prefHeight="50.0" prefWidth="70.0" promptText="ÅÅ" styleClass="betalning-textbox" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="301.0" AnchorPane.topAnchor="294.0" />
+            <Label layoutX="905.0" layoutY="347.0" prefHeight="50.0" prefWidth="210.0" styleClass="betalning-text" text=" Total:  999 kr" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="347.0">
+
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField layoutX="594.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="2222" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="594.0" AnchorPane.rightAnchor="445.0" AnchorPane.topAnchor="225.0" />
-            <TextField layoutX="719.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="3333" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="316.0" AnchorPane.topAnchor="225.0" />
-            <TextField layoutX="844.0" layoutY="234.0" prefHeight="55.0" prefWidth="105.0" promptText="4444" styleClass="betalning-textbox" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="196.0" AnchorPane.topAnchor="225.0" />
-            <Button layoutX="469.0" layoutY="354.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="45.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="354.0" />
+            <Button fx:id="saveInformationButton" layoutX="469.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#saveInformationOnClick" prefHeight="42.0" prefWidth="45.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="469.0" AnchorPane.rightAnchor="626.0" AnchorPane.topAnchor="354.0" />
             <Label layoutX="844.0" layoutY="306.0" styleClass="betalning-text" text="/" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="844.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="294.0" />
             <Pane prefHeight="120.0" prefWidth="200.0" styleClass="betalning-icon-bakgrund" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="910.0" AnchorPane.topAnchor="20.0">
                <children>
@@ -79,6 +77,8 @@
                   </ImageView>
                </children>
             </Pane>
+            <TextField fx:id="VerificationCodeTextField" layoutX="470.0" layoutY="295.0" prefHeight="40.0" prefWidth="111.0" promptText="123" styleClass="betalning-textbox" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="559.0" AnchorPane.topAnchor="295.0" />
+            <Label fx:id="savedInfoLabel" layoutX="526.0" layoutY="357.0" styleClass="saved-information-text" text="Din information har sparats" />
          </children>
       </AnchorPane>
       <Button layoutX="992.0" layoutY="635.0" mnemonicParsing="false" onMousePressed="#onNextButtonClick" prefHeight="75.0" prefWidth="238.0" styleClass="slutfor-button" text="Slutför köp" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0" />

@@ -101,7 +101,7 @@ public class MainViewController implements Initializable {
         historyPane.getChildren().add(history);
         searchbar.setOnKeyTyped(event -> handleKeyPress());
         updateRightSidebar();
-
+        model.getShoppingCart().fireShoppingCartChanged(null, true);
         checkoutViewPanes.add(receiptPage);
     }
 
@@ -277,5 +277,8 @@ public class MainViewController implements Initializable {
     }
     public void LoadHistory(){
 
+    }
+    public void updateFavorites(){
+        favorite.loadFavorites();
     }
 }
