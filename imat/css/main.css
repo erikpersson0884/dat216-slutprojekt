@@ -142,6 +142,11 @@
     -fx-border-style: solid;
 }
 
+.header-icon:pressed{
+    -fx-background-color: #AAFFAA;
+    -fx-border-color: #AAFFAA;
+}
+
 /* BETALNING */
 
 .betalning-icon-bakgrund{
@@ -244,6 +249,10 @@
 }
 .change-area-button:hover {
     -fx-background-color: #ECE6F0;
+}
+
+.change-area-button:pressed {
+    -fx-background-color: #00AA00;
 }
 
 .product-Label {
