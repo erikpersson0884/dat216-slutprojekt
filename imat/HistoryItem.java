@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -26,6 +27,8 @@ public class HistoryItem extends AnchorPane {
     private Label priceLabel;
     @FXML
     private Label quantityLabel;
+    @FXML
+    private FlowPane historyItemFlowPane;
     public HistoryItem(MainViewController mainViewController, Order order) {
         this.mainViewController = mainViewController;
         this.order = order;
@@ -72,7 +75,7 @@ public class HistoryItem extends AnchorPane {
 
     private void populateList(){
         for(ShoppingItem item : order.getItems()){
-            openAnchorPane.getChildren().add(new HistoryListItem(mainViewController, item));
+            historyItemFlowPane.getChildren().add(new HistoryListItem(mainViewController, item));
         }
     }
 }
