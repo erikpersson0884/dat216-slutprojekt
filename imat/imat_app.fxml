@@ -63,7 +63,7 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <TextField fx:id="searchbar" layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" promptText="   sök i iMat" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+                        <TextField fx:id="searchbar" layoutX="10.0" layoutY="3.0" prefHeight="93.0" prefWidth="535.0" promptText="   sök i iMat" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -72,7 +72,7 @@
                               <String fx:value="sok-text" />
                            </styleClass>
                         </TextField>
-                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="27.0">
+                        <ImageView fitHeight="67.0" fitWidth="70.0" layoutX="634.0" layoutY="18.0" AnchorPane.bottomAnchor="526.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                            <image>
                               <Image url="@resources/search-icon.png" />
                            </image>

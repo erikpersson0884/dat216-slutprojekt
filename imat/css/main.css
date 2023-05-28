@@ -85,8 +85,8 @@
     -fx-background-radius: 100px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 2, 1, 0, 0), dropshadow(three-pass-box, rgba(0,0,0,0.15), 6, 2, 0, 0);
 }
-.spara-button: hover{
-    -fx-background-color: #67E083;
+.spara-button:hover{
+    -fx-background-color: #B6F3A5;
 }
 
 .textfield {
@@ -105,6 +105,12 @@
     -fx-font-size: 40px;
 }
 .time-choosing-button: hover{
+    -fx-background-color: #67E083;
+}
+.saved-information-button{
+    -fx-background-color: #b5b7c7;
+}
+.saved-information-button:hover{
     -fx-background-color: #67E083;
 }
 
