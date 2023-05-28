@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -30,16 +31,20 @@
       <AnchorPane layoutX="10.0" layoutY="253.0" minHeight="26.0" minWidth="205.0" prefHeight="41.0" prefWidth="209.0" styleClass="product-change-area">
          <children>
             <Label fx:id="AmountLabel" layoutX="99.0" layoutY="3.0" styleClass="product-Label" text="0" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="3.0" />
-            <Button layoutX="147.0" layoutY="3.0" maxHeight="30.0" maxWidth="30.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onMouseClicked="#onPlusButtonClick" prefHeight="10.0" prefWidth="20.0" styleClass="change-area-button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="147.0" layoutY="3.0" maxHeight="30.0" maxWidth="30.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onMouseClicked="#onPlusButtonClick" prefHeight="10.0" prefWidth="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <graphic>
-                  <ImageView onMouseClicked="#onPlusButtonClick" styleClass="change-area-button">
+                  <ImageView onMouseClicked="#onPlusButtonClick">
                      <image>
                         <Image url="@resources/add-icon.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <styleClass>
+                  <String fx:value="change-area-button" />
+                  <String fx:value="plus_button" />
+               </styleClass>
             </Button>
-            <Button maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onMouseClicked="#onMinusButtonClick" prefHeight="48.0" prefWidth="48.0" styleClass="change-area-button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button maxHeight="48.0" maxWidth="48.0" minHeight="48.0" minWidth="48.0" mnemonicParsing="false" onMouseClicked="#onMinusButtonClick" prefHeight="48.0" prefWidth="48.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <graphic>
                   <ImageView onMouseClicked="#onMinusButtonClick">
                      <image>
@@ -47,6 +52,10 @@
                      </image>
                   </ImageView>
                </graphic>
+               <styleClass>
+                  <String fx:value="change-area-button" />
+                  <String fx:value="minus_button" />
+               </styleClass>
             </Button>
          </children>
       </AnchorPane>
