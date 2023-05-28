@@ -316,5 +316,8 @@ public class MainViewController implements Initializable {
     public void updateFavorites(){
         favorite.loadFavorites();
     }
+    public void updateHistory(){
+        history.updateOrders();
+    }
 
 }
